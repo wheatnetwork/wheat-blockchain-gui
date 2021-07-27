@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { Trans } from '@lingui/macro';
 import { ChevronRight as ChevronRightIcon } from '@material-ui/icons';
-import {Button, Flex} from '@wheat/core';
+import { Flex } from '@wheat/core';
 import { createPlotNFT } from '../../modules/plotNFT';
 import PlotNFTState from '../../constants/PlotNFTState';
 import useUnconfirmedPlotNFTs from '../../hooks/useUnconfirmedPlotNFTs';
@@ -54,11 +54,7 @@ export default function PlotNFTAdd(props: Props) {
       )}
       <PlotNFTSelectPool
         onSubmit={handleSubmit}
-        title={
-          <Flex gap={1} alignItems="center">
-            <Flex flexGrow={1}><Trans>Want to Join a Pool?</Trans> <Trans>Create a Plot NFT</Trans></Flex>
-          </Flex>
-        }
+        title={<Trans>Want to Join a Pool? Create a Plot NFT</Trans>}
         description={
           <Trans>
             Join a pool and get consistent WHEAT farming rewards. The average

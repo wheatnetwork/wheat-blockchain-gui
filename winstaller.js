@@ -18,7 +18,7 @@ function getInstallerConfig () {
     authors: 'Wheat Network',
     version: process.env.WHEAT_INSTALLER_VERSION,
     noMsi: true,
-    iconUrl: 'https://raw.githubusercontent.com/WheatNetwork/wheat-blockchain/master/electron-react/src/assets/img/wheat.ico',
+    iconUrl: 'https://raw.githubusercontent.com/wheatnetwork/wheat-blockchain/master/electron-react/src/assets/img/wheat.ico',
     outputDirectory: path.join(outPath, 'windows-installer'),
     certificateFile: 'win_code_sign_cert.p12',
     certificatePassword: process.env.WIN_CODE_SIGN_PASS,

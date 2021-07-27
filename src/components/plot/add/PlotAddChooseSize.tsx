@@ -66,7 +66,7 @@ export default function PlotAddChooseSize() {
           }
           <Link
             target="_blank"
-            href="https://github.com/WheatNetwork/wheat-blockchain/wiki/k-sizes"
+            href="https://github.com/Wheat-Network/wheat-blockchain/wiki/k-sizes"
           >
             Learn more
           </Link>

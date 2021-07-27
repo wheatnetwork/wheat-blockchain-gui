@@ -26,7 +26,6 @@ import PlotQueueSize from '../queue/PlotQueueSize';
 import PlotQueueActions from '../queue/PlotQueueActions';
 import PlotQueueIndicator from '../queue/PlotQueueIndicator';
 import usePlots from '../../../hooks/usePlots';
-import {Wheat} from "@wheat/icons";
 
 const StyledTableRowQueue = styled(TableRow)`
   background-color: ${({ theme }) =>

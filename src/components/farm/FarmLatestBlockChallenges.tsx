@@ -62,10 +62,10 @@ export default function FarmLatestBlockChallenges() {
       />
       <Typography variant="caption">
         <Trans>
-          *Want to explore Wheat ’s blocks further? Check out{' '}
+          *Want to explore Wheat’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://explorer.wheat.network/"
+            href="https://www.wheatexplorer.com/"
             target="_blank"
           >
             Wheat Explorer

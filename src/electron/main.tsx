@@ -358,7 +358,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Wheat Blockchain Wiki' }),
             click: () => {
               openExternal(
-                'https://github.com/WheatNetwork/wheat-blockchain/wiki',
+                'https://github.com/Wheat-Network/wheat-blockchain/wiki',
               );
             },
           },
@@ -366,7 +366,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
             click: () => {
               openExternal(
-                'https://github.com/WheatNetwork/wheat-blockchain/wiki/FAQ',
+                'https://github.com/Wheat-Network/wheat-blockchain/wiki/FAQ',
               );
             },
           },
@@ -374,7 +374,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Release Notes' }),
             click: () => {
               openExternal(
-                'https://github.com/WheatNetwork/wheat-blockchain/releases',
+                'https://github.com/Wheat-Network/wheat-blockchain/releases',
               );
             },
           },
@@ -382,7 +382,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Contribute on GitHub' }),
             click: () => {
               openExternal(
-                'https://github.com/WheatNetwork/wheat-blockchain/blob/master/CONTRIBUTING.md',
+                'https://github.com/Wheat-Network/wheat-blockchain/blob/master/CONTRIBUTING.md',
               );
             },
           },
@@ -393,7 +393,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Report an Issue...' }),
             click: () => {
               openExternal(
-                'https://github.com/WheatNetwork/wheat-blockchain/issues',
+                'https://github.com/Wheat-Network/wheat-blockchain/issues',
               );
             },
           },

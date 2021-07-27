@@ -1,6 +1,6 @@
 {
   "name": "wheat-blockchain",
-  "author": "Wheat Network <hello@wheat.network> (https://wheat.network/)",
+  "author": "Wheat Network <admin@wheat.network> (https://wheat.network/)",
   "description": "GUI for Wheat Blockchain",
   "productName": "Wheat Blockchain",
   "private": true,
