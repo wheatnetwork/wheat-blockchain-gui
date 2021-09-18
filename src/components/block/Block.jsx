@@ -268,7 +268,12 @@ export default function Block() {
       value: (
         <Link
           target="_blank"
-          href={`https://www.wheatexplorer.com/blockchain/puzzlehash/${blockRecord.farmer_puzzle_hash}`}
+          href={`https://alltheblocks.net/wheat/address/${currencyCode
+            ? toBech32m(
+                blockRecord.farmer_puzzle_hash,
+                currencyCode.toLowerCase(),
+              )
+            : ''}`}
         >
           {currencyCode
             ? toBech32m(
@@ -284,7 +289,12 @@ export default function Block() {
       value: (
         <Link
           target="_blank"
-          href={`https://www.wheatexplorer.com/blockchain/puzzlehash/${blockRecord.pool_puzzle_hash}`}
+          href={`https://alltheblocks.net/wheat/address/${currencyCode
+            ? toBech32m(
+                blockRecord.pool_puzzle_hash,
+                currencyCode.toLowerCase(),
+              )
+            : ''}`}
         >
           {currencyCode
             ? toBech32m(

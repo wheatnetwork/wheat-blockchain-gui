@@ -8,14 +8,14 @@ msgstr ""
 "Language: da_DK\n"
 "Project-Id-Version: wheat-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-24 12:14\n"
+"PO-Revision-Date: 2021-07-26 15:12\n"
 "Last-Translator: \n"
 "Language-Team: Danish\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: wheat-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: da\n"
-"X-Crowdin-File: /[Wheat-Network.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[WheatNetwork.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -29,6 +29,10 @@ msgstr "*Vil du udforske Wheats blokke yderligerer? Se <0>Wheat Explorer</0> byg
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
 msgstr "+ Tilføj Ny Plot NFT"
+
+#: src/components/wallet/Wallets.tsx:122
+msgid "+ Add Wallet"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:94
 #~ msgid "0 automatically chooses bucket count"
@@ -144,7 +148,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Er du sikker du vil slette plotfilen? Plotfilen kan ikke gendannes."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:633
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Er du sikker på, at du vil slette ubekræftede transaktioner?"
 
@@ -183,7 +187,7 @@ msgstr "Backup til at gendanne smart pung"
 msgid "Balance"
 msgstr "Saldo"
 
-#: src/components/block/Block.jsx:317
+#: src/components/block/Block.jsx:327
 msgid "Base Farmer Reward Amount"
 msgstr "Grund belønningsbeløb"
 
@@ -203,7 +207,7 @@ msgstr "Bedste skøn over de sidste 24 timer"
 #: src/components/block/Block.jsx:129
 #: src/components/block/Block.jsx:153
 #: src/components/block/Block.jsx:157
-#: src/components/block/Block.jsx:332
+#: src/components/block/Block.jsx:342
 msgid "Block"
 msgstr "Blok"
 
@@ -215,7 +219,7 @@ msgstr "Blok Test"
 msgid "Block VDF Iterations"
 msgstr "Blok VDF iterationer"
 
-#: src/components/block/Block.jsx:336
+#: src/components/block/Block.jsx:346
 msgid "Block at height {0} in the Wheat blockchain"
 msgstr "Block ved højde {0} i Wheat blockchainen"
 
@@ -371,7 +375,7 @@ msgid "Confirm Disconnect"
 msgstr "Bekræft Afkobling"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:629
 msgid "Confirmation"
 msgstr "Bekræftelse"
 
@@ -584,7 +588,7 @@ msgstr "Forsinkelse"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:630
 msgid "Delete"
 msgstr "Slet"
 
@@ -594,7 +598,7 @@ msgid "Delete Plot"
 msgstr "Slet Plotfil"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:674
 msgid "Delete Unconfirmed Transactions"
 msgstr "Slet Ubekræftede Transaktioner"
 
@@ -821,7 +825,7 @@ msgstr "Gebyr"
 msgid "Fee ({currencyCode})"
 msgstr "Gebyr ({currencyCode})"
 
-#: src/components/block/Block.jsx:321
+#: src/components/block/Block.jsx:331
 msgid "Fees Amount"
 msgstr "Gebyr Beløb"
 
@@ -1068,11 +1072,11 @@ msgstr "Forlader Pulje"
 msgid "List view"
 msgstr "Listevisning"
 
-#: src/components/pool/Pool.tsx:21
+#: src/components/pool/Pool.tsx:22
 msgid "Loading Plot NFTs"
 msgstr "Indlæser Plot NFT'er"
 
-#: src/components/wallet/Wallets.tsx:172
+#: src/components/wallet/Wallets.tsx:111
 msgid "Loading list of wallets"
 msgstr "Indlæser liste over tegnebøger"
 
@@ -1177,7 +1181,7 @@ msgstr "Ny Addresse"
 msgid "New Wallet"
 msgstr "Ny Pung"
 
-#: src/components/block/Block.jsx:350
+#: src/components/block/Block.jsx:360
 #: src/components/wallet/WalletAdd.tsx:95
 #: src/components/wallet/WalletImport.tsx:163
 msgid "Next"
@@ -1421,7 +1425,7 @@ msgstr "Plot"
 msgid "Plot Count"
 msgstr "Plot Antal"
 
-#: src/components/block/Block.jsx:299
+#: src/components/block/Block.jsx:309
 msgid "Plot Id"
 msgstr "Plot ID"
 
@@ -1514,7 +1518,7 @@ msgid "Points Successful in Last 24 Hours"
 msgstr "Point Fundet i de sidste 24 Timer"
 
 #: src/components/dashboard/DashboardSideBar.tsx:60
-#: src/components/pool/Pool.tsx:25
+#: src/components/pool/Pool.tsx:26
 msgid "Pool"
 msgstr "Pulje"
 
@@ -1539,7 +1543,7 @@ msgstr "Pulje Udbetalingsvejledning"
 msgid "Pool Public Key"
 msgstr "Pool Public Nøgle"
 
-#: src/components/block/Block.jsx:283
+#: src/components/block/Block.jsx:288
 msgid "Pool Puzzle Hash"
 msgstr "Pool Puzzle Hash"
 
@@ -1559,7 +1563,7 @@ msgstr "Pool Belønningsadresse er ikke korrekt formateret."
 msgid "Pool Reward Address must not be empty."
 msgstr "Pool Belønningsadresse må ikke være tom."
 
-#: src/components/block/Block.jsx:313
+#: src/components/block/Block.jsx:323
 msgid "Pool Reward Amount"
 msgstr "Pool Belønnings Beløb"
 
@@ -1602,7 +1606,7 @@ msgstr "Forbereder Plot NFT"
 msgid "Preparing standard wallet"
 msgstr "Forbereder standard tegnebog"
 
-#: src/components/block/Block.jsx:347
+#: src/components/block/Block.jsx:357
 msgid "Previous"
 msgstr "Tidligere"
 
@@ -1932,7 +1936,7 @@ msgstr "Status"
 #: src/components/pool/PoolOverview.tsx:44
 #: src/components/trading/TradingOverview.jsx:128
 #: src/components/wallet/WalletHistory.tsx:55
-#: src/components/wallet/Wallets.tsx:118
+#: src/components/wallet/Wallets.tsx:52
 #: src/components/wallet/WalletStatusCard.tsx:22
 msgid "Status"
 msgstr "Status"
@@ -2070,7 +2074,7 @@ msgstr "Pulje URL skal bruge https protokol. {normalizedUrl}"
 msgid "The pool switching operation was cancelled, please try again by changing pool, or self pooling"
 msgstr "Pulje skiftefunktion blev abrudt, prøv igen ved at skifte pulje, eller selv pulje"
 
-#: src/components/block/Block.jsx:302
+#: src/components/block/Block.jsx:312
 msgid "The seed used to create the plot. This depends on the pool pk and plot pk."
 msgstr "Det seed der er brugt tul at generer plotfilen. Dette er afhængig af pool pk og plot pk."
 
@@ -2082,7 +2086,7 @@ msgstr "Det samlede nummer af VDF (verifiable delay function) eller bevis af tid
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on this block."
 msgstr "Det samlede nummer af VDF (verifiable delay function) eller bevis af tid gentagelser på denne blok."
 
-#: src/components/block/Block.jsx:324
+#: src/components/block/Block.jsx:334
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Det samlede transaktionsgebyr i denne blok. Belønnet til farmeren."
 
@@ -2261,7 +2265,7 @@ msgstr "Handler"
 msgid "Trading History"
 msgstr "Handelshistorik"
 
-#: src/components/block/Block.jsx:309
+#: src/components/block/Block.jsx:319
 msgid "Transactions Filter Hash"
 msgstr "Transaktionsfilter Hash"
 
@@ -2365,7 +2369,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr "Afventer at transaktionen bekræftes"
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:656
 msgid "Wallet Status:"
 msgstr "Tegnebog Status:"
 
@@ -2398,17 +2402,13 @@ msgstr "Tegnebog Status:"
 #~ msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:45
-#: src/components/wallet/Wallets.tsx:173
+#: src/components/wallet/Wallets.tsx:112
 msgid "Wallets"
 msgstr "Punge"
 
 #: src/components/wallet/Wallets.tsx:131
 #~ msgid "Wallets.title"
 #~ msgstr ""
-
-#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:27
-msgid "Want to Join a Pool?"
-msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:57
 msgid "Want to Join a Pool? Create a Plot NFT"
@@ -2458,7 +2458,7 @@ msgstr "Wheat"
 msgid "Wheat Blockchain Wiki"
 msgstr "Wheat Blockchain Wiki"
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
+#: src/components/wallet/standard/WalletStandard.tsx:649
 msgid "Wheat Wallet"
 msgstr "Wheat Pung"
 
@@ -2565,17 +2565,17 @@ msgstr "[Fejl 13] Adgang nægtet. Du prøver at få adgang til en fil / mappe ud
 msgid "[Error 22] File not found. Most likely one of the plot folders in your config.yaml has an issue."
 msgstr "[Fejl 22] Filen blev ikke fundet. Sandsynligvis har en af plotmapperne i din config.yaml et problem."
 
-#: src/components/wallet/Wallets.tsx:143
+#: src/components/wallet/Wallets.tsx:77
 #: src/components/wallet/WalletStatusCard.tsx:41
 msgid "connections:"
 msgstr "forbindelser:"
 
-#: src/components/wallet/Wallets.tsx:135
+#: src/components/wallet/Wallets.tsx:69
 #: src/components/wallet/WalletStatusCard.tsx:33
 msgid "height:"
 msgstr "højde:"
 
-#: src/components/wallet/Wallets.tsx:129
+#: src/components/wallet/Wallets.tsx:63
 msgid "not synced"
 msgstr "ikke synkroniseret"
 
@@ -2583,17 +2583,17 @@ msgstr "ikke synkroniseret"
 msgid "p2_singleton_puzzle_hash is not defined"
 msgstr "p2_singleton_puzzle_hash er ikke defineret"
 
-#: src/components/wallet/Wallets.tsx:123
+#: src/components/wallet/Wallets.tsx:57
 #: src/components/wallet/WalletStatusCard.tsx:27
 msgid "status:"
 msgstr "status:"
 
-#: src/components/wallet/Wallets.tsx:128
+#: src/components/wallet/Wallets.tsx:62
 #: src/components/wallet/WalletStatusCard.tsx:29
 msgid "synced"
 msgstr "synkroniseret"
 
-#: src/components/wallet/Wallets.tsx:127
+#: src/components/wallet/Wallets.tsx:61
 #: src/components/wallet/WalletStatusCard.tsx:29
 msgid "syncing"
 msgstr "synkroniserer"

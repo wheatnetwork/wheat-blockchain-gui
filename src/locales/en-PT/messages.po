@@ -8,14 +8,14 @@ msgstr ""
 "Language: en_PT\n"
 "Project-Id-Version: wheat-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-20 20:06\n"
+"PO-Revision-Date: 2021-07-26 15:12\n"
 "Last-Translator: \n"
 "Language-Team: Pirate English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: wheat-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: en-PT\n"
-"X-Crowdin-File: /[Wheat-Network.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[WheatNetwork.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -29,6 +29,10 @@ msgstr "*Wants t' explore taken booty further? See <0>Wheat Explorer</0> by a mi
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
 msgstr "Give yer Crewdog a no-so-loyal NFT tag"
+
+#: src/components/wallet/Wallets.tsx:122
+msgid "+ Add Wallet"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:94
 #~ msgid "0 automatically chooses bucket count"
@@ -144,7 +148,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Be ye sure ye want to let the crewdog go o'er board? Th' scurvy dog cannot be rescued as soon as ye do so."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:633
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr ""
 
@@ -183,7 +187,7 @@ msgstr "Scribble (backup) file be used t' restore smart wallets."
 msgid "Balance"
 msgstr "Ye Treasure"
 
-#: src/components/block/Block.jsx:317
+#: src/components/block/Block.jsx:327
 msgid "Base Farmer Reward Amount"
 msgstr "Base Plunderer Reward Amount"
 
@@ -203,7 +207,7 @@ msgstr "Best guess o'er last 24 hours"
 #: src/components/block/Block.jsx:129
 #: src/components/block/Block.jsx:153
 #: src/components/block/Block.jsx:157
-#: src/components/block/Block.jsx:332
+#: src/components/block/Block.jsx:342
 msgid "Block"
 msgstr "Booty"
 
@@ -215,7 +219,7 @@ msgstr "Booty Test"
 msgid "Block VDF Iterations"
 msgstr "Booty Thumbs Twiddled"
 
-#: src/components/block/Block.jsx:336
+#: src/components/block/Block.jsx:346
 msgid "Block at height {0} in the Wheat blockchain"
 msgstr "Booty at number {0} in the Wheat blockchain"
 
@@ -371,7 +375,7 @@ msgid "Confirm Disconnect"
 msgstr "Yarr, Disconnect"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:629
 msgid "Confirmation"
 msgstr ""
 
@@ -584,7 +588,7 @@ msgstr "Wait"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:630
 msgid "Delete"
 msgstr "Maroon"
 
@@ -594,7 +598,7 @@ msgid "Delete Plot"
 msgstr "Maroon Crewdog"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:674
 msgid "Delete Unconfirmed Transactions"
 msgstr ""
 
@@ -821,7 +825,7 @@ msgstr "Fee"
 msgid "Fee ({currencyCode})"
 msgstr "Fee ({currencyCode})"
 
-#: src/components/block/Block.jsx:321
+#: src/components/block/Block.jsx:331
 msgid "Fees Amount"
 msgstr "Fees Amount"
 
@@ -1068,11 +1072,11 @@ msgstr "Abandon da fleet"
 msgid "List view"
 msgstr ""
 
-#: src/components/pool/Pool.tsx:21
+#: src/components/pool/Pool.tsx:22
 msgid "Loading Plot NFTs"
 msgstr "Reading thee NFT voodoos"
 
-#: src/components/wallet/Wallets.tsx:172
+#: src/components/wallet/Wallets.tsx:111
 msgid "Loading list of wallets"
 msgstr "Show others treasure boxes"
 
@@ -1177,7 +1181,7 @@ msgstr "New Coordinates"
 msgid "New Wallet"
 msgstr "New Treasure Chest"
 
-#: src/components/block/Block.jsx:350
+#: src/components/block/Block.jsx:360
 #: src/components/wallet/WalletAdd.tsx:95
 #: src/components/wallet/WalletImport.tsx:163
 msgid "Next"
@@ -1421,7 +1425,7 @@ msgstr "Crew"
 msgid "Plot Count"
 msgstr "Crew Count"
 
-#: src/components/block/Block.jsx:299
+#: src/components/block/Block.jsx:309
 msgid "Plot Id"
 msgstr "Crewdog's Id"
 
@@ -1514,7 +1518,7 @@ msgid "Points Successful in Last 24 Hours"
 msgstr "Booty at yar feet from last 24 bottle o rum"
 
 #: src/components/dashboard/DashboardSideBar.tsx:60
-#: src/components/pool/Pool.tsx:25
+#: src/components/pool/Pool.tsx:26
 msgid "Pool"
 msgstr "Fleets"
 
@@ -1539,7 +1543,7 @@ msgstr ""
 msgid "Pool Public Key"
 msgstr "Clan Public Treasure Map"
 
-#: src/components/block/Block.jsx:283
+#: src/components/block/Block.jsx:288
 msgid "Pool Puzzle Hash"
 msgstr "Clan Puzzle Hash"
 
@@ -1559,7 +1563,7 @@ msgstr ""
 msgid "Pool Reward Address must not be empty."
 msgstr ""
 
-#: src/components/block/Block.jsx:313
+#: src/components/block/Block.jsx:323
 msgid "Pool Reward Amount"
 msgstr "Clan Reward Amount"
 
@@ -1602,7 +1606,7 @@ msgstr ""
 msgid "Preparing standard wallet"
 msgstr ""
 
-#: src/components/block/Block.jsx:347
+#: src/components/block/Block.jsx:357
 msgid "Previous"
 msgstr "Before"
 
@@ -1932,7 +1936,7 @@ msgstr "State"
 #: src/components/pool/PoolOverview.tsx:44
 #: src/components/trading/TradingOverview.jsx:128
 #: src/components/wallet/WalletHistory.tsx:55
-#: src/components/wallet/Wallets.tsx:118
+#: src/components/wallet/Wallets.tsx:52
 #: src/components/wallet/WalletStatusCard.tsx:22
 msgid "Status"
 msgstr "State o' t'ings"
@@ -2070,7 +2074,7 @@ msgstr ""
 msgid "The pool switching operation was cancelled, please try again by changing pool, or self pooling"
 msgstr ""
 
-#: src/components/block/Block.jsx:302
+#: src/components/block/Block.jsx:312
 msgid "The seed used to create the plot. This depends on the pool pk and plot pk."
 msgstr "The seed used t' recruit the crewdog. It depends on the clan pk an' crewdog pk."
 
@@ -2082,7 +2086,7 @@ msgstr "The number o' thumbs twiddled (VDF verifiable delay function) on the who
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on this block."
 msgstr "The number o' thumbs twiddled (VDF verifiable delay function) on this booty."
 
-#: src/components/block/Block.jsx:324
+#: src/components/block/Block.jsx:334
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "The sum o' \"transactions fees\" in this booty. Given t' the plunderer."
 
@@ -2261,7 +2265,7 @@ msgstr "Tradin'"
 msgid "Trading History"
 msgstr "Tradin' Log"
 
-#: src/components/block/Block.jsx:309
+#: src/components/block/Block.jsx:319
 msgid "Transactions Filter Hash"
 msgstr "Transactions Filter Hash"
 
@@ -2365,7 +2369,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:656
 msgid "Wallet Status:"
 msgstr ""
 
@@ -2398,17 +2402,13 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:45
-#: src/components/wallet/Wallets.tsx:173
+#: src/components/wallet/Wallets.tsx:112
 msgid "Wallets"
 msgstr "Treasure Chests"
 
 #: src/components/wallet/Wallets.tsx:131
 #~ msgid "Wallets.title"
 #~ msgstr ""
-
-#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:27
-msgid "Want to Join a Pool?"
-msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:57
 msgid "Want to Join a Pool? Create a Plot NFT"
@@ -2458,7 +2458,7 @@ msgstr "Wheat"
 msgid "Wheat Blockchain Wiki"
 msgstr "Wheat Blockchain Wiki"
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
+#: src/components/wallet/standard/WalletStandard.tsx:649
 msgid "Wheat Wallet"
 msgstr "Wheat Treasure Chest"
 
@@ -2565,17 +2565,17 @@ msgstr "[Error 13] Permission denied. Ye be trying t' access a file/directory wi
 msgid "[Error 22] File not found. Most likely one of the plot folders in your config.yaml has an issue."
 msgstr "[Error 22] File not found. See if one o' the plot folders in yer config.yaml has a problem."
 
-#: src/components/wallet/Wallets.tsx:143
+#: src/components/wallet/Wallets.tsx:77
 #: src/components/wallet/WalletStatusCard.tsx:41
 msgid "connections:"
 msgstr "connections:"
 
-#: src/components/wallet/Wallets.tsx:135
+#: src/components/wallet/Wallets.tsx:69
 #: src/components/wallet/WalletStatusCard.tsx:33
 msgid "height:"
 msgstr "recorded captures:"
 
-#: src/components/wallet/Wallets.tsx:129
+#: src/components/wallet/Wallets.tsx:63
 msgid "not synced"
 msgstr "not there yet"
 
@@ -2583,17 +2583,17 @@ msgstr "not there yet"
 msgid "p2_singleton_puzzle_hash is not defined"
 msgstr ""
 
-#: src/components/wallet/Wallets.tsx:123
+#: src/components/wallet/Wallets.tsx:57
 #: src/components/wallet/WalletStatusCard.tsx:27
 msgid "status:"
 msgstr "status:"
 
-#: src/components/wallet/Wallets.tsx:128
+#: src/components/wallet/Wallets.tsx:62
 #: src/components/wallet/WalletStatusCard.tsx:29
 msgid "synced"
 msgstr "jolly"
 
-#: src/components/wallet/Wallets.tsx:127
+#: src/components/wallet/Wallets.tsx:61
 #: src/components/wallet/WalletStatusCard.tsx:29
 msgid "syncing"
 msgstr "catchin' up"

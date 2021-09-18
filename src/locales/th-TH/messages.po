@@ -8,14 +8,14 @@ msgstr ""
 "Language: th_TH\n"
 "Project-Id-Version: wheat-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-24 01:35\n"
+"PO-Revision-Date: 2021-07-27 12:39\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: wheat-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: th\n"
-"X-Crowdin-File: /[Wheat-Network.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[WheatNetwork.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -385,7 +385,7 @@ msgstr "ยืนยันการตัดการเชื่อมต่อ
 #: src/components/plotNFT/PlotNFTCard.tsx:121
 #: src/components/wallet/standard/WalletStandard.tsx:628
 msgid "Confirmation"
-msgstr "ยืนยัน"
+msgstr "การยืนยัน"
 
 #: src/components/trading/TradingOverview.jsx:201
 msgid "Confirmed at block:"
@@ -1008,7 +1008,7 @@ msgstr "ช่วงเวลา"
 
 #: src/components/plotNFT/PlotNFTState.tsx:26
 msgid "Invalid state"
-msgstr "ที่อยู่ไม่ถูกต้อง"
+msgstr "สถานะไม่ถูกต้อง"
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:90
 msgid "It is a one-time login link that can be used to log in to a pool's website. It contains a signature using the farmer's key from the plot NFT. Not all pools support this feature."

@@ -8,14 +8,14 @@ msgstr ""
 "Language: sq_AL\n"
 "Project-Id-Version: wheat-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-07-20 20:06\n"
+"PO-Revision-Date: 2021-07-26 15:12\n"
 "Last-Translator: \n"
 "Language-Team: Albanian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: wheat-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: sq\n"
-"X-Crowdin-File: /[Wheat-Network.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[WheatNetwork.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -29,6 +29,10 @@ msgstr "Dëshiron të mësosh më shumë rreth Wheat's? Kliko në <0> Wheat Expl
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
 msgstr "+ Shto një plot të ri NFT"
+
+#: src/components/wallet/Wallets.tsx:122
+msgid "+ Add Wallet"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:94
 #~ msgid "0 automatically chooses bucket count"
@@ -144,7 +148,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Je i sigurt që do ta fshish këtë Plot? Pasi nuk mund ta riktheni."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:633
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Je i sigurt që dëshiron të fshish transaksione të pakonfirmuara?"
 
@@ -183,7 +187,7 @@ msgstr "Skedari Reservë shërben për të rikthyer kuletat smart."
 msgid "Balance"
 msgstr "Shuma"
 
-#: src/components/block/Block.jsx:317
+#: src/components/block/Block.jsx:327
 msgid "Base Farmer Reward Amount"
 msgstr "Shuma e Shpërblimit për Fermerin kryesor"
 
@@ -203,7 +207,7 @@ msgstr "Llogaritja më e mire gjatë 24 orëve të fundit"
 #: src/components/block/Block.jsx:129
 #: src/components/block/Block.jsx:153
 #: src/components/block/Block.jsx:157
-#: src/components/block/Block.jsx:332
+#: src/components/block/Block.jsx:342
 msgid "Block"
 msgstr "Blloku"
 
@@ -215,7 +219,7 @@ msgstr "Kontrolli i Bllokut"
 msgid "Block VDF Iterations"
 msgstr "Përsëritjet e Bllokut VDF"
 
-#: src/components/block/Block.jsx:336
+#: src/components/block/Block.jsx:346
 msgid "Block at height {0} in the Wheat blockchain"
 msgstr "Blloku ne lartësin {0} ne Zinxhirin Wheat"
 
@@ -371,7 +375,7 @@ msgid "Confirm Disconnect"
 msgstr "Konfirmo shkëputjen"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:629
 msgid "Confirmation"
 msgstr "Konfirmimi"
 
@@ -584,7 +588,7 @@ msgstr "Vonesa"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:630
 msgid "Delete"
 msgstr "Fshij"
 
@@ -594,7 +598,7 @@ msgid "Delete Plot"
 msgstr "Fshij plotin"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:674
 msgid "Delete Unconfirmed Transactions"
 msgstr "Fshi transaksionet e pakonfirmuara"
 
@@ -821,7 +825,7 @@ msgstr "Tarifa"
 msgid "Fee ({currencyCode})"
 msgstr "Tarifa({currencyCode})"
 
-#: src/components/block/Block.jsx:321
+#: src/components/block/Block.jsx:331
 msgid "Fees Amount"
 msgstr "Shuma e tarifës"
 
@@ -1068,11 +1072,11 @@ msgstr "Largimi nga polli"
 msgid "List view"
 msgstr "Pamje si listë"
 
-#: src/components/pool/Pool.tsx:21
+#: src/components/pool/Pool.tsx:22
 msgid "Loading Plot NFTs"
 msgstr "Po ngarkon plotet e NFT"
 
-#: src/components/wallet/Wallets.tsx:172
+#: src/components/wallet/Wallets.tsx:111
 msgid "Loading list of wallets"
 msgstr "Lista në ngarkim e kuletave"
 
@@ -1177,7 +1181,7 @@ msgstr "Adresë e re"
 msgid "New Wallet"
 msgstr "Kuletë e re"
 
-#: src/components/block/Block.jsx:350
+#: src/components/block/Block.jsx:360
 #: src/components/wallet/WalletAdd.tsx:95
 #: src/components/wallet/WalletImport.tsx:163
 msgid "Next"
@@ -1421,7 +1425,7 @@ msgstr "Plot"
 msgid "Plot Count"
 msgstr "Numri i ploteve"
 
-#: src/components/block/Block.jsx:299
+#: src/components/block/Block.jsx:309
 msgid "Plot Id"
 msgstr "Id e plotit"
 
@@ -1514,7 +1518,7 @@ msgid "Points Successful in Last 24 Hours"
 msgstr "Pikët e Suksesshme në 24 Orët e Fundit"
 
 #: src/components/dashboard/DashboardSideBar.tsx:60
-#: src/components/pool/Pool.tsx:25
+#: src/components/pool/Pool.tsx:26
 msgid "Pool"
 msgstr "Polli"
 
@@ -1539,7 +1543,7 @@ msgstr "Udhëzimet e Pagimit të Pollit"
 msgid "Pool Public Key"
 msgstr "Çelësi publik i pollit"
 
-#: src/components/block/Block.jsx:283
+#: src/components/block/Block.jsx:288
 msgid "Pool Puzzle Hash"
 msgstr "Pazell e pollit"
 
@@ -1559,7 +1563,7 @@ msgstr "Adresa e Shpërblimit të Pollit nuk është e formatuar siç duhet."
 msgid "Pool Reward Address must not be empty."
 msgstr "Adresa e Shpërblimit të Pollit nuk duhet të jetë bosh."
 
-#: src/components/block/Block.jsx:313
+#: src/components/block/Block.jsx:323
 msgid "Pool Reward Amount"
 msgstr "Shuma e Shpërblimit të Pollit"
 
@@ -1602,7 +1606,7 @@ msgstr "Përgatitja e plotit NFT"
 msgid "Preparing standard wallet"
 msgstr "Përgatitja e portofolit standard"
 
-#: src/components/block/Block.jsx:347
+#: src/components/block/Block.jsx:357
 msgid "Previous"
 msgstr "Paraprak"
 
@@ -1932,7 +1936,7 @@ msgstr "Krahina"
 #: src/components/pool/PoolOverview.tsx:44
 #: src/components/trading/TradingOverview.jsx:128
 #: src/components/wallet/WalletHistory.tsx:55
-#: src/components/wallet/Wallets.tsx:118
+#: src/components/wallet/Wallets.tsx:52
 #: src/components/wallet/WalletStatusCard.tsx:22
 msgid "Status"
 msgstr "Statusi"
@@ -2070,7 +2074,7 @@ msgstr "URL-ja e pollit duhet të përdorë protokollin https. {normalizedUrl}"
 msgid "The pool switching operation was cancelled, please try again by changing pool, or self pooling"
 msgstr "Operacioni i ndërrimit të pollit u anulua, ju lutemi provoni përsëri duke ndryshuar pollin ose vetë-bashkuar"
 
-#: src/components/block/Block.jsx:302
+#: src/components/block/Block.jsx:312
 msgid "The seed used to create the plot. This depends on the pool pk and plot pk."
 msgstr "Fara e përdorur për të krijuar komplotin. Kjo varet nga komploti pk i pollit."
 
@@ -2082,7 +2086,7 @@ msgstr "Numri i përgjithshëm i VDF (funksioni i verifikimit të vonesës) ose 
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on this block."
 msgstr "Numri i përgjithshëm i VDF (funksioni i verifikimit të vonesës) ose prova e përsëritjeve të kohës në këtë bllok."
 
-#: src/components/block/Block.jsx:324
+#: src/components/block/Block.jsx:334
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Tarifat totale të transaksioneve në këtë bllok. Shpërblyer për fermerin."
 
@@ -2261,7 +2265,7 @@ msgstr "Tregtimi"
 msgid "Trading History"
 msgstr "Historia e Tregtisë"
 
-#: src/components/block/Block.jsx:309
+#: src/components/block/Block.jsx:319
 msgid "Transactions Filter Hash"
 msgstr "Filteri I Transaksioneve"
 
@@ -2365,7 +2369,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr "Në pritje të konfirmimit të transaksionit"
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:656
 msgid "Wallet Status:"
 msgstr "Statusi i Portofolit:"
 
@@ -2398,17 +2402,13 @@ msgstr "Statusi i Portofolit:"
 #~ msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:45
-#: src/components/wallet/Wallets.tsx:173
+#: src/components/wallet/Wallets.tsx:112
 msgid "Wallets"
 msgstr "Kuletat"
 
 #: src/components/wallet/Wallets.tsx:131
 #~ msgid "Wallets.title"
 #~ msgstr ""
-
-#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:27
-msgid "Want to Join a Pool?"
-msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:57
 msgid "Want to Join a Pool? Create a Plot NFT"
@@ -2458,7 +2458,7 @@ msgstr "Wheat"
 msgid "Wheat Blockchain Wiki"
 msgstr "Zinxhiri Wheat Wiki"
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
+#: src/components/wallet/standard/WalletStandard.tsx:649
 msgid "Wheat Wallet"
 msgstr "Kuleta Wheat"
 
@@ -2565,17 +2565,17 @@ msgstr "[Gabimi 13] Leja u refuzua. Ju po përpiqeni të përdorni një skedar /
 msgid "[Error 22] File not found. Most likely one of the plot folders in your config.yaml has an issue."
 msgstr "[Gabimi 22] Skedari nuk u gjet. Ka shumë të ngjarë që një nga dosjet e skemave në konfigurimin.yaml ka një problem."
 
-#: src/components/wallet/Wallets.tsx:143
+#: src/components/wallet/Wallets.tsx:77
 #: src/components/wallet/WalletStatusCard.tsx:41
 msgid "connections:"
 msgstr "lidhje:"
 
-#: src/components/wallet/Wallets.tsx:135
+#: src/components/wallet/Wallets.tsx:69
 #: src/components/wallet/WalletStatusCard.tsx:33
 msgid "height:"
 msgstr "lartësia:"
 
-#: src/components/wallet/Wallets.tsx:129
+#: src/components/wallet/Wallets.tsx:63
 msgid "not synced"
 msgstr "i pa sinkronizuar"
 
@@ -2583,17 +2583,17 @@ msgstr "i pa sinkronizuar"
 msgid "p2_singleton_puzzle_hash is not defined"
 msgstr "p2_singleton_puzzle_hash nuk është përcaktuar"
 
-#: src/components/wallet/Wallets.tsx:123
+#: src/components/wallet/Wallets.tsx:57
 #: src/components/wallet/WalletStatusCard.tsx:27
 msgid "status:"
 msgstr "statusi:"
 
-#: src/components/wallet/Wallets.tsx:128
+#: src/components/wallet/Wallets.tsx:62
 #: src/components/wallet/WalletStatusCard.tsx:29
 msgid "synced"
 msgstr "sinkronizuar"
 
-#: src/components/wallet/Wallets.tsx:127
+#: src/components/wallet/Wallets.tsx:61
 #: src/components/wallet/WalletStatusCard.tsx:29
 msgid "syncing"
 msgstr "po sinkronizohet"

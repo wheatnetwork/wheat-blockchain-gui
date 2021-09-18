@@ -24,7 +24,7 @@ export default function PlotNFTSelectFaucet(props: Props) {
       step={step}
       title={
         <Flex gap={1} alignItems="center">
-          <Flex flexGrow={1}><Trans>Want to Join a Pool?</Trans></Flex>
+          <Flex flexGrow={1}>Want to Join a Pool?</Flex>
           {onCancel && (
             <Button onClick={onCancel}>
               <Trans>Cancel</Trans>

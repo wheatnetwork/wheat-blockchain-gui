@@ -65,7 +65,7 @@ export default function FarmLatestBlockChallenges() {
           *Want to explore Wheat’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://www.wheatexplorer.com/"
+            href="https://wheat.chivescoin.org/"
             target="_blank"
           >
             Wheat Explorer
