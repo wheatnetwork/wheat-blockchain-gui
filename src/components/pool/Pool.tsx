@@ -29,8 +29,8 @@ export default function Pool() {
         </>
       }
     >
+      <PoolCollection />
       <Flex flexDirection="column" gap={3}>
-        <PoolCollection />
         <Switch>
           <Route path={path} exact>
             <PoolOverview />

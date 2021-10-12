@@ -93,4 +93,6 @@ build_scripts/*.Dmg
 src/locales/_build
 src/locales/**/*.js
 daemon/
+release-builds/
+Wheat-win32-x64/
 win_code_sign_cert.p12
