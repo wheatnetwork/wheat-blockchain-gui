@@ -18,7 +18,15 @@ msgstr ""
 "X-Crowdin-File: /[WheatNetwork.wheat-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
-#: src/components/plot/add/PlotAddNFT.tsx:62
+#: src/components/plot/add/PlotAddChoosePlotter.tsx:78
+msgid "(Not Installed)"
+msgstr ""
+
+#: src/components/plot/add/PlotAddChoosePlotter.tsx:75
+msgid "(Not Supported)"
+msgstr ""
+
+#: src/components/plot/add/PlotAddNFT.tsx:67
 msgid "(Optional)"
 msgstr "(Pilihan)"
 
@@ -26,7 +34,7 @@ msgstr "(Pilihan)"
 msgid "*Want to explore Wheat’s blocks further? Check out <0>Wheat Explorer</0> built by an open source developer."
 msgstr "*Ingin tahu soal blok Wheat lebih jauh? Periksa laman <0>Wheat Explorer</0> yang dibuat oleh software sumber terbuka."
 
-#: src/components/plot/add/PlotAddNFT.tsx:123
+#: src/components/plot/add/PlotAddNFT.tsx:128
 msgid "+ Add New Plot NFT"
 msgstr "+ Tambah Plot NFT baru"
 
@@ -39,15 +47,19 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:148
-msgid "128 buckets is recommended"
-msgstr "Disarankan menggunakan 128 bucket"
+#~ msgid "128 buckets is recommended"
+#~ msgstr "Disarankan menggunakan 128 bucket"
 
 #: src/components/farm/FarmYourHarvesterNetwork.tsx:98
 msgid "A harvester is a service running on a machine where plot(s) are actually stored. A farmer and harvester talk to a full node to see the state of the chain. View your network of connected harvesters below Learn more"
 msgstr "Harvester adalah layanan yang berjalan pada komputer dimana plot disimpan. Farmer dan Harvester terhubung dengan jaringan untuk memeriksa status rantai. Tampilkan jaringan Harvester terhubung anda di bawah ini Pelajari lebih lanjut"
 
-#: src/electron/main.tsx:422
-#: src/electron/main.tsx:509
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:155
+msgid "A value of {0} is recommended"
+msgstr ""
+
+#: src/electron/main.tsx:431
+#: src/electron/main.tsx:518
 msgid "About Wheat Blockchain"
 msgstr "Tentang Wheat Blockchain"
 
@@ -76,8 +88,8 @@ msgstr "Tindakan"
 msgid "Add"
 msgstr "Tambah"
 
-#: src/components/wallet/did/WalletDID.tsx:874
-#: src/components/wallet/did/WalletDIDCreate.tsx:205
+#: src/components/wallet/did/WalletDID.tsx:877
+#: src/components/wallet/did/WalletDIDCreate.tsx:208
 msgid "Add Backup ID"
 msgstr "Tambah ID sampingan"
 
@@ -94,7 +106,7 @@ msgstr "Tambahkan Plot ke Antrian"
 #~ msgstr "Add Wallet"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:46
-#: src/components/plot/add/PlotAdd.tsx:160
+#: src/components/plot/add/PlotAdd.tsx:191
 #: src/components/plot/overview/PlotOverviewHero.tsx:54
 #: src/components/plot/PlotHeader.tsx:63
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:230
@@ -129,8 +141,12 @@ msgstr "Alamat"
 msgid "Address / Puzzle hash"
 msgstr "Alamat / Hash teka-teki"
 
-#: src/components/app/AppKeyringMigrator.tsx:158
+#: src/components/app/AppKeyringMigrator.tsx:195
 msgid "After your keys are successfully migrated to the new keyring, you may choose to have your keys removed from the old keyring."
+msgstr ""
+
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:238
+msgid "Alternate tmpdir/tmpdir2"
 msgstr ""
 
 #: src/components/core/components/Amount/Amount.tsx:99
@@ -169,7 +185,7 @@ msgstr "Yakin ingin menghapus transaksi yang belum ter konfirmasi ini?"
 msgid "Are you sure you want to disconnect?"
 msgstr "Anda yakin ingin memutuskan koneksi?"
 
-#: src/electron/main.tsx:197
+#: src/electron/main.tsx:196
 msgid "Are you sure you want to quit? GUI Plotting and farming will stop."
 msgstr "Anda yakin ingin keluar dari program? Plotting dan Farming di GUI akan berhenti."
 
@@ -177,7 +193,7 @@ msgstr "Anda yakin ingin keluar dari program? Plotting dan Farming di GUI akan b
 #~ msgid "Are you sure you want to use k={plotSize}"
 #~ msgstr "Are you sure you want to use k={plotSize}"
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:38
+#: src/components/plot/add/PlotAddChooseSize.tsx:52
 msgid "Are you sure you want to use k={plotSize}?"
 msgstr "Anda yakin ingin menggunakan k={plotSize}?"
 
@@ -201,7 +217,7 @@ msgstr "Berkas cadangan digunakan untuk mengembalikan smart wallet."
 msgid "Balance"
 msgstr "Saldo"
 
-#: src/components/block/Block.jsx:328
+#: src/components/block/Block.jsx:316
 msgid "Base Farmer Reward Amount"
 msgstr "Jumlah Upah Pokok Farmer"
 
@@ -221,7 +237,7 @@ msgstr "Estimasi terbaik berdasarkan 24 jam lalu"
 #: src/components/block/Block.jsx:130
 #: src/components/block/Block.jsx:154
 #: src/components/block/Block.jsx:158
-#: src/components/block/Block.jsx:343
+#: src/components/block/Block.jsx:331
 msgid "Block"
 msgstr "Blok"
 
@@ -229,11 +245,11 @@ msgstr "Blok"
 msgid "Block Test"
 msgstr "Test Blok"
 
-#: src/components/block/Block.jsx:236
+#: src/components/block/Block.jsx:244
 msgid "Block VDF Iterations"
 msgstr "Perulangan blok VDF"
 
-#: src/components/block/Block.jsx:347
+#: src/components/block/Block.jsx:335
 msgid "Block at height {0} in the Wheat blockchain"
 msgstr "Blok pada puncak {0} dalam rantai blok Wheat"
 
@@ -257,9 +273,9 @@ msgstr "Blok-blok"
 #~ msgid "Both values are empty. This is ok if you are, for example, sending your rewards to an offline wallet."
 #~ msgstr "Both values are empty. This is ok if you are, for example, sending your rewards to an offline wallet."
 
-#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:61
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:79
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:110
+#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:72
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:92
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:123
 msgid "Browse"
 msgstr "Telusuri"
 
@@ -285,18 +301,18 @@ msgstr "Beli"
 msgid "Can be backed up to mnemonic seed"
 msgstr "Dapat dibackup ke mnemonic seed"
 
-#: src/components/app/AppPassPrompt.tsx:239
+#: src/components/app/AppPassPrompt.tsx:256
 #: src/components/backup/BackupCreate.tsx:50
 #: src/components/core/components/ConfirmDialog/ConfirmDialog.tsx:86
 #: src/components/farm/FarmManageFarmingRewards.tsx:200
 #: src/components/fullNode/FullNodeAddConnection.tsx:89
-#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:123
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:87
+#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:128
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:85
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:30
 #: src/components/selectKey/SelectKey.tsx:138
-#: src/components/settings/ChangePassphrasePrompt.tsx:198
-#: src/components/settings/RemovePassphrasePrompt.tsx:137
-#: src/components/settings/SetPassphrasePrompt.tsx:168
+#: src/components/settings/ChangePassphrasePrompt.tsx:240
+#: src/components/settings/RemovePassphrasePrompt.tsx:152
+#: src/components/settings/SetPassphrasePrompt.tsx:211
 #: src/components/trading/CreateOffer.jsx:139
 #: src/components/trading/TradingOverview.jsx:400
 #: src/components/trading/ViewOffer.jsx:71
@@ -323,7 +339,7 @@ msgstr "Challenge Hash"
 msgid "Change"
 msgstr "Ubah"
 
-#: src/components/settings/ChangePassphrasePrompt.tsx:207
+#: src/components/settings/ChangePassphrasePrompt.tsx:248
 #: src/components/settings/Settings.tsx:158
 msgid "Change Passphrase"
 msgstr ""
@@ -334,17 +350,21 @@ msgstr ""
 msgid "Change Pool"
 msgstr "Ubah Pool"
 
-#: src/electron/main.tsx:401
+#: src/electron/main.tsx:410
 msgid "Chat on KeyBase"
 msgstr "Hubung Chat di KeyBase"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 msgid "Choose Number of Plots"
 msgstr "Pilih Jumlah Plot"
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:61
+#: src/components/plot/add/PlotAddChooseSize.tsx:75
 msgid "Choose Plot Size"
 msgstr "Pilih Ukuran Plot"
+
+#: src/components/plot/add/PlotAddChoosePlotter.tsx:94
+msgid "Choose Plotter"
+msgstr ""
 
 #: src/components/plotNFT/PlotNFTCard.tsx:384
 #: src/components/pool/PoolOverview.tsx:92
@@ -352,7 +372,7 @@ msgid "Claim Rewards"
 msgstr "Ambil Hadiah"
 
 #: src/components/plot/PlotAddDirectoryDialog.tsx:118
-#: src/components/plot/queue/PlotQueueLogDialog.tsx:89
+#: src/components/plot/queue/PlotQueueLogDialog.tsx:88
 msgid "Close"
 msgstr "Tutup"
 
@@ -360,7 +380,7 @@ msgstr "Tutup"
 msgid "Closing down node and server"
 msgstr "Menutup node dan server"
 
-#: src/components/wallet/did/WalletDID.tsx:984
+#: src/components/wallet/did/WalletDID.tsx:987
 msgid "Coin Name"
 msgstr "Nama Wang"
 
@@ -394,7 +414,7 @@ msgid "Coloured Coin Options"
 msgstr "Pilihan Koin Berwarna"
 
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:168
-#: src/electron/main.tsx:195
+#: src/electron/main.tsx:194
 #: src/hooks/useAbsorbRewards.tsx:46
 msgid "Confirm"
 msgstr "Konfirmasi"
@@ -403,13 +423,13 @@ msgstr "Konfirmasi"
 msgid "Confirm Disconnect"
 msgstr "Konfirmasi Pemutusan Koneksi"
 
-#: src/components/settings/ChangePassphrasePrompt.tsx:185
+#: src/components/settings/ChangePassphrasePrompt.tsx:198
 msgid "Confirm New Passphrase"
 msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:140
-#: src/components/app/AppKeyringMigrator.tsx:141
-#: src/components/settings/SetPassphrasePrompt.tsx:153
+#: src/components/app/AppKeyringMigrator.tsx:146
+#: src/components/app/AppKeyringMigrator.tsx:147
+#: src/components/settings/SetPassphrasePrompt.tsx:166
 msgid "Confirm Passphrase"
 msgstr ""
 
@@ -435,7 +455,7 @@ msgstr "Sambung"
 msgid "Connect to other peers"
 msgstr "Sambung ke peer lain"
 
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:116
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:114
 msgid "Connect to pool"
 msgstr "Konek ke Pool"
 
@@ -465,7 +485,7 @@ msgstr "Jenis koneksi"
 msgid "Connections"
 msgstr "Koneksi"
 
-#: src/electron/main.tsx:382
+#: src/electron/main.tsx:391
 msgid "Contribute on GitHub"
 msgstr "Berkontribusi di GitHub"
 
@@ -485,17 +505,17 @@ msgid "Copy to Clipboard"
 msgstr "Salin ke Clipboard"
 
 #: src/components/backup/BackupCreate.tsx:58
-#: src/components/plot/add/PlotAdd.tsx:177
+#: src/components/plot/add/PlotAdd.tsx:211
 #: src/components/plotNFT/select/PlotNFTSelectPool.tsx:175
 #: src/components/wallet/create/createExistingColouredCoin.jsx:133
 #: src/components/wallet/create/createNewColouredCoin.jsx:142
 #: src/components/wallet/create/createRLAdmin.jsx:307
 #: src/components/wallet/create/createRLUser.jsx:99
-#: src/components/wallet/did/WalletDIDCreate.tsx:218
+#: src/components/wallet/did/WalletDIDCreate.tsx:221
 msgid "Create"
 msgstr "Buat"
 
-#: src/components/wallet/did/WalletDID.tsx:967
+#: src/components/wallet/did/WalletDID.tsx:970
 msgid "Create An Attestation Packet"
 msgstr "Buat Paket Pengesahan"
 
@@ -545,7 +565,7 @@ msgstr "Buat Transaksi"
 msgid "Create a Backup"
 msgstr "Buat sebuah Backup"
 
-#: src/components/plot/add/PlotAddNFT.tsx:42
+#: src/components/plot/add/PlotAddNFT.tsx:47
 msgid "Create a Plot NFT"
 msgstr "Buat sebuah Plot NFT"
 
@@ -593,7 +613,7 @@ msgstr "Buat sebuah Plot NFT dan gabung ke Pool"
 msgid "Creating Plot NFT for Self Pooling"
 msgstr "Buat sebuah Plot NFT untuk Pool Sendiri"
 
-#: src/components/plot/add/PlotAdd.tsx:86
+#: src/components/plot/add/PlotAdd.tsx:117
 msgid "Currency code is not defined"
 msgstr "Kode mata uang diperlukan"
 
@@ -602,7 +622,7 @@ msgstr "Kode mata uang diperlukan"
 msgid "Current Difficulty"
 msgstr "Tingkat ke rumitan saat ini"
 
-#: src/components/settings/ChangePassphrasePrompt.tsx:165
+#: src/components/settings/ChangePassphrasePrompt.tsx:178
 msgid "Current Passphrase"
 msgstr ""
 
@@ -633,7 +653,7 @@ msgstr "BAHAYA: menghapus permanen private key"
 msgid "Date"
 msgstr "Tanggal"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:92
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:93
 msgid "Delay"
 msgstr "Tunda"
 
@@ -645,14 +665,14 @@ msgstr "Tunda"
 #: src/components/selectKey/SelectKey.tsx:76
 #: src/components/selectKey/SelectKey.tsx:115
 #: src/components/wallet/did/WalletDID.tsx:449
-#: src/components/wallet/did/WalletDID.tsx:862
-#: src/components/wallet/did/WalletDIDCreate.tsx:194
+#: src/components/wallet/did/WalletDID.tsx:865
+#: src/components/wallet/did/WalletDIDCreate.tsx:197
 #: src/components/wallet/did/WalletDIDRecovery.tsx:101
 #: src/components/wallet/standard/WalletStandard.tsx:623
 msgid "Delete"
 msgstr "Hapus"
 
-#: src/components/app/AppPassPrompt.tsx:195
+#: src/components/app/AppPassPrompt.tsx:198
 msgid "Delete Key"
 msgstr ""
 
@@ -683,7 +703,7 @@ msgstr ""
 #~ msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
 #~ msgstr "Menghapus semua kunci akan menghilangkan kunci-kunci tersebut dari komputer anda, pastikan anda telah memiliki cadangan. Apa anda yakin ingin melanjutkan?"
 
-#: src/components/app/AppPassPrompt.tsx:191
+#: src/components/app/AppPassPrompt.tsx:194
 msgid "Deleting key"
 msgstr ""
 
@@ -691,21 +711,29 @@ msgstr ""
 #~ msgid "Deleting the key will permanently remove the key from your computer, make sure you have backups. Are you sure you want to continue?"
 #~ msgstr "Menghapus semua kunci akan menghilangkan kunci-kunci tersebut dari komputer anda, pastikan anda telah memiliki cadangan. Apa anda yakin ingin melanjutkan?"
 
-#: src/electron/main.tsx:304
+#: src/components/plot/add/PlotAddChoosePlotter.tsx:96
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
+msgstr ""
+
+#: src/electron/main.tsx:313
 msgid "Developer"
 msgstr "Developer"
 
-#: src/electron/main.tsx:307
+#: src/electron/main.tsx:316
 msgid "Developer Tools"
 msgstr "Developer Tools"
 
-#: src/components/block/Block.jsx:222
+#: src/components/block/Block.jsx:230
 #: src/components/fullNode/card/FullNodeCardDifficulty.tsx:20
 msgid "Difficulty"
 msgstr "Tingkat kesulitan"
 
 #: src/components/app/AppPassPrompt.tsx:78
 msgid "Disable"
+msgstr ""
+
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:266
+msgid "Disable NUMA"
 msgstr ""
 
 #: src/components/app/AppPassPrompt.tsx:77
@@ -716,7 +744,7 @@ msgstr ""
 #~ msgid "Disable bifield plotting when your temporary directory is on fast storage like SSD or you need lower per process RAM requirements. Plotting with bitfield enabled has about 20% less overall writes."
 #~ msgstr ""
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:172
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:215
 msgid "Disable bitfield plotting"
 msgstr "Nonaktifkan mengeplot dengan bitfield"
 
@@ -762,13 +790,13 @@ msgstr "Seret dan lepas berkas cadangan anda"
 msgid "Drag and drop your recovery backup file"
 msgstr "Seret dan lepas berkas cadangan anda"
 
-#: src/electron/main.tsx:263
+#: src/electron/main.tsx:272
 msgid "Edit"
 msgstr "Ubah"
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:259
 #: src/components/plotNFT/PlotNFTCard.tsx:301
-#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:76
+#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:81
 msgid "Edit Payout Instructions"
 msgstr ""
 
@@ -776,11 +804,11 @@ msgstr ""
 #~ msgid "Enter Passphrase"
 #~ msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:119
+#: src/components/app/AppKeyringMigrator.tsx:125
 msgid "Enter a strong passphrase and click Migrate Keys to secure your keys"
 msgstr ""
 
-#: src/components/settings/SetPassphrasePrompt.tsx:132
+#: src/components/settings/SetPassphrasePrompt.tsx:145
 msgid "Enter a strong passphrase to secure your keys:"
 msgstr ""
 
@@ -788,7 +816,7 @@ msgstr ""
 msgid "Enter the 24 word mnemonic that you have saved in order to restore your Wheat wallet."
 msgstr "Masukkan 24 kata mnemonik yang telah anda simpan untuk mengembalikan dompet Wheat anda."
 
-#: src/components/settings/RemovePassphrasePrompt.tsx:115
+#: src/components/settings/RemovePassphrasePrompt.tsx:118
 msgid "Enter your passphrase:"
 msgstr ""
 
@@ -823,7 +851,7 @@ msgstr "Perkiraan waktu untuk menang"
 msgid "Estimated sum of all the plotted disk space of all farmers in the network"
 msgstr "Estimasi jumlah total ruang penyimpanan yang sudah diplot oleh seluruh farmer di network"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:193
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:279
 msgid "Exclude final directory"
 msgstr "Kecualikan direktori akhir"
 
@@ -836,15 +864,15 @@ msgstr "Kecualikan direktori akhir"
 msgid "Failed to open (invalid plots)"
 msgstr "Gagal membuka (plot tidak valid)"
 
-#: src/components/settings/ChangePassphrasePrompt.tsx:86
+#: src/components/settings/ChangePassphrasePrompt.tsx:97
 msgid "Failed to remove passphrase: {error}"
 msgstr ""
 
-#: src/components/settings/SetPassphrasePrompt.tsx:79
+#: src/components/settings/SetPassphrasePrompt.tsx:92
 msgid "Failed to set passphrase: {error}"
 msgstr ""
 
-#: src/components/settings/ChangePassphrasePrompt.tsx:107
+#: src/components/settings/ChangePassphrasePrompt.tsx:120
 msgid "Failed to update passphrase: {error}"
 msgstr ""
 
@@ -854,11 +882,11 @@ msgstr ""
 msgid "Farm"
 msgstr "Farm"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:211
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:297
 msgid "Farmer Public Key"
 msgstr "Kunci Publik Farmer"
 
-#: src/components/block/Block.jsx:268
+#: src/components/block/Block.jsx:276
 msgid "Farmer Puzzle Hash"
 msgstr "Teka-teki Hash Farmer"
 
@@ -913,7 +941,7 @@ msgstr "Status Farming"
 
 #: src/components/core/components/Fee/Fee.tsx:48
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:154
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:147
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:145
 #: src/components/pool/PoolInfo.tsx:17
 #: src/components/wallet/create/createExistingColouredCoin.jsx:123
 #: src/components/wallet/create/createNewColouredCoin.jsx:132
@@ -937,7 +965,7 @@ msgstr "Biaya"
 msgid "Fee ({currencyCode})"
 msgstr "Biaya ({currencyCode})"
 
-#: src/components/block/Block.jsx:332
+#: src/components/block/Block.jsx:320
 msgid "Fees Amount"
 msgstr "Jumlah Biaya"
 
@@ -945,19 +973,19 @@ msgstr "Jumlah Biaya"
 #~ msgid "Fees Puzzle Hash"
 #~ msgstr ""
 
-#: src/electron/main.tsx:255
-#: src/electron/main.tsx:456
+#: src/electron/main.tsx:264
+#: src/electron/main.tsx:465
 msgid "File"
 msgstr "File"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:106
 #: src/components/plot/PlotsFailed.tsx:14
 #: src/components/plot/PlotsNotFound.tsx:14
-#: src/components/wallet/did/WalletDID.tsx:975
+#: src/components/wallet/did/WalletDID.tsx:978
 msgid "Filename"
 msgstr "Nama file"
 
-#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:36
+#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:47
 msgid "Final folder location"
 msgstr "Lokasi folder akhir"
 
@@ -966,11 +994,11 @@ msgstr "Lokasi folder akhir"
 msgid "Finished"
 msgstr "Selesai"
 
-#: src/electron/main.tsx:407
+#: src/electron/main.tsx:416
 msgid "Follow on Twitter"
 msgstr "Follow di Twitter"
 
-#: src/electron/main.tsx:366
+#: src/electron/main.tsx:375
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
 
@@ -987,7 +1015,7 @@ msgstr "Gambaran node Total"
 #~ msgid "Full Node Status"
 #~ msgstr "Full Node Status"
 
-#: src/electron/main.tsx:332
+#: src/electron/main.tsx:341
 msgid "Full Screen"
 msgstr "Layar Penuh"
 
@@ -1019,17 +1047,17 @@ msgstr "Plot Harvester Lokal"
 msgid "Header Hash"
 msgstr "Kepala hash"
 
-#: src/components/block/Block.jsx:186
+#: src/components/block/Block.jsx:194
 msgid "Header hash"
 msgstr "Kepala hash"
 
-#: src/components/block/Block.jsx:202
+#: src/components/block/Block.jsx:210
 #: src/components/fullNode/FullNode.jsx:81
 #: src/components/fullNode/FullNodeConnections.tsx:79
 msgid "Height"
 msgstr "Tinggi"
 
-#: src/electron/main.tsx:354
+#: src/electron/main.tsx:363
 msgid "Help"
 msgstr "Bantuan"
 
@@ -1040,6 +1068,11 @@ msgstr "Bantu menterjemahkan"
 #: src/components/core/components/AdvancedOptions/AdvancedOptions.tsx:75
 msgid "Hide Advanced Options"
 msgstr "Sembunyikan Opsi Tingkat Lanjut"
+
+#: src/components/app/AppPassPrompt.tsx:233
+#: src/components/settings/RemovePassphrasePrompt.tsx:134
+msgid "Hint"
+msgstr ""
 
 #: src/components/wallet/WalletHistory.tsx:91
 msgid "History"
@@ -1058,7 +1091,7 @@ msgstr "Alamat IP"
 msgid "IP address / host"
 msgstr "Alamat IP / host"
 
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:115
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:128
 msgid "If none selected, then it will default to the temporary directory."
 msgstr "Jika tidak ada yang dipilih, maka akan default ke direktori sementara."
 
@@ -1115,7 +1148,7 @@ msgstr "Interval"
 msgid "Invalid state"
 msgstr "Keadaan Salah"
 
-#: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:90
+#: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:94
 msgid "It is a one-time login link that can be used to log in to a pool's website. It contains a signature using the farmer's key from the plot NFT. Not all pools support this feature."
 msgstr ""
 
@@ -1124,13 +1157,13 @@ msgstr ""
 msgid "Join Pool"
 msgstr "Gabung ke Pool"
 
-#: src/components/plot/add/PlotAddNFT.tsx:59
-#: src/components/plot/add/PlotAddNFT.tsx:141
+#: src/components/plot/add/PlotAddNFT.tsx:64
+#: src/components/plot/add/PlotAddNFT.tsx:146
 #: src/components/pool/PoolHero.tsx:31
 msgid "Join a Pool"
 msgstr "Gabung ke Pool"
 
-#: src/components/plot/add/PlotAddNFT.tsx:44
+#: src/components/plot/add/PlotAddNFT.tsx:49
 msgid "Join a pool and get consistent WHEAT farming rewards. The average returns are the same, but it is much less volatile."
 msgstr ""
 
@@ -1138,7 +1171,7 @@ msgstr ""
 msgid "Join a pool and get consistent WHEAT farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
 msgstr ""
 
-#: src/components/plot/add/PlotAddNFT.tsx:133
+#: src/components/plot/add/PlotAddNFT.tsx:138
 msgid "Join a pool and get more consistent WHEAT farming rewards. Create a plot NFT and assign your new plots to a group."
 msgstr ""
 
@@ -1146,7 +1179,7 @@ msgstr ""
 msgid "K-Size"
 msgstr "Ukuran-K"
 
-#: src/components/app/AppKeyringMigrator.tsx:80
+#: src/components/app/AppKeyringMigrator.tsx:86
 msgid "Keyring migration failed: {error}"
 msgstr ""
 
@@ -1176,8 +1209,8 @@ msgstr "Blok Challenge Terbaru"
 msgid "Launcher Id"
 msgstr ""
 
-#: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:100
-#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:114
+#: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:104
+#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:119
 msgid "Learn More"
 msgstr "Pelajari Lebih Lanjut"
 
@@ -1189,7 +1222,7 @@ msgstr "Meninggalkan Pool"
 msgid "List view"
 msgstr "Tampilan daftar"
 
-#: src/components/pool/Pool.tsx:22
+#: src/components/pool/Pool.tsx:21
 msgid "Loading Plot NFTs"
 msgstr "Memuat Plot NFT"
 
@@ -1273,11 +1306,11 @@ msgstr ""
 msgid "Migrate Keyring"
 msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:188
+#: src/components/app/AppKeyringMigrator.tsx:226
 msgid "Migrate Keys"
 msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:115
+#: src/components/app/AppKeyringMigrator.tsx:121
 #: src/components/selectKey/SelectKey.tsx:136
 msgid "Migration required"
 msgstr ""
@@ -1290,11 +1323,11 @@ msgstr ""
 msgid "Minimum Difficulty"
 msgstr "Kesulitan Minimum"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:97
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:98
 msgid "Minutes"
 msgstr "Menit"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:116
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:118
 msgid "More memory slightly increases speed"
 msgstr "Lebih banyak memori sedikit meningkatkan kecepatan"
 
@@ -1323,7 +1356,7 @@ msgstr "Nama jaringan"
 msgid "New Address"
 msgstr "Alamat Baru"
 
-#: src/components/settings/ChangePassphrasePrompt.tsx:175
+#: src/components/settings/ChangePassphrasePrompt.tsx:188
 msgid "New Passphrase"
 msgstr ""
 
@@ -1335,7 +1368,7 @@ msgstr "Dompet elektronik Baru"
 msgid "New passphrase is the same as your current passphrase"
 msgstr ""
 
-#: src/components/block/Block.jsx:361
+#: src/components/block/Block.jsx:349
 #: src/components/wallet/WalletAdd.tsx:95
 #: src/components/wallet/WalletImport.tsx:162
 msgid "Next"
@@ -1346,7 +1379,7 @@ msgid "Nickname"
 msgstr "Nama Panggilan"
 
 #: src/components/trading/TradingOverview.jsx:209
-#: src/electron/main.tsx:192
+#: src/electron/main.tsx:191
 msgid "No"
 msgstr "Tidak"
 
@@ -1376,7 +1409,7 @@ msgstr "Nod ID"
 msgid "Node Id"
 msgstr ""
 
-#: src/components/plot/add/PlotAddNFT.tsx:86
+#: src/components/plot/add/PlotAddNFT.tsx:91
 msgid "None"
 msgstr "Tidak Tersedia"
 
@@ -1423,16 +1456,20 @@ msgstr ""
 msgid "Number of Plots"
 msgstr "Jumlah Plot"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:147
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:171
 msgid "Number of buckets"
 msgstr "Bilangan bucket"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:133
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:188
+msgid "Number of buckets for phase 3 & 4"
+msgstr ""
+
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:136
 msgid "Number of threads"
 msgstr "Bilangan thread"
 
 #: src/components/core/components/ConfirmDialog/ConfirmDialog.tsx:87
-#: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:111
+#: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:115
 msgid "OK"
 msgstr "OK"
 
@@ -1460,20 +1497,32 @@ msgstr "Hanya satu fail backup dibenarkan."
 msgid "Outgoing"
 msgstr "Keluar"
 
-#: src/components/app/AppKeyringMigrator.tsx:129
-#: src/components/app/AppKeyringMigrator.tsx:130
-#: src/components/app/AppPassPrompt.tsx:221
-#: src/components/settings/RemovePassphrasePrompt.tsx:123
-#: src/components/settings/SetPassphrasePrompt.tsx:142
+#: src/components/app/AppKeyringMigrator.tsx:135
+#: src/components/app/AppKeyringMigrator.tsx:136
+#: src/components/app/AppPassPrompt.tsx:225
+#: src/components/settings/RemovePassphrasePrompt.tsx:126
+#: src/components/settings/SetPassphrasePrompt.tsx:155
 msgid "Passphrase"
+msgstr ""
+
+#: src/components/app/AppKeyringMigrator.tsx:159
+#: src/components/settings/ChangePassphrasePrompt.tsx:209
+#: src/components/settings/SetPassphrasePrompt.tsx:179
+msgid "Passphrase Hint"
+msgstr ""
+
+#: src/components/app/AppKeyringMigrator.tsx:158
+#: src/components/settings/ChangePassphrasePrompt.tsx:208
+#: src/components/settings/SetPassphrasePrompt.tsx:178
+msgid "Passphrase Hint (Optional)"
 msgstr ""
 
 #: src/components/settings/Settings.tsx:213
 msgid "Passphrase Settings"
 msgstr ""
 
-#: src/components/app/AppPassPrompt.tsx:149
-#: src/components/settings/RemovePassphrasePrompt.tsx:64
+#: src/components/app/AppPassPrompt.tsx:152
+#: src/components/settings/RemovePassphrasePrompt.tsx:67
 msgid "Passphrase is incorrect"
 msgstr ""
 
@@ -1542,25 +1591,25 @@ msgstr "Sila masukkan pasangan perdagangan"
 msgid "Please enter 0 fee. Positive fees not supported yet for RL."
 msgstr "Silahkan memasukkan 0 untuk biaya. Biaya tambahan belum didukung sementara ini untuk RL."
 
-#: src/components/wallet/did/WalletDID.tsx:924
+#: src/components/wallet/did/WalletDID.tsx:927
 msgid "Please enter a coin"
 msgstr "Sila masukkan wang"
 
 #: src/components/wallet/did/WalletDID.tsx:526
-#: src/components/wallet/did/WalletDID.tsx:914
+#: src/components/wallet/did/WalletDID.tsx:917
 msgid "Please enter a filename"
 msgstr "Silakan masukkan nama fail"
 
-#: src/components/app/AppPassPrompt.tsx:133
-#: src/components/settings/SetPassphrasePrompt.tsx:48
+#: src/components/app/AppPassPrompt.tsx:136
+#: src/components/settings/SetPassphrasePrompt.tsx:57
 msgid "Please enter a passphrase"
 msgstr ""
 
-#: src/components/wallet/did/WalletDID.tsx:934
+#: src/components/wallet/did/WalletDID.tsx:937
 msgid "Please enter a pubkey"
 msgstr "Silakan masukkan public key yang sah"
 
-#: src/components/wallet/did/WalletDID.tsx:944
+#: src/components/wallet/did/WalletDID.tsx:947
 msgid "Please enter a puzzlehash"
 msgstr "Silakan masukkan kata hash yang sah"
 
@@ -1603,17 +1652,17 @@ msgstr "Sila masukkan nombor perbelanjaan yang valid"
 msgid "Please enter a valid pubkey"
 msgstr "Silakan masukkan public key yang valid"
 
-#: src/components/settings/ChangePassphrasePrompt.tsx:54
+#: src/components/settings/ChangePassphrasePrompt.tsx:63
 msgid "Please enter your current passphrase, and a new passphrase"
 msgstr ""
 
-#: src/components/app/AppPassPrompt.tsx:182
-#: src/components/app/AppPassPrompt.tsx:198
-#: src/components/settings/RemovePassphrasePrompt.tsx:47
+#: src/components/app/AppPassPrompt.tsx:185
+#: src/components/app/AppPassPrompt.tsx:201
+#: src/components/settings/RemovePassphrasePrompt.tsx:50
 msgid "Please enter your passphrase"
 msgstr ""
 
-#: src/components/app/AppPassPrompt.tsx:192
+#: src/components/app/AppPassPrompt.tsx:195
 msgid "Please enter your passphrase to proceed"
 msgstr ""
 
@@ -1642,13 +1691,13 @@ msgstr "Sila pilih warna duit"
 #~ msgid "Please select coin type"
 #~ msgstr ""
 
-#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:45
-#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:49
+#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:56
+#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:60
 msgid "Please specify final directory"
 msgstr "Silakan tentukan direktori akhir yang sah"
 
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:60
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:64
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:73
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:77
 msgid "Please specify temporary directory"
 msgstr "Silakan tentukan direktori sementara yang sah"
 
@@ -1661,16 +1710,16 @@ msgstr "Harap tunggu sampai sinkronisasi selesai"
 msgid "Please wait for wallet synchronization"
 msgstr "Harap tunggu sampai sinkronisasi dompet selesai"
 
-#: src/components/plot/Plot.tsx:18
+#: src/components/plot/Plot.tsx:28
 msgid "Plot"
 msgstr "Plot"
 
 #: src/components/farm/card/FarmCardPlotCount.tsx:12
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:41
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:44
 msgid "Plot Count"
 msgstr "Jumlah Plot"
 
-#: src/components/block/Block.jsx:310
+#: src/components/block/Block.jsx:298
 msgid "Plot Id"
 msgstr "ID Plot"
 
@@ -1691,7 +1740,7 @@ msgstr ""
 #~ msgid "Plot Name"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:260
+#: src/components/block/Block.jsx:268
 msgid "Plot Public Key"
 msgstr "Public Key Plot"
 
@@ -1699,7 +1748,7 @@ msgstr "Public Key Plot"
 #~ msgid "Plot Seed"
 #~ msgstr ""
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:80
+#: src/components/plot/add/PlotAddChooseSize.tsx:94
 msgid "Plot Size"
 msgstr "Ukuran Plot"
 
@@ -1733,6 +1782,10 @@ msgstr ""
 "Plot adalah penempatan ruang dalam hard drive yang digunakan untuk disewakan dan memperoleh Wheat\n"
 "<0>Pelajari lebih lanjut</0>"
 
+#: src/components/plot/add/PlotAddChoosePlotter.tsx:107
+msgid "Plotter"
+msgstr ""
+
 #: src/components/plot/queue/PlotQueueIndicator.tsx:34
 msgid "Plotting"
 msgstr "Plotkan"
@@ -1741,7 +1794,7 @@ msgstr "Plotkan"
 msgid "Plotting in parallel can save time. Otherwise, add plot(s) to the queue."
 msgstr "Plotting secara paralel dapat mempersingkat waktu. Jika tidak, masukkan plot ke dalam antrian."
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:174
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:217
 msgid "Plotting with bitfield enabled has about 30% less overall writes and is now almost always faster. You may see reduced memory requirements with bitfield plotting disabled. If your CPU design is from before 2010 you may have to disable bitfield plotting."
 msgstr "Membuat plot dengan bitfield yang diaktifkan akan memiliki sekitar 30% lebih sedikit penulisan keseluruhan dan sekarang ini hampir selalu lebih cepat. Anda mungkin melihat berkurangnya persyaratan memori dengan cara menonaktifkan bitfield plotting. Jika desain CPU Anda dari sebelum tahun 2010, anda sebaiknya menonaktifkan plotting dengan bitfield."
 
@@ -1765,7 +1818,7 @@ msgid "Points Successful in Last 24 Hours"
 msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:63
-#: src/components/pool/Pool.tsx:26
+#: src/components/pool/Pool.tsx:25
 msgid "Pool"
 msgstr ""
 
@@ -1777,20 +1830,20 @@ msgstr ""
 msgid "Pool Key"
 msgstr "Kunci Pool"
 
-#: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:77
+#: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:81
 msgid "Pool Login Link"
 msgstr ""
 
-#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:87
+#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:92
 msgid "Pool Payout Instructions"
 msgstr ""
 
-#: src/components/block/Block.jsx:264
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:222
+#: src/components/block/Block.jsx:272
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:308
 msgid "Pool Public Key"
 msgstr "Pool Kunci Publik"
 
-#: src/components/block/Block.jsx:289
+#: src/components/block/Block.jsx:287
 msgid "Pool Puzzle Hash"
 msgstr "Teka-teki Hash Pool"
 
@@ -1810,7 +1863,7 @@ msgstr ""
 msgid "Pool Reward Address must not be empty."
 msgstr ""
 
-#: src/components/block/Block.jsx:324
+#: src/components/block/Block.jsx:312
 msgid "Pool Reward Amount"
 msgstr "Jumlah Upah Pool"
 
@@ -1853,7 +1906,7 @@ msgstr ""
 msgid "Preparing standard wallet"
 msgstr ""
 
-#: src/components/block/Block.jsx:358
+#: src/components/block/Block.jsx:346
 msgid "Previous"
 msgstr "Sebelumnya"
 
@@ -1861,7 +1914,7 @@ msgstr "Sebelumnya"
 #~ msgid "Previous Block Hash"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:216
+#: src/components/block/Block.jsx:224
 msgid "Previous Header Hash"
 msgstr "Header Hash Sebelumnya"
 
@@ -1881,7 +1934,7 @@ msgstr "Kunci privat {0}"
 msgid "Private key:"
 msgstr "Kunci privat:"
 
-#: src/components/block/Block.jsx:252
+#: src/components/block/Block.jsx:260
 msgid "Proof of Space Size"
 msgstr "Ukuran Bukti Dari Ruang"
 
@@ -1894,7 +1947,7 @@ msgid "Protocol Version"
 msgstr ""
 
 #: src/components/wallet/create/createRLAdmin.jsx:297
-#: src/components/wallet/did/WalletDID.tsx:993
+#: src/components/wallet/did/WalletDID.tsx:996
 msgid "Pubkey"
 msgstr "Pubkey"
 
@@ -1902,11 +1955,11 @@ msgstr "Pubkey"
 msgid "Public key:"
 msgstr "Kunci publik:"
 
-#: src/components/wallet/did/WalletDID.tsx:1002
+#: src/components/wallet/did/WalletDID.tsx:1005
 msgid "Puzzlehash"
 msgstr "Kata hash"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:162
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:204
 msgid "Queue Name"
 msgstr "Nama Antrian"
 
@@ -1922,7 +1975,7 @@ msgstr "Dalam antrian"
 #~ msgid "Quit"
 #~ msgstr "Quit"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:115
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:117
 msgid "RAM max usage"
 msgstr "Penggunaan RAM tertinggi"
 
@@ -1987,17 +2040,17 @@ msgstr "Segarkan data Plot-Plot"
 msgid "Relative Lock Height"
 msgstr ""
 
-#: src/electron/main.tsx:374
+#: src/electron/main.tsx:383
 msgid "Release Notes"
 msgstr "Release Notes"
 
-#: src/components/settings/RemovePassphrasePrompt.tsx:111
-#: src/components/settings/RemovePassphrasePrompt.tsx:146
+#: src/components/settings/RemovePassphrasePrompt.tsx:114
+#: src/components/settings/RemovePassphrasePrompt.tsx:161
 #: src/components/settings/Settings.tsx:194
 msgid "Remove Passphrase"
 msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:155
+#: src/components/app/AppKeyringMigrator.tsx:192
 msgid "Remove keys from old keyring upon successful migration"
 msgstr ""
 
@@ -2009,7 +2062,7 @@ msgstr "Menghapus"
 msgid "Rename"
 msgstr "Ubah nama"
 
-#: src/electron/main.tsx:393
+#: src/electron/main.tsx:402
 msgid "Report an Issue..."
 msgstr "Melaporkan sebuah masalah..."
 
@@ -2031,10 +2084,16 @@ msgid "Safe To Skip"
 msgstr "Langkah Tidak Wajib"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:203
-#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:126
+#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:131
 #: src/components/trading/CreateOffer.jsx:142
 msgid "Save"
 msgstr "Simpan"
+
+#: src/components/app/AppKeyringMigrator.tsx:174
+#: src/components/settings/ChangePassphrasePrompt.tsx:224
+#: src/components/settings/SetPassphrasePrompt.tsx:194
+msgid "Save passphrase"
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:338
 #~ msgid "Search"
@@ -2044,7 +2103,7 @@ msgstr "Simpan"
 msgid "Search block by header hash"
 msgstr "Cari block dari hulu hash"
 
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:93
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:106
 msgid "Second temporary folder location"
 msgstr "Folder sementara dua"
 
@@ -2060,11 +2119,11 @@ msgstr "Lihat kata kunci pribadi"
 msgid "Seed:"
 msgstr "Benih:"
 
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:87
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:100
 msgid "Select 2nd Temporary Directory"
 msgstr "Pilih Direktori Sementara kedua"
 
-#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:23
+#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:34
 msgid "Select Final Directory"
 msgstr "Pilih Direktori Akhir"
 
@@ -2076,7 +2135,7 @@ msgstr "Pilih kunci"
 msgid "Select Offer"
 msgstr "Pilih Penawaran"
 
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:39
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:52
 msgid "Select Temporary Directory"
 msgstr "Pilih Direktori Sementara"
 
@@ -2084,7 +2143,7 @@ msgstr "Pilih Direktori Sementara"
 msgid "Select Wallet Type"
 msgstr "Pilih Jenis Dompet elektronik"
 
-#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:25
+#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:36
 msgid "Select the final destination for the folder where you would like the plot to be stored. We recommend you use a large slow hard drive (like external HDD)."
 msgstr "Pilih tujuan akhir untuk folder dimana plot akan di simpan. Kami sarankan anda menggunakan hard drive besar dan pelan (seperti HDD external)."
 
@@ -2092,21 +2151,21 @@ msgstr "Pilih tujuan akhir untuk folder dimana plot akan di simpan. Kami saranka
 #~ msgid "Select the temporary destination for the folder where you would like the plot to be stored. We recommend you use a fast SSD."
 #~ msgstr "Select the temporary destination for the folder where you would like the plot to be stored. We recommend you use a fast SSD."
 
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:41
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:54
 msgid "Select the temporary destination for the folder where you would like the plot to be stored. We recommend you use a fast drive."
 msgstr "Pilih tujuan sementara untuk folder dimana Anda ingin plot tersebut tersimpan. Kami menyarankan Anda menggunakan sebuah drive yang cepat."
 
-#: src/components/plot/add/PlotAddNFT.tsx:81
+#: src/components/plot/add/PlotAddNFT.tsx:86
 msgid "Select your Plot NFT"
 msgstr ""
 
-#: src/components/plot/add/PlotAddNFT.tsx:72
+#: src/components/plot/add/PlotAddNFT.tsx:77
 msgid "Select your Plot NFT from the dropdown or create a new one."
 msgstr ""
 
-#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:61
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:77
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:108
+#: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:72
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:90
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:121
 msgid "Selected"
 msgstr "Dipilih"
 
@@ -2119,7 +2178,7 @@ msgstr "Pilih fail pulihan:"
 msgid "Self Pooling"
 msgstr ""
 
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:103
 msgid "Self pool. When you win a block you will earn WHEAT rewards."
 msgstr ""
 
@@ -2143,8 +2202,8 @@ msgstr "Kirim info paket ke Dompet Pengguna Hak Terbatas yang harus digunakan un
 msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Kirim pubkey anda ke admin Dompet Hak Terbatas:"
 
-#: src/components/settings/SetPassphrasePrompt.tsx:128
-#: src/components/settings/SetPassphrasePrompt.tsx:177
+#: src/components/settings/SetPassphrasePrompt.tsx:141
+#: src/components/settings/SetPassphrasePrompt.tsx:220
 #: src/components/settings/Settings.tsx:205
 msgid "Set Passphrase"
 msgstr ""
@@ -2175,13 +2234,13 @@ msgstr "Sisi"
 msgid "Sign In"
 msgstr "Log Masuk"
 
-#: src/components/app/AppKeyringMigrator.tsx:47
-#: src/components/app/AppKeyringMigrator.tsx:177
+#: src/components/app/AppKeyringMigrator.tsx:49
+#: src/components/app/AppKeyringMigrator.tsx:215
 #: src/components/app/AppPassPrompt.tsx:74
 msgid "Skip"
 msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:46
+#: src/components/app/AppKeyringMigrator.tsx:48
 msgid "Skip Keyring Migration"
 msgstr ""
 
@@ -2193,7 +2252,7 @@ msgstr ""
 #~ msgid "Skips adding [final dir] to harvester for farming"
 #~ msgstr "Skips adding [final dir] to harvester for farming"
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:195
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:281
 msgid "Skips adding a final directory to harvester for farming"
 msgstr "Lewati saja penambahan sebuah direktori akhir ke harvester unuk farming"
 
@@ -2205,7 +2264,11 @@ msgstr ""
 msgid "Something went wrong"
 msgstr ""
 
-#: src/electron/main.tsx:470
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:138
+msgid "Specify a value of 0 to use all available threads"
+msgstr ""
+
+#: src/electron/main.tsx:479
 msgid "Speech"
 msgstr "Pertuturan"
 
@@ -2286,8 +2349,8 @@ msgstr "Status:"
 #~ msgid "Sub Block at height {0} in the Wheat blockchain"
 #~ msgstr "Sub Block at height {0} in the Wheat blockchain"
 
-#: src/components/app/AppPassPrompt.tsx:199
-#: src/components/wallet/did/WalletDID.tsx:886
+#: src/components/app/AppPassPrompt.tsx:202
+#: src/components/wallet/did/WalletDID.tsx:889
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:347
 msgid "Submit"
 msgstr "Kirim"
@@ -2344,11 +2407,11 @@ msgstr ""
 #~ msgid "Temporary files are created during the plotting process which exceeds the size of the final plot files. Make sure you have enough space. <0>Learn more</0>"
 #~ msgstr ""
 
-#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:51
+#: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:64
 msgid "Temporary folder location"
 msgstr "Folder sementara untuk kompilasi"
 
-#: src/components/app/AppTimeBomb.tsx:30
+#: src/components/app/AppTimeBomb.tsx:28
 msgid "The application will stop working at block height 193536."
 msgstr "Aplikasi akan tamat kerja pada blok 193536."
 
@@ -2356,8 +2419,8 @@ msgstr "Aplikasi akan tamat kerja pada blok 193536."
 msgid "The full node that your farmer is connected to is below. <0>Learn more</0>"
 msgstr "Node penuh yang terhubung ke farmer anda di bawah. <0>Pelajari lebih lanjut</0>"
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:34
-#: src/components/plot/add/PlotAddChooseSize.tsx:91
+#: src/components/plot/add/PlotAddChooseSize.tsx:48
+#: src/components/plot/add/PlotAddChooseSize.tsx:105
 msgid "The minimum required size for mainnet is k=32"
 msgstr "Ukuran minimum yang di butuhkan untuk mainnet adalah k=32"
 
@@ -2402,23 +2465,23 @@ msgstr ""
 msgid "The provided passphrase and confirmation do not match"
 msgstr ""
 
-#: src/components/block/Block.jsx:313
+#: src/components/block/Block.jsx:301
 msgid "The seed used to create the plot. This depends on the pool pk and plot pk."
 msgstr "Bulir yang digunakan untuk membuat plot. Ini tergantung oleh pool pk dan plot pk."
 
-#: src/components/block/Block.jsx:229
+#: src/components/block/Block.jsx:237
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on the whole chain up to this sub block."
 msgstr "Jumlah total dari VDF (fungsi delay yang dapat diverfikasikan) atau bukti dari iterasi waktu pada keseluruhan chain sampai pada blok sub ini."
 
-#: src/components/block/Block.jsx:245
+#: src/components/block/Block.jsx:253
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on this block."
 msgstr "Jumlah total dari VDF (fungsi delay yang dapat diverfikasikan) atau bukti dari iterasi waktu pada blok ini."
 
-#: src/components/block/Block.jsx:335
+#: src/components/block/Block.jsx:323
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Total dari biaya transaksi pada block ini. Diberikan kepada farmer."
 
-#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:102
+#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:107
 msgid "These are the instructions for how the farmer wants to get paid. By default this will be an WHEAT address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
 msgstr ""
 
@@ -2436,7 +2499,7 @@ msgid "This difficulty is an artifically lower difficulty than on the real netwo
 msgstr ""
 
 #: src/components/trading/CreateOffer.jsx:123
-#: src/hooks/useSelectDirectory.tsx:31
+#: src/hooks/useSelectDirectory.tsx:33
 #: src/hooks/useSelectFile.tsx:21
 msgid "This feature is available only from the GUI."
 msgstr "Fitur ini hanya tersedia di GUI."
@@ -2457,7 +2520,7 @@ msgstr "Ini ada jumlah dari transaksi masuk dan keluar yang masih dalam antrian 
 msgid "This is the time of the latest peak sub block."
 msgstr "Ini adalah waktu dari ketinggian terakhir sub block."
 
-#: src/components/block/Block.jsx:195
+#: src/components/block/Block.jsx:203
 msgid "This is the time the block was created by the farmer, which is before it is finalized with a proof of time"
 msgstr "Ini adalah waktu dimana blok di hasilkan oleh farmer, sebelum di finalisasi dengan bukti dari waktu"
 
@@ -2511,6 +2574,10 @@ msgstr "Perdagangan ini sudah termasuk di blockchain pada ketinggian block ini"
 msgid "This version of Wheat is no longer compatible with the blockchain and can not safely farm."
 msgstr "Versi Wheat anda tidak serasi kepada blockchain dan tidak boleh ditransaksi."
 
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:154
+msgid "Thread Multiplier for Phase 2"
+msgstr ""
+
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"
 msgstr "Waktu Dibuat"
@@ -2519,7 +2586,7 @@ msgstr "Waktu Dibuat"
 #~ msgid "Time this trade was created at this time"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:190
+#: src/components/block/Block.jsx:198
 msgid "Timestamp"
 msgstr "Timestamp"
 
@@ -2549,7 +2616,7 @@ msgstr "Jumlah Ukuran Plot:"
 msgid "Total Size of Plots"
 msgstr "Jumlah Ukuran Plot-Plot"
 
-#: src/components/block/Block.jsx:226
+#: src/components/block/Block.jsx:234
 msgid "Total VDF Iterations"
 msgstr "Jumlah iterasi VDF"
 
@@ -2593,7 +2660,7 @@ msgstr "Perdagangan"
 msgid "Trading History"
 msgstr "Sejarah Perdagangan"
 
-#: src/components/block/Block.jsx:320
+#: src/components/block/Block.jsx:308
 msgid "Transactions Filter Hash"
 msgstr "Seleksi Hash Transaksi"
 
@@ -2601,7 +2668,7 @@ msgstr "Seleksi Hash Transaksi"
 msgid "Type"
 msgstr "Jenis"
 
-#: src/components/plot/add/PlotAdd.tsx:101
+#: src/components/plot/add/PlotAdd.tsx:132
 msgid "Unable to create plot NFT"
 msgstr ""
 
@@ -2622,7 +2689,7 @@ msgstr "Identifikasi unik"
 msgid "Unknown"
 msgstr "Diketahui"
 
-#: src/components/app/AppPassPrompt.tsx:185
+#: src/components/app/AppPassPrompt.tsx:188
 msgid "Unlock Keyring"
 msgstr ""
 
@@ -2651,16 +2718,16 @@ msgstr "Iterasi VDF Sub Slot"
 msgid "Value seems high"
 msgstr "Nilai Kelihatan terlalu tinggi"
 
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:156
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:154
 msgid "Verify Pool Details"
 msgstr "Verifikasi Detil Pool"
 
-#: src/electron/main.tsx:295
+#: src/electron/main.tsx:304
 msgid "View"
 msgstr "Lihat"
 
 #: src/components/plot/queue/PlotQueueActions.tsx:79
-#: src/components/plot/queue/PlotQueueLogDialog.tsx:63
+#: src/components/plot/queue/PlotQueueLogDialog.tsx:62
 msgid "View Log"
 msgstr "Lihat Log"
 
@@ -2709,7 +2776,7 @@ msgstr "Menunggu transaksi untuk di konfirmasi"
 msgid "Wallet Status:"
 msgstr "Status Dompet:"
 
-#: src/components/wallet/did/WalletDID.tsx:1118
+#: src/components/wallet/did/WalletDID.tsx:1121
 msgid "Wallet does not exists"
 msgstr "Berkas tidak ada"
 
@@ -2758,9 +2825,13 @@ msgstr "Mau bergabung ke Pool? Buat sebuah Plot NFT"
 msgid "Want to earn more Wheat? Add more plots to your farm."
 msgstr "Ingin mendapatkan lebih banyak Wheat? Tambahkan lebih banyak plot ke farm anda."
 
-#: src/components/plot/add/PlotAddNumberOfPlots.tsx:86
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:87
 msgid "Want to have a delay before the next plot starts?"
 msgstr "Anda hendak lebih masa sebelum plot seterusnya mula?"
+
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:252
+msgid "Warm start"
+msgstr ""
 
 #: src/components/selectKey/SelectKey.tsx:88
 #: src/components/selectKey/SelectKey.tsx:119
@@ -2775,11 +2846,11 @@ msgstr ""
 msgid "Warning: This key is used for your pool rewards address. By deleting this key you may lose access to any future pool rewards"
 msgstr ""
 
-#: src/components/block/Block.jsx:206
+#: src/components/block/Block.jsx:214
 msgid "Weight"
 msgstr "Berat"
 
-#: src/components/block/Block.jsx:209
+#: src/components/block/Block.jsx:217
 msgid "Weight is the total added difficulty of all sub blocks up to and including this one"
 msgstr "Beban adalah jumlah total ke rumitan semua sub blok sampai dengan blok ini"
 
@@ -2791,11 +2862,11 @@ msgstr "Selamat datang di Wheat. Silahkan masuk dengan key eksisting atau dengan
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Selamat datang! kata-kata frasa ini akan diguna untuk simpanan dompet elektronik anda. Jika hilang, anda tidak boleh mengeluar data anda. Simpan dalam tempat selamat! Tuliskan setiap ayat dalam tuturan asal. (Pastikan susunan perkataan betul)"
 
-#: src/electron/main.tsx:419
+#: src/electron/main.tsx:428
 msgid "Wheat"
 msgstr "Wheat"
 
-#: src/electron/main.tsx:358
+#: src/electron/main.tsx:367
 msgid "Wheat Blockchain Wiki"
 msgstr "Wiki Wheat Blockchain"
 
@@ -2807,7 +2878,7 @@ msgstr "Wallet Wheat"
 msgid "When you receive the setup info packet from your admin, enter it below to complete your Rate Limited Wallet setup:"
 msgstr "Ketika anda menerima paket informasi setup dari administrator, masukan di bawah untuk menyelesaikan setup dompet rate terbatas anda:"
 
-#: src/electron/main.tsx:340
+#: src/electron/main.tsx:349
 msgid "Window"
 msgstr "Jendela"
 
@@ -2815,9 +2886,9 @@ msgstr "Jendela"
 msgid "Without fees"
 msgstr "Tanpa biaya"
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:35
+#: src/components/plot/add/PlotAddChooseSize.tsx:49
 #: src/components/trading/TradingOverview.jsx:209
-#: src/electron/main.tsx:193
+#: src/electron/main.tsx:192
 msgid "Yes"
 msgstr "Ya"
 
@@ -2834,7 +2905,7 @@ msgstr "Kamu tidak sedan membuat pool sendiri"
 msgid "You can still create plots for this plot NFT, but you can not make changes until sync is complete."
 msgstr "Kamu masi bisa membuat plot untuk plot NFT ini, tetapi tidak bisa membuat perubahan sampai beres sinkronisasi."
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:63
+#: src/components/plot/add/PlotAddChooseSize.tsx:77
 msgid "You do not need to be synced or connected to plot. Temporary files are created during the plotting process which exceed the size of the final plot files. Make sure you have enough space. <0>Learn more</0>"
 msgstr ""
 
@@ -2906,11 +2977,11 @@ msgstr "Jaringan Harvester Anda"
 msgid "Your Pool Overview"
 msgstr "Gambaran Pool Anda"
 
-#: src/components/app/AppPassPrompt.tsx:181
+#: src/components/app/AppPassPrompt.tsx:184
 msgid "Your keyring is locked"
 msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:52
+#: src/components/app/AppKeyringMigrator.tsx:54
 msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Are you sure you want to skip migrating your keys?"
 msgstr ""
 
@@ -2918,12 +2989,18 @@ msgstr ""
 msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Would you like to migrate your keys now?"
 msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:95
+#: src/components/app/AppKeyringMigrator.tsx:101
 msgid "Your keys need to be migrated to a new keyring that is optionally secured by a master passphrase."
 msgstr ""
 
-#: src/components/app/AppKeyringMigrator.tsx:101
+#: src/components/app/AppKeyringMigrator.tsx:107
 msgid "Your keys need to be migrated to a new keyring that is secured by a master passphrase."
+msgstr ""
+
+#: src/components/app/AppKeyringMigrator.tsx:177
+#: src/components/settings/ChangePassphrasePrompt.tsx:227
+#: src/components/settings/SetPassphrasePrompt.tsx:197
+msgid "Your passphrase can be stored in your system's secure credential store. Wheat will be able to access your keys without prompting for your passphrase."
 msgstr ""
 
 #: src/components/settings/Settings.tsx:80
@@ -2956,7 +3033,7 @@ msgstr "tinggi:"
 msgid "not synced"
 msgstr "tidak sinkron"
 
-#: src/components/plot/add/PlotAdd.tsx:105
+#: src/components/plot/add/PlotAdd.tsx:136
 msgid "p2_singleton_puzzle_hash is not defined"
 msgstr "p2_singleton_puzzle_hash belum ter definisi"
 
@@ -2975,6 +3052,10 @@ msgstr "sinkron"
 msgid "syncing"
 msgstr "sinkronisasi"
 
+#: src/components/plot/add/PlotAddChoosePlotter.tsx:89
+#~ msgid "thirdparty.plotter.disclaimer"
+#~ msgstr ""
+
 #: src/components/app/AppPassPrompt.tsx:48
 msgid "{0, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
 msgstr ""
@@ -2986,6 +3067,11 @@ msgstr ""
 #: src/components/farm/card/FarmCardUserFees.tsx:16
 #~ msgid "{0} User Transaction Fees"
 #~ msgstr "{0} User Transaction Fees"
+
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:172
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:189
+msgid "{0} buckets is recommended"
+msgstr ""
 
 #: src/components/plotNFT/PlotNFTGraph.tsx:111
 msgid "{0} points {1} - {2} hours ago"
@@ -3006,3 +3092,7 @@ msgstr "{currencyCode} Biaya Transaksi User"
 #: src/components/core/components/Amount/Amount.tsx:82
 msgid "{mojo, plural, one {mojo} other {mojos}}"
 msgstr "{mojo, plural, other {mojo}}"
+
+#: src/components/plot/add/PlotAddChoosePlotter.tsx:122
+msgid "{warning}"
+msgstr ""

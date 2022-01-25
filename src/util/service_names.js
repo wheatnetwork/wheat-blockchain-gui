@@ -4,7 +4,7 @@ export const service_farmer = 'wheat_farmer';
 export const service_harvester = 'wheat_harvester';
 export const service_simulator = 'wheat_full_node_simulator';
 export const service_daemon = 'daemon';
-export const service_plotter = 'wheat plots create';
+export const service_plotter = 'wheat_plotter';
 
 // Corresponds with outbound_message.py NodeTypes
 export const service_connection_types = {

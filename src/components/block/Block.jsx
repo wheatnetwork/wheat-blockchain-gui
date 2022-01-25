@@ -176,6 +176,14 @@ export default function Block() {
   const baseFarmerReward = mojo_to_wheat(
     calculateBaseFarmerReward(blockRecord.height),
   );
+  const farmerAddress = currencyCode ? toBech32m(
+    blockRecord.farmer_puzzle_hash,
+    currencyCode.toLowerCase(),
+  ) : '';
+  const poolAddress = currencyCode ? toBech32m(
+    blockRecord.pool_puzzle_hash,
+    currencyCode.toLowerCase(),
+  ) : '';
 
   const wheatFees = blockRecord.fees
     ? mojo_to_wheat(BigInt(blockRecord.fees))
@@ -269,19 +277,9 @@ export default function Block() {
       value: (
         <Link
           target="_blank"
-          href={`https://alltheblocks.net/wheat/address/${currencyCode
-            ? toBech32m(
-                blockRecord.farmer_puzzle_hash,
-                currencyCode.toLowerCase(),
-              )
-            : ''}`}
+          href={`https://alltheblocks.net/wheat/address/${farmerAddress}`}
         >
-          {currencyCode
-            ? toBech32m(
-                blockRecord.farmer_puzzle_hash,
-                currencyCode.toLowerCase(),
-              )
-            : ''}
+          {farmerAddress}
         </Link>
       ),
     },
@@ -290,19 +288,9 @@ export default function Block() {
       value: (
         <Link
           target="_blank"
-          href={`https://alltheblocks.net/wheat/address/${currencyCode
-            ? toBech32m(
-                blockRecord.pool_puzzle_hash,
-                currencyCode.toLowerCase(),
-              )
-            : ''}`}
+          href={`https://alltheblocks.net/wheat/address/${poolAddress}`}
         >
-          {currencyCode
-            ? toBech32m(
-                blockRecord.pool_puzzle_hash,
-                currencyCode.toLowerCase(),
-              )
-            : ''}
+          {poolAddress}
         </Link>
       ),
     },

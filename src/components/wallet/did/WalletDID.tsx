@@ -821,13 +821,14 @@ const ManageDIDsCard = (props) => {
                 </Tooltip>
               </Flex>
               <Controller
-                as={TextField}
                 name="num_needed"
                 control={control}
-                label="Number of Backup IDs needed for recovery"
-                variant="outlined"
-                fullWidth
-                defaultValue=""
+                render={({ field }) =>
+                  (<TextField
+                    label="Number of Backup IDs needed for recovery"
+                    variant="outlined"
+                    fullWidth
+                    {...field} /> )}
               />
             </Flex>
 
@@ -844,14 +845,16 @@ const ManageDIDsCard = (props) => {
                 <Flex alignItems="stretch">
                   <Box flexGrow={1}>
                     <Controller
-                      as={TextField}
                       name={`backup_dids[${index}].backupid`}
                       control={control}
                       defaultValue=""
-                      label="Backup ID"
-                      variant="outlined"
-                      fullWidth
-                      color="secondary"
+                      render={({ field }) =>
+                        (<TextField
+                          label="Backup ID"
+                          variant="outlined"
+                          fullWidth
+                          color="secondary"
+                          {...field} /> )}
                     />
                   </Box>
                   <Button
