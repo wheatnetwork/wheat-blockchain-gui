@@ -1,4 +1,8 @@
 # wheat-blockchain
+![Alt text](https://www.wheat.network/img/wheat_logo.svg)
+
+![GitHub contributors](https://img.shields.io/github/contributors/WheatNetwork/wheat-blockchain?logo=GitHub)
+
 Please check out the [wiki](https://github.com/WheatNetwork/wheat-blockchain/wiki)
 and [FAQ](https://github.com/WheatNetwork/wheat-blockchain/wiki/FAQ) for
 information on this project.
