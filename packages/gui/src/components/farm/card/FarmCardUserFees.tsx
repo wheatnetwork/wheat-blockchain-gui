@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
-import { useCurrencyCode, mojoToWheatLocaleString, CardSimple } from '@wheat/core';
+import { useCurrencyCode, mojoToWheatLocaleString, CardSimple, useLocale } from '@wheat/core';
 import { useGetFarmedAmountQuery } from '@wheat/api-react';
 
 export default function FarmCardUserFees() {
   const currencyCode = useCurrencyCode();
+  const [locale] = useLocale();
   const { data, isLoading, error } = useGetFarmedAmountQuery();
 
   const feeAmount = data?.feeAmount;
@@ -13,13 +14,13 @@ export default function FarmCardUserFees() {
     if (feeAmount !== undefined) {
       return (
         <>
-          {mojoToWheatLocaleString(feeAmount)}
+          {mojoToWheatLocaleString(feeAmount, locale)}
           &nbsp;
           {currencyCode}
         </>
       );
     }
-  }, [feeAmount]);
+  }, [feeAmount, locale, currencyCode]);
 
   return (
     <CardSimple

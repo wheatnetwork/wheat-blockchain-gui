@@ -1,10 +1,9 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Alert } from '@material-ui/lab';
-import { DialogActions, Flex, Form, TextField } from '@wheat/core';
+import { Button, DialogActions, Flex, Form, TextField } from '@wheat/core';
 import { useOpenFullNodeConnectionMutation } from '@wheat/api-react';
 import { useForm } from 'react-hook-form';
-import { Button, Dialog, DialogTitle, DialogContent } from '@material-ui/core';
+import { Alert, Dialog, DialogTitle, DialogContent } from '@mui/material';
 
 type Props = {
   open: boolean;
@@ -22,8 +21,8 @@ export default function FullNodeAddConnection(props: Props) {
 
   const methods = useForm<FormData>({
     defaultValues: {
-      host: 'dns-introducer.wheat.network',
-      port: '26666',
+      host: 'dns-introducer.wheat.top',
+      port: '21333',
     },
   });
 

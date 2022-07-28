@@ -73,9 +73,7 @@ export default function wheatLazyBaseQuery(options: Options = {}): BaseQueryFn<
 
     try {
       return {
-        data: mockResponse
-          ? mockResponse
-          : await instance[command](...args),
+        data: mockResponse ?? await instance[command](...args),
         meta,
       };
     } catch(error) {

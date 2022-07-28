@@ -71,7 +71,7 @@ const Spacer = styled.div`
   margin-bottom: 1rem;
 `;
 
-const url = 'https://wheat.network';
+const url = 'https://wheat.top';
 
 type Props = {
   version: string;

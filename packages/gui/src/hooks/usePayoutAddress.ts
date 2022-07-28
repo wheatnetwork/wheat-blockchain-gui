@@ -1,6 +1,6 @@
+import { toBech32m, fromBech32m } from '@wheat/api';
 import type { PlotNFT } from '@wheat/api';
 import { useSetPayoutInstructionsMutation, useGetNetworkInfoQuery } from '@wheat/api-react';
-import { toBech32m, fromBech32m } from '@wheat/core';
 
 export default function usePayoutAddress(nft: PlotNFT): {
   loading: boolean;

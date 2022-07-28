@@ -84,7 +84,7 @@ export default [
   { word: 'apart', value: 82 },
   { word: 'apology', value: 83 },
   { word: 'appear', value: 84 },
-  { word: 'wheat', value: 85 },
+  { word: 'apple', value: 85 },
   { word: 'approve', value: 86 },
   { word: 'april', value: 87 },
   { word: 'arch', value: 88 },

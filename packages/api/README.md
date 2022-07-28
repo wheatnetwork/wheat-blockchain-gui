@@ -1,8 +1,8 @@
 # @wheat/api
 
-![Alt text](https://www.wheat.network/img/wheat_logo.svg)
+![Alt text](https://www.wheat.top/img/wheat_logo.svg)
 
-This library provides support for TypeScript/JavaScript [Wheat](https://www.wheat.network) apps to access the [Wheat Blockchain RPC](https://github.com/WheatNetwork/wheat-blockchain/wiki/RPC-Interfaces), by making it easier to perform the following actions:
+This library provides support for TypeScript/JavaScript [Wheat](https://www.wheat.top) apps to access the [Wheat Blockchain RPC](https://github.com/WheatNetwork/wheat-blockchain/wiki/RPC-Interfaces), by making it easier to perform the following actions:
 
 - Making requests to the Wheat Blockchain RPC.
 - Catch responses and errors with standard try/catch and async/await syntax.
