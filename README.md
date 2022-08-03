@@ -1,5 +1,5 @@
 # wheat-blockchain
-![Alt text](https://www.wheat.network/img/wheat_logo.svg)
+![Alt text](https://wheat.top/img/wheat_logo.svg)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/WheatNetwork/wheat-blockchain?logo=GitHub)
 
