@@ -1,7 +1,7 @@
-import React from 'react';
+import { useGetTotalHarvestersSummaryQuery } from '@wheat-network/api-react';
+import { FormatBytes, CardSimple } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { FormatBytes, CardSimple } from '@wheat/core';
-import { useGetTotalHarvestersSummaryQuery } from '@wheat/api-react';
+import React from 'react';
 
 export default function FarmCardTotalSizeOfPlots() {
   const { totalPlotSize, isLoading } = useGetTotalHarvestersSummaryQuery();

@@ -1,6 +1,7 @@
+import type { PlotNFT, Plot } from '@wheat-network/api';
+import { useIsWalletSynced } from '@wheat-network/wallets';
 import { useMemo } from 'react';
-import type { PlotNFT, Plot } from '@wheat/api';
-import { useIsWalletSynced } from '@wheat/wallets';
+
 import PlotNFTState from '../constants/PlotNFTState';
 import usePlotNFTName from './usePlotNFTName';
 

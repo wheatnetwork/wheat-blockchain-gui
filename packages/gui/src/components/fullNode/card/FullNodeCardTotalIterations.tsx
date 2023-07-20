@@ -1,7 +1,7 @@
-import React from 'react';
+import { useGetBlockchainStateQuery } from '@wheat-network/api-react';
+import { FormatLargeNumber, CardSimple } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { FormatLargeNumber, CardSimple } from '@wheat/core';
-import { useGetBlockchainStateQuery } from '@wheat/api-react';
+import React from 'react';
 
 export default function FullNodeCardTotalIterations() {
   const { data, isLoading, error } = useGetBlockchainStateQuery();
@@ -12,9 +12,7 @@ export default function FullNodeCardTotalIterations() {
       loading={isLoading}
       valueColor="textPrimary"
       title={<Trans>Total Iterations</Trans>}
-      tooltip={
-        <Trans>Total iterations since the start of the blockchain</Trans>
-      }
+      tooltip={<Trans>Total iterations since the start of the blockchain</Trans>}
       value={<FormatLargeNumber value={value} />}
       error={error}
     />

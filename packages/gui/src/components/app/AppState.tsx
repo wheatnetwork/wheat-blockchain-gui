@@ -1,14 +1,43 @@
-import React, { useState, useEffect, ReactNode, useMemo } from 'react';
-import isElectron from 'is-electron';
+import { IpcRenderer } from 'electron';
+
+import {
+  ConnectionState,
+  ServiceHumanName,
+  ServiceName,
+  ServiceNameValue,
+  PassphrasePromptReason,
+} from '@wheat-network/api';
+import {
+  useCloseMutation,
+  useGetStateQuery,
+  useGetKeyringStatusQuery,
+  useServices,
+  useGetVersionQuery,
+} from '@wheat-network/api-react';
+import {
+  Flex,
+  LayoutHero,
+  LayoutLoading,
+  Mode,
+  useMode,
+  useIsSimulator,
+  useAppVersion,
+  useCurrencyCode,
+} from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { ConnectionState, ServiceHumanName, ServiceName, PassphrasePromptReason } from '@wheat/api';
-import { useCloseMutation, useGetStateQuery, useGetKeyringStatusQuery, useServices } from '@wheat/api-react';
-import { Flex, useSkipMigration, LayoutHero, LayoutLoading, useMode, useIsSimulator } from '@wheat/core';
 import { Typography, Collapse } from '@mui/material';
+import isElectron from 'is-electron';
+import React, { useState, useEffect, ReactNode, useMemo } from 'react';
+
+import ModeServices, { SimulatorServices } from '../../constants/ModeServices';
+import useEnableDataLayerService from '../../hooks/useEnableDataLayerService';
+import useEnableFilePropagationServer from '../../hooks/useEnableFilePropagationServer';
+import useNFTMetadataLRU from '../../hooks/useNFTMetadataLRU';
+import AppAutoLogin from './AppAutoLogin';
 import AppKeyringMigrator from './AppKeyringMigrator';
 import AppPassPrompt from './AppPassPrompt';
 import AppSelectMode from './AppSelectMode';
-import ModeServices, { SimulatorServices } from '../../constants/ModeServices';
+import AppVersionWarning from './AppVersionWarning';
 
 const ALL_SERVICES = [
   ServiceName.WALLET,
@@ -16,6 +45,8 @@ const ALL_SERVICES = [
   ServiceName.FARMER,
   ServiceName.HARVESTER,
   ServiceName.SIMULATOR,
+  ServiceName.DATALAYER,
+  ServiceName.DATALAYER_SERVER,
 ];
 
 type Props = {
@@ -26,23 +57,42 @@ export default function AppState(props: Props) {
   const { children } = props;
   const [close] = useCloseMutation();
   const [closing, setClosing] = useState<boolean>(false);
-  const { data: clienState = {}, isLoading: isClientStateLoading } = useGetStateQuery();
+  const { data: clientState = {}, isLoading: isClientStateLoading } = useGetStateQuery();
   const { data: keyringStatus, isLoading: isLoadingKeyringStatus } = useGetKeyringStatusQuery();
-  const [isMigrationSkipped] = useSkipMigration();
   const [mode] = useMode();
   const isSimulator = useIsSimulator();
+  const [enableDataLayerService] = useEnableDataLayerService();
+  const [enableFilePropagationServer] = useEnableFilePropagationServer();
+  // NOTE: We only start the DL at launch time for now
+  const [isDataLayerEnabled] = useState(enableDataLayerService);
+  const [isFilePropagationServerEnabled] = useState(enableFilePropagationServer);
+  const [versionDialog, setVersionDialog] = useState<boolean>(true);
+  const [updatedWindowTitle, setUpdatedWindowTitle] = useState<boolean>(false);
+  const { data: backendVersion } = useGetVersionQuery();
+  const { version } = useAppVersion();
+  const lru = useNFTMetadataLRU();
+  const isTestnet = useCurrencyCode() === 'TWHEAT';
 
-  const runServices = useMemo<ServiceName[] | undefined>(() => {
+  const runServices = useMemo<ServiceNameValue[] | undefined>(() => {
     if (mode) {
-      if (isSimulator) {
-        return SimulatorServices;
+      const services: ServiceNameValue[] = isSimulator ? SimulatorServices : ModeServices[mode];
+
+      if (isDataLayerEnabled) {
+        if (!services.includes(ServiceName.DATALAYER)) {
+          services.push(ServiceName.DATALAYER);
+        }
+
+        // File propagation server is dependent on the datalayer
+        if (isFilePropagationServerEnabled && !services.includes(ServiceName.DATALAYER_SERVER)) {
+          services.push(ServiceName.DATALAYER_SERVER);
+        }
       }
 
-      return ModeServices[mode];
+      return services;
     }
 
     return undefined;
-  }, [mode, isSimulator]);
+  }, [mode, isSimulator, isDataLayerEnabled, isFilePropagationServerEnabled]);
 
   const isKeyringReady = !!keyringStatus && !keyringStatus.isKeyringLocked;
 
@@ -56,39 +106,61 @@ export default function AppState(props: Props) {
       return false;
     }
 
-    const specificRunningServiceStates = servicesState
-      .running
-      .filter((serviceState) => runServices.includes(serviceState.service));
+    const specificRunningServiceStates = servicesState.running.filter((serviceName) =>
+      runServices.includes(serviceName)
+    );
 
     return specificRunningServiceStates.length === runServices.length;
   }, [servicesState, runServices]);
 
-  const isConnected = !isClientStateLoading && clienState?.state === ConnectionState.CONNECTED;
-
-  async function handleClose(event) {
-    if (closing) {
-      return;
-    }
-
-    setClosing(true);
-
-    await close({
-      force: true,
-    }).unwrap();
-
-    event.sender.send('daemon-exited');
-  }
+  const isConnected = !isClientStateLoading && clientState?.state === ConnectionState.CONNECTED;
 
   useEffect(() => {
+    const allRunningServices = servicesState.running.map((serviceState) => serviceState.service);
+    const nonWalletServiceRunning = allRunningServices.some((service) => service !== ServiceName.WALLET);
+
+    if (mode === Mode.WALLET && !nonWalletServiceRunning) {
+      window.ipcRenderer.invoke('setPromptOnQuit', false);
+    } else {
+      window.ipcRenderer.invoke('setPromptOnQuit', true);
+    }
+  }, [mode, servicesState]);
+
+  useEffect(() => {
+    async function handleClose(event) {
+      if (closing) {
+        return;
+      }
+
+      setClosing(true);
+
+      await close({
+        force: true,
+      }).unwrap();
+
+      event.sender.send('daemon-exited');
+    }
+
     if (isElectron()) {
-      // @ts-ignore
-      window.ipcRenderer.on('exit-daemon', handleClose);
+      const { ipcRenderer } = window as unknown as { ipcRenderer: IpcRenderer };
+
+      ipcRenderer.on('exit-daemon', handleClose);
+
+      // Handle files/URLs opened at launch now that the app is ready
+      ipcRenderer.invoke('processLaunchTasks');
+
+      if (isTestnet && !updatedWindowTitle) {
+        ipcRenderer.invoke('setWindowTitle', 'Wheat Blockchain (Testnet)');
+        setUpdatedWindowTitle(true);
+      }
+
       return () => {
         // @ts-ignore
-        window.ipcRenderer.off('exit-daemon', handleClose);
+        ipcRenderer.off('exit-daemon', handleClose);
       };
     }
-  }, []);
+    return undefined;
+  }, [close, closing, lru, isTestnet, updatedWindowTitle]);
 
   if (closing) {
     return (
@@ -98,9 +170,9 @@ export default function AppState(props: Props) {
             <Trans>Closing down services</Trans>
           </Typography>
           <Flex flexDirection="column" gap={0.5}>
-            {!!ALL_SERVICES && ALL_SERVICES.map((service) => (
-              <Collapse key={service} in={!!clienState?.startedServices.includes(service)} timeout={{ enter: 0, exit: 1000 }}>
-                <Typography variant="body1" color="textSecondary"  align="center">
+            {ALL_SERVICES.filter((service) => !!clientState?.startedServices.includes(service)).map((service) => (
+              <Collapse key={service} in timeout={{ enter: 0, exit: 1000 }}>
+                <Typography variant="body1" color="textSecondary" align="center">
                   {ServiceHumanName[service]}
                 </Typography>
               </Collapse>
@@ -111,16 +183,34 @@ export default function AppState(props: Props) {
     );
   }
 
+  if (backendVersion && version && versionDialog === true) {
+    // backendVersion can be in the format of 1.6.1, 1.7.0b3, or 1.7.0b3.dev123
+    // version can be in the format of 1.6.1, 1.7.0b3, 1.7.0-b2.dev123, or 1.7.0b3-dev123
+
+    const backendVersionClean = backendVersion.replace(/[-+.]/g, '');
+    const guiVersionClean = version.replace(/[-+.]/g, '');
+
+    if (backendVersionClean !== guiVersionClean && process.env.NODE_ENV !== 'development') {
+      return (
+        <LayoutHero>
+          <AppVersionWarning backV={backendVersion} guiV={version} setVersionDialog={setVersionDialog} />
+        </LayoutHero>
+      );
+    }
+  }
+
   if (isLoadingKeyringStatus || !keyringStatus) {
     return (
       <LayoutLoading>
-        <Trans>Loading keyring status</Trans>
+        <Typography variant="body1">
+          <Trans>Loading keyring status</Trans>
+        </Typography>
       </LayoutLoading>
     );
   }
 
   const { needsMigration, isKeyringLocked } = keyringStatus;
-  if (needsMigration && !isMigrationSkipped) {
+  if (needsMigration) {
     return (
       <LayoutHero>
         <AppKeyringMigrator />
@@ -137,11 +227,13 @@ export default function AppState(props: Props) {
   }
 
   if (!isConnected) {
-    const { attempt } = clienState;
+    const { attempt } = clientState;
     return (
       <LayoutLoading>
         {!attempt ? (
-          <Trans>Connecting to daemon</Trans>
+          <Typography variant="body1" align="center">
+            <Trans>Connecting to daemon</Trans>
+          </Typography>
         ) : (
           <Flex flexDirection="column" gap={1}>
             <Typography variant="body1" align="center">
@@ -172,22 +264,27 @@ export default function AppState(props: Props) {
             <Trans>Starting services</Trans>
           </Typography>
           <Flex flexDirection="column" gap={0.5}>
-            {!!runServices && runServices.map((service) => (
-              <Collapse key={service} in={!servicesState.running.find(state => state.service === service)} timeout={{ enter: 0, exit: 1000 }}>
-                <Typography variant="body1" color="textSecondary"  align="center">
-                  {ServiceHumanName[service]}
-                </Typography>
-              </Collapse>
-            ))}
+            {!!runServices &&
+              runServices.map((service) => (
+                <Collapse
+                  key={service}
+                  in={!servicesState.running.includes(service)}
+                  timeout={{ enter: 0, exit: 1000 }}
+                >
+                  <Typography variant="body1" color="textSecondary" align="center">
+                    {ServiceHumanName[service]}
+                  </Typography>
+                </Collapse>
+              ))}
           </Flex>
         </Flex>
       </LayoutLoading>
     );
   }
 
-  return (
-    <>
-      {children}
-    </>
-  );
+  return <AppAutoLogin>{children}</AppAutoLogin>;
 }
+
+// AppState.whyDidYouRender = {
+//   logOnDifferentValues: true,
+// };

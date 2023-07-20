@@ -1,7 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Trans } from '@lingui/macro';
-import { Box } from '@mui/material';
+import { useLocalStorage } from '@wheat-network/api-react';
+import { Flex, SideBarItem } from '@wheat-network/core';
 import {
   Farming as FarmingIcon,
   FullNode as FullNodeIcon,
@@ -11,8 +9,12 @@ import {
   Offers as OffersIcon,
   Tokens as TokensIcon,
   Settings as SettingsIcon,
-} from '@wheat/icons';
-import { Flex, SideBarItem } from '@wheat/core';
+  VC as VCIcon,
+} from '@wheat-network/icons';
+import { Trans } from '@lingui/macro';
+import { Box } from '@mui/material';
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledItemsContainer = styled(Flex)`
   flex-direction: column;
@@ -28,11 +30,7 @@ const StyledRoot = styled(Flex)`
 
 const StyledSideBarDivider = styled(Box)`
   height: 1px;
-  background: radial-gradient(
-    36.59% 100.8% at 50% 50%,
-    rgba(0, 0, 0, 0.18) 99.54%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: radial-gradient(36.59% 100.8% at 50% 50%, rgba(0, 0, 0, 0.18) 99.54%, rgba(255, 255, 255, 0) 100%);
 `;
 
 const StyledSettingsContainer = styled(Box)`
@@ -45,6 +43,7 @@ export type DashboardSideBarProps = {
 
 export default function DashboardSideBar(props: DashboardSideBarProps) {
   const { simple = false } = props;
+  const [enableVerifiableCredentials] = useLocalStorage<boolean>('enable-verifiable-credentials', false);
 
   return (
     <StyledRoot>
@@ -53,16 +52,27 @@ export default function DashboardSideBar(props: DashboardSideBarProps) {
           to="/dashboard/wallets"
           icon={TokensIcon}
           title={<Trans>Tokens</Trans>}
+          data-testid="DashboardSideBar-tokens"
         />
         <SideBarItem
           to="/dashboard/nfts"
           icon={NFTsIcon}
           title={<Trans>NFTs</Trans>}
+          data-testid="DashboardSideBar-nfts"
         />
+        {enableVerifiableCredentials && (
+          <SideBarItem
+            to="/dashboard/vc"
+            icon={VCIcon}
+            title={<Trans>Credentials</Trans>}
+            data-testid="DashboardSideBar-vc"
+          />
+        )}
         <SideBarItem
           to="/dashboard/offers"
           icon={OffersIcon}
           title={<Trans>Offers</Trans>}
+          data-testid="DashboardSideBar-offers"
         />
 
         {!simple && (
@@ -75,14 +85,16 @@ export default function DashboardSideBar(props: DashboardSideBarProps) {
               to="/dashboard"
               icon={FullNodeIcon}
               title={<Trans>Full Node</Trans>}
+              data-testid="DashboardSideBar-fullnode"
               end
             />
             <SideBarItem
               to="/dashboard/plot"
               icon={PlotsIcon}
               title={<Trans>Plots</Trans>}
+              data-testid="DashboardSideBar-plots"
             />
-            {/*}
+            {/* }
             <SideBarItem
               to="/dashboard/wallets"
               icon={<WalletIcon fontSize="large" />}
@@ -94,20 +106,23 @@ export default function DashboardSideBar(props: DashboardSideBarProps) {
               to="/dashboard/farm"
               icon={FarmingIcon}
               title={<Trans>Farming</Trans>}
+              data-testid="DashboardSideBar-farming"
             />
             <SideBarItem
               to="/dashboard/pool"
               icon={PoolingIcon}
               title={<Trans>Pooling</Trans>}
+              data-testid="DashboardSideBar-pooling"
             />
           </>
         )}
       </StyledItemsContainer>
       <StyledSettingsContainer>
         <SideBarItem
-          to="/dashboard/settings"
+          to="/dashboard/settings/general"
           icon={SettingsIcon}
           title={<Trans>Settings</Trans>}
+          data-testid="DashboardSideBar-settings"
         />
       </StyledSettingsContainer>
     </StyledRoot>

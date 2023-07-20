@@ -1,6 +1,6 @@
 enum NFTOfferExchangeType {
-  NFTForWHEAT = 'nft_for_wheat',
-  WHEATForNFT = 'wheat_for_nft',
+  NFTForToken = 'nft_for_token',
+  TokenForNFT = 'token_for_nft',
 }
 
 export default NFTOfferExchangeType;

@@ -1,7 +1,8 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
-import wheatLazyBaseQuery from './wheatLazyBaseQuery';
 
-export const baseQuery = wheatLazyBaseQuery({});
+import baseQuery from './wheatLazyBaseQuery';
+
+export { baseQuery };
 
 export default createApi({
   reducerPath: 'wheatApi',

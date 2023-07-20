@@ -1,7 +1,12 @@
+import KeyData from '../@types/KeyData';
+import KeyringStatus from '../@types/KeyringStatus';
+import PlotQueueItem from '../@types/PlotQueueItem';
+import { PlottersApi } from '../@types/Plotter';
 import type Client from '../Client';
+import type Message from '../Message';
+import ServiceName, { type ServiceNameValue } from '../constants/ServiceName';
 import Service from './Service';
 import type { Options } from './Service';
-import ServiceName from '../constants/ServiceName';
 
 export default class Daemon extends Service {
   constructor(client: Client, options?: Options) {
@@ -11,169 +16,203 @@ export default class Daemon extends Service {
     });
   }
 
-  registerService(service: string) {
-    return this.command('register_service', {
-      service,
-    });
+  registerService(args: { service: ServiceNameValue }) {
+    return this.command<{
+      queue: [PlotQueueItem];
+    }>('register_service', args);
   }
 
-  startService(service: string, testing?: boolean) {
-    return this.command('start_service', {
-      service,
-      testing: testing ? true : undefined,
-    });
+  startService(args: { service: ServiceNameValue; testing?: boolean }) {
+    return this.command<{
+      service: ServiceNameValue;
+    }>('start_service', args);
   }
 
-  stopService(service: string) {
-    return this.command('stop_service', {
-      service,
-    });
+  stopService(args: { service: ServiceNameValue }) {
+    return this.command<void>('stop_service', args);
   }
 
-  isRunning(service: string) {
-    return this.command('is_running', {
-      service,
-    });
+  isRunning(args: { service: ServiceNameValue }) {
+    return this.command<{
+      isRunning: boolean;
+    }>('is_running', args);
+  }
+
+  runningServices() {
+    return this.command<{
+      runningServices: [string];
+    }>('running_services');
+  }
+
+  addPrivateKey(args: { mnemonic: string; label?: string }) {
+    return this.command<{
+      fingerprint: string;
+    }>('add_private_key', args);
+  }
+
+  getKey(args: { fingerprint: string; includeSecrets?: boolean }) {
+    return this.command<{
+      key: KeyData;
+    }>('get_key', args);
+  }
+
+  getKeys(args: { includeSecrets?: boolean }) {
+    return this.command<{
+      keys: [KeyData];
+    }>('get_keys', args);
+  }
+
+  setLabel(args: { fingerprint: string; label: string }) {
+    return this.command<void>('set_label', args);
+  }
+
+  deleteLabel(args: { fingerprint: string }) {
+    return this.command<void>('delete_label', args);
   }
 
   keyringStatus() {
-    return this.command('keyring_status');
+    return this.command<KeyringStatus>('keyring_status');
   }
 
-  setKeyringPassphrase(currentPassphrase?: string | null, newPassphrase?: string, passphraseHint?: string, savePassphrase?: boolean) {
-    return this.command('set_keyring_passphrase', {
-      currentPassphrase,
-      newPassphrase,
-      passphraseHint,
-      savePassphrase,
-    });
+  setKeyringPassphrase(args: {
+    currentPassphrase?: string | null;
+    newPassphrase?: string;
+    passphraseHint?: string;
+    savePassphrase?: boolean;
+  }) {
+    return this.command<void>('set_keyring_passphrase', args);
   }
 
-  removeKeyringPassphrase(currentPassphrase: string) {
-    return this.command('remove_keyring_passphrase', {
-      currentPassphrase,
-    });
+  removeKeyringPassphrase(args: { currentPassphrase: string }) {
+    return this.command<void>('remove_keyring_passphrase', args);
   }
 
-  migrateKeyring(passphrase: string, passphraseHint: string, savePassphrase: boolean, cleanupLegacyKeyring: boolean) {
-    return this.command('migrate_keyring', {
-      passphrase,
-      passphraseHint,
-      savePassphrase,
-      cleanupLegacyKeyring,
-    });
+  migrateKeyring(args: {
+    passphrase: string;
+    passphraseHint: string;
+    savePassphrase: boolean;
+    cleanupLegacyKeyring: boolean;
+  }) {
+    return this.command<void>('migrate_keyring', args);
   }
 
-  unlockKeyring(key: string) {
-    return this.command('unlock_keyring', {
-      key,
-    });
+  unlockKeyring(args: { key: string }) {
+    return this.command<void>('unlock_keyring', args);
   }
 
   getPlotters() {
-    return this.command('get_plotters');
+    return this.command<{
+      plotters: PlottersApi;
+    }>('get_plotters');
   }
 
-
-  stopPlotting(id: string) {
+  stopPlotting(args: { id: string }) {
     return this.command('stop_plotting', {
-      id,
+      ...args,
       service: ServiceName.PLOTTER,
     });
   }
 
-  startPlotting(
-    plotterName, // plotterName
-    k, // plotSize
-    n, // plotCount
-    t, // workspaceLocation
-    t2, // workspaceLocation2
-    d, // finalLocation
-    b, // maxRam
-    u, // numBuckets
-    r, // numThreads,
-    queue, // queue
-    a, // fingerprint
-    parallel, // parallel
-    delay, // delay
-    e, // disableBitfieldPlotting
-    x, // excludeFinalDir
-    overrideK, //overrideK
-    f, // farmerPublicKey
-    p, // poolPublicKey
-    c, // poolContractAddress
-    m, // bladebitDisableNUMA,
-    w, // bladebitWarmStart,
-    v, // madmaxNumBucketsPhase3,
-    G, // madmaxTempToggle,
-    K, // madmaxThreadMultiplier,
-  ) {
-    const args = {
-      service: ServiceName.PLOTTER,
-      plotter: plotterName,
-      k,
-      n,
-      t,
-      t2,
-      d,
-      b,
-      u,
-      r,
-      queue,
-      parallel,
-      delay,
-      e,
-      x,
-      overrideK,
+  startPlotting(inputArgs: {
+    bladebitDisableNUMA: boolean;
+    bladebitWarmStart: boolean;
+    bladebitNoCpuAffinity?: boolean;
+    bladebitDiskCache?: number;
+    bladebitDiskF1Threads?: number;
+    bladebitDiskFpThreads?: number;
+    bladebitDiskCThreads?: number;
+    bladebitDiskP2Threads?: number;
+    bladebitDiskP3Threads?: number;
+    bladebitDiskAlternate?: boolean;
+    bladebitDiskNoT1Direct?: boolean;
+    bladebitDiskNoT2Direct?: boolean;
+    c?: string;
+    delay: number;
+    disableBitfieldPlotting?: boolean;
+    excludeFinalDir?: boolean;
+    farmerPublicKey?: string;
+    finalLocation: string;
+    fingerprint?: number;
+    madmaxNumBucketsPhase3?: number;
+    madmaxTempToggle?: boolean;
+    madmaxThreadMultiplier?: number;
+    maxRam: number;
+    numBuckets: number;
+    numThreads: number;
+    overrideK?: boolean;
+    parallel: boolean;
+    plotCount: number;
+    plotSize: number;
+    plotterName: string;
+    plotType?: string;
+    poolPublicKey?: string;
+    queue: string;
+    workspaceLocation: string;
+    workspaceLocation2: string;
+  }) {
+    const conversionDict: Record<string, string> = {
+      bladebitDisableNUMA: 'm',
+      bladebitWarmStart: 'w',
+      bladebitNoCpuAffinity: 'no_cpu_affinity',
+      bladebitDiskCache: 'cache',
+      bladebitDiskF1Threads: 'f1_threads',
+      bladebitDiskFpThreads: 'fp_threads',
+      bladebitDiskCThreads: 'c_threads',
+      bladebitDiskP2Threads: 'p2_threads',
+      bladebitDiskP3Threads: 'p3_threads',
+      bladebitDiskAlternate: 'alternate',
+      bladebitDiskNoT1Direct: 'no_t1_direct',
+      bladebitDiskNoT2Direct: 'no_t2_direct',
+      disableBitfieldPlotting: 'e',
+      excludeFinalDir: 'x',
+      farmerPublicKey: 'f',
+      finalLocation: 'd',
+      fingerprint: 'a',
+      madmaxNumBucketsPhase3: 'v',
+      madmaxTempToggle: 'G',
+      madmaxThreadMultiplier: 'K',
+      maxRam: 'b',
+      numBuckets: 'u',
+      numThreads: 'r',
+      plotCount: 'n',
+      plotSize: 'k',
+      plotterName: 'plotter',
+      plotType: 'plot_type',
+      poolPublicKey: 'p',
+      workspaceLocation: 't',
+      workspaceLocation2: 't2',
     };
-  
-    if (a) {
-      args.a = a;
-    }
-  
-    if (f) {
-      args.f = f;
-    }
-  
-    if (p) {
-      args.p = p;
-    }
-  
-    if (c) {
-      args.c = c;
-    }
-  
-    if (m) { // bladebitDisableNUMA
-      args.m = m;
-    }
-  
-    if (w) { // bladebitWarmStart
-      args.w = w;
-    }
-  
-    if (v) { // madmaxNumBucketsPhase3
-      args.v = v;
-    }
-  
-    if (G) { // madmaxTempToggle
-      args.G = G;
-    }
-  
-    if (K) { // madmaxThreadMultiplier
-      args.K = K;
-    }
 
-    return this.command('start_plotting', args, undefined, undefined, true);  
+    const outputArgs: Record<string, unknown> = { service: ServiceName.PLOTTER };
+
+    Object.keys(inputArgs).forEach((key) => {
+      if (conversionDict[key]) outputArgs[conversionDict[key]] = inputArgs[key as keyof typeof inputArgs];
+      else outputArgs[key] = inputArgs[key as keyof typeof inputArgs];
+    });
+
+    if (outputArgs.plotter && (outputArgs.plotter as string).startsWith('bladebit')) outputArgs.plotter = 'bladebit';
+    if (outputArgs.cache) outputArgs.cache = `${outputArgs.cache}G`;
+
+    Object.keys(outputArgs).forEach((key) => {
+      if (outputArgs[key] === undefined) delete outputArgs[key];
+      // if (outputArgs[key] === '') delete outputArgs[key];
+    });
+
+    // some keys must be provided as empty strings and some must not be provided at all
+    if (outputArgs.p === '') delete outputArgs.p;
+
+    return this.command<{ ids: string[] }>('start_plotting', outputArgs, undefined, undefined, true);
   }
 
   exit() {
-    return this.command('exit');
+    return this.command<void>('exit');
   }
 
-  onKeyringStatusChanged(
-    callback: (data: any, message: Message) => void,
-    processData?: (data: any) => any,
-  ) {
+  onKeyringStatusChanged(callback: (data: any, message: Message) => void, processData?: (data: any) => any) {
     return this.onStateChanged('keyring_status_changed', callback, processData);
+  }
+
+  getVersion() {
+    return this.command<{ version: string }>('get_version');
   }
 }

@@ -1,8 +1,10 @@
-# @wheat/api
+# wheat-blockchain-gui/api
 
-![Alt text](https://www.wheat.top/img/wheat_logo.svg)
+![Wheat logo](https://www.wheatcoin.top/wp-content/uploads/2022/09/wheat-logo.svg)
 
-This library provides support for TypeScript/JavaScript [Wheat](https://www.wheat.top) apps to access the [Wheat Blockchain RPC](https://github.com/WheatNetwork/wheat-blockchain/wiki/RPC-Interfaces), by making it easier to perform the following actions:
+![GitHub contributors](https://img.shields.io/github/contributors/Wheat-Network/wheat-blockchain-gui?logo=GitHub)
+
+This library provides support for TypeScript/JavaScript [Wheat](https://www.wheatcoin.top) apps to access the [Wheat Blockchain RPC](https://docs.wheatcoin.top/rpc/), by making it easier to perform the following actions:
 
 - Making requests to the Wheat Blockchain RPC.
 - Catch responses and errors with standard try/catch and async/await syntax.
@@ -15,13 +17,15 @@ This library provides support for TypeScript/JavaScript [Wheat](https://www.whea
 ## Example
 
 ```ts
-import Client, { Wallet } from '@wheat/api';
+import { readFileSync } from "fs";
+import Client, { Wallet } from '@wheat-network/api'; // or from "../wheat-blockchain/wheat-blockchain-gui/packages/api";
 import Websocket from 'ws';
 import sleep from 'sleep-promise';
 
 (async () => {
   const client = new Client({
-    url: 'wss://127.0.0.1:54000',
+    url: 'wss://127.0.0.1:55400',
+    // key and crt files should be in your homedir in: .wheat/mainnet/config/ssl/daemon/
     cert: readFileSync('private_cert.crt'),
     key: readFileSync('private_key.key'),
     webSocket: Websocket;
@@ -30,18 +34,18 @@ import sleep from 'sleep-promise';
   const wallet = new Wallet(client);
 
   try {
-    // get list of available publick keys
+    // get list of available public keys
     const publicKeys = await wallet.getPublicKeys();
 
     // bind to sync changes
     const unsubscribeSyncChanges = wallet.onSyncChanged((syncData) => {
-      console.log('do something with synchronisation data');
+      console.log('do something with synchronization data');
     });
 
     // wait 5 minutes
     await sleep(1000 * 60 * 5);
 
-    // unubscribe from synchronisation changes
+    // unsubscribe from synchronization changes
     await unsubscribeSyncChanges();
 
     // wait 5 minutes
@@ -55,3 +59,7 @@ import sleep from 'sleep-promise';
   }
 })();
 ```
+
+## Development
+
+Please read and follow the main [README.md](https://github.com/Wheat-Network/wheat-blockchain-gui) of this monorepo.

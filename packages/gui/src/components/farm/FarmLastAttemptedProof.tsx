@@ -1,8 +1,9 @@
-import React from 'react';
+import { useGetFarmingInfoQuery } from '@wheat-network/api-react';
+import { Link, Table, Card } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { Link, Table, Card } from '@wheat/core';
-import { useGetFarmingInfoQuery } from '@wheat/api-react';
 import moment from 'moment';
+import React from 'react';
+
 import type { Row } from '../core/components/Table/Table';
 // import usePlots from '../../hooks/usePlots';
 
@@ -45,17 +46,15 @@ export default function FarmLastAttemptedProof() {
       titleVariant="h6"
       tooltip={
         <Trans>
-          This table shows you the last time your farm attempted to win a block
-          challenge.{' '}
+          This table shows you the last time your farm attempted to win a block challenge.{' '}
           <Link
             target="_blank"
-            href="https://github.com/WheatNetwork/wheat-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it"
+            href="https://github.com/Wheat-Network/wheat-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it"
           >
             Learn more
           </Link>
         </Trans>
       }
-      interactive
       transparent
     >
       <Table

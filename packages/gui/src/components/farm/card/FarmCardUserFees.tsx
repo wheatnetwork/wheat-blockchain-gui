@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import { useGetFarmedAmountQuery } from '@wheat-network/api-react';
+import { useCurrencyCode, mojoToWheatLocaleString, CardSimple, useLocale } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { useCurrencyCode, mojoToWheatLocaleString, CardSimple, useLocale } from '@wheat/core';
-import { useGetFarmedAmountQuery } from '@wheat/api-react';
+import React, { useMemo } from 'react';
 
 export default function FarmCardUserFees() {
   const currencyCode = useCurrencyCode();
@@ -20,6 +20,7 @@ export default function FarmCardUserFees() {
         </>
       );
     }
+    return undefined;
   }, [feeAmount, locale, currencyCode]);
 
   return (

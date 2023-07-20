@@ -1,7 +1,7 @@
-import React from 'react';
+import { useGetFarmedAmountQuery } from '@wheat-network/api-react';
+import { FormatLargeNumber, CardSimple } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { FormatLargeNumber, CardSimple } from '@wheat/core';
-import { useGetFarmedAmountQuery } from '@wheat/api-react';
+import React from 'react';
 
 export default function FarmCardLastHeightFarmed() {
   const { data, isLoading, error } = useGetFarmedAmountQuery();

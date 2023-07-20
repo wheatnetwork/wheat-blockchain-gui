@@ -1,5 +1,5 @@
-import type { Wallet, CATToken } from '@wheat/api';
-import { WalletType } from '@wheat/api';
+import type { Wallet, CATToken } from '@wheat-network/api';
+import { WalletType } from '@wheat-network/api';
 
 export default function isCATWalletPresent(wallets: Wallet[], token: CATToken): boolean {
   return !!wallets?.find((wallet) => {

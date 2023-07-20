@@ -1,5 +1,4 @@
-import type BigNumber from 'bignumber.js';
-import { type WalletType } from '@wheat/api';
+import { WalletType } from '@wheat-network/api';
 
 type OfferRowData = {
   amount: string;

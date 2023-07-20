@@ -1,4 +1,4 @@
-import { useGetNetworkInfoQuery } from '@wheat/api-react';
+import { useGetNetworkInfoQuery } from '@wheat-network/api-react';
 
 export default function useCurrencyCode(): string | undefined {
   const { data: networkInfo, isLoading } = useGetNetworkInfoQuery();

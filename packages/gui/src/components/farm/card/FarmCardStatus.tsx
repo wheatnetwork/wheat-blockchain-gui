@@ -1,9 +1,10 @@
-import React from 'react';
+import { StateIndicator, State, CardSimple } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { StateIndicator, State, CardSimple } from '@wheat/core';
-import FarmCardNotAvailable from './FarmCardNotAvailable';
-import useFarmerStatus from '../../../hooks/useFarmerStatus';
+import React from 'react';
+
 import FarmerStatus from '../../../constants/FarmerStatus';
+import useFarmerStatus from '../../../hooks/useFarmerStatus';
+import FarmCardNotAvailable from './FarmCardNotAvailable';
 
 export default function FarmCardStatus() {
   const farmerStatus = useFarmerStatus();

@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import { WalletType } from '@wheat-network/api';
+import { Flex, MenuItem } from '@wheat-network/core';
+import { Offers as OffersIcon } from '@wheat-network/icons';
 import { Trans } from '@lingui/macro';
-import { useNavigate } from 'react-router-dom';
-import { WalletType } from '@wheat/api';
-import { Flex } from '@wheat/core';
-import { Offers as OffersIcon } from '@wheat/icons';
-import { Box, Typography, ListItemIcon, MenuItem } from '@mui/material';
+import { Typography, ListItemIcon } from '@mui/material';
+import React from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+
+import WalletHeader from '../WalletHeader';
 import WalletHistory from '../WalletHistory';
-import WalletStandardCards from './WalletStandardCards';
 import WalletReceiveAddress from '../WalletReceiveAddress';
 import WalletSend from '../WalletSend';
-import WalletHeader from '../WalletHeader';
+import WalletStandardCards from './WalletStandardCards';
+import NFTRecover from "./nftRecover/NFTRecover";
 
 type StandardWalletProps = {
   walletId: number;
@@ -17,18 +19,21 @@ type StandardWalletProps = {
 
 export default function StandardWallet(props: StandardWalletProps) {
   const { walletId } = props;
-  // const showDebugInformation = useShowDebugInformation();
+
   const navigate = useNavigate();
-  const [selectedTab, setSelectedTab] = useState<
-    'summary' | 'send' | 'receive'
-  >('summary');
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedTab = searchParams.get('selectedTab') || 'summary';
+
+  const setSelectedTab = (tab: 'summary' | 'send' | 'receive'| 'nftRecover') => {
+    setSearchParams({ selectedTab: tab });
+  };
 
   function handleCreateOffer() {
-    navigate('/dashboard/offers/create', {
+    navigate('/dashboard/offers/builder', {
       state: {
-        walletId,
         walletType: WalletType.STANDARD_WALLET,
-        referrerPath: location.hash.split('#').slice(-1)[0],
+        referrerPath: window.location.hash.split('#').slice(-1)[0],
       },
     });
   }
@@ -39,43 +44,35 @@ export default function StandardWallet(props: StandardWalletProps) {
         walletId={walletId}
         tab={selectedTab}
         onTabChange={setSelectedTab}
-        actions={({ onClose }) => (
-          <>
-            <MenuItem
-              onClick={() => {
-                onClose();
-                handleCreateOffer();
-              }}
-            >
-              <ListItemIcon>
-                <OffersIcon />
-              </ListItemIcon>
-              <Typography variant="inherit" noWrap>
-                <Trans>Create Offer</Trans>
-              </Typography>
-            </MenuItem>
-          </>
-        )}
+        actions={
+          <MenuItem onClick={handleCreateOffer} close>
+            <ListItemIcon>
+              <OffersIcon />
+            </ListItemIcon>
+            <Typography variant="inherit" noWrap>
+              <Trans>Create Offer</Trans>
+            </Typography>
+          </MenuItem>
+        }
       />
+      <Flex flexDirection="column" gap={4}>
+        <WalletStandardCards walletId={walletId} />
 
-      <Box display={selectedTab === 'summary' ? 'block' : 'none'}>
-        <Flex flexDirection="column" gap={4}>
-          <WalletStandardCards walletId={walletId} />
-          <WalletHistory walletId={walletId} />
-        </Flex>
-      </Box>
-      <Box display={selectedTab === 'send' ? 'block' : 'none'}>
-        <WalletSend walletId={walletId} />
-      </Box>
-      <Box display={selectedTab === 'receive' ? 'block' : 'none'}>
-        <WalletReceiveAddress walletId={walletId} />
-      </Box>
-
-      {/*
-      {showDebugInformation && (
-        <WalletConnections walletId={walletId} />
-      )}
-      */}
+        {(() => {
+          switch (selectedTab) {
+            case 'summary':
+              return <WalletHistory walletId={walletId} />;
+            case 'send':
+              return <WalletSend walletId={walletId} />;
+            case 'receive':
+              return <WalletReceiveAddress walletId={walletId} />;
+            case 'nftRecover':
+              return <NFTRecover walletId={walletId} />;
+            default:
+              return null;
+          }
+        })()}
+      </Flex>
     </Flex>
   );
 }

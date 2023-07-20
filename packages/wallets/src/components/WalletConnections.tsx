@@ -1,14 +1,9 @@
-import React from 'react';
+import { Connection, ServiceConnectionName } from '@wheat-network/api';
+import { useGetWalletConnectionsQuery } from '@wheat-network/api-react';
+import { Card, FormatBytes, Loading, Table } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import {
-  Card,
-  FormatBytes,
-  Loading,
-  Table,
-} from '@wheat/core';
 import { Tooltip } from '@mui/material';
-import { Connection, ServiceConnectionName } from '@wheat/api';
-import { useGetWalletConnectionsQuery } from '@wheat/api-react';
+import React from 'react';
 
 const cols = [
   {
@@ -36,19 +31,9 @@ const cols = [
     field(row: Connection) {
       return (
         <>
-          <FormatBytes
-            value={row.bytesWritten}
-            unit="MiB"
-            removeUnit
-            fixedDecimals
-          />
+          <FormatBytes value={row.bytesWritten} unit="MiB" removeUnit fixedDecimals />
           /
-          <FormatBytes
-            value={row.bytesRead}
-            unit="MiB"
-            removeUnit
-            fixedDecimals
-          />
+          <FormatBytes value={row.bytesRead} unit="MiB" removeUnit fixedDecimals />
         </>
       );
     },
@@ -69,16 +54,17 @@ export type WalletConnectionsProps = {
 
 export default function WalletConnections(props: WalletConnectionsProps) {
   const { walletId } = props;
-  const { data: connections, isLoading } = useGetWalletConnectionsQuery({
-    walletId,
-  }, {
-    pollingInterval: 10000,
-  });
+  const { data: connections, isLoading } = useGetWalletConnectionsQuery(
+    {
+      walletId,
+    },
+    {
+      pollingInterval: 10_000,
+    }
+  );
 
   return (
-    <Card
-      title={<Trans>Connections</Trans>}
-    >
+    <Card title={<Trans>Wallet Connections</Trans>}>
       {isLoading ? (
         <Loading center />
       ) : !connections?.length ? (

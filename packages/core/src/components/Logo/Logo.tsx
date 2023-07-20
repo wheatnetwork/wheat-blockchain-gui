@@ -1,7 +1,7 @@
+import { Wheat } from '@wheat-network/icons';
+import { Box, BoxProps } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { Box, BoxProps } from '@mui/material';
-import { Wheat } from '@wheat/icons';
 
 const StyledWheat = styled(Wheat)`
   max-width: 100%;

@@ -1,11 +1,11 @@
-import { WalletType } from '@wheat/api';
-import type { Wallet } from '@wheat/api';
+import { WalletType } from '@wheat-network/api';
+import type { Wallet } from '@wheat-network/api';
 
 export default function getWalletPrimaryTitle(wallet: Wallet): string {
   switch (wallet.type) {
     case WalletType.STANDARD_WALLET:
       return 'Wheat';
     default:
-      return wallet.name;
+      return wallet.meta?.name ?? wallet.name;
   }
 }

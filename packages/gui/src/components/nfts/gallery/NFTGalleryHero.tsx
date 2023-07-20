@@ -1,7 +1,8 @@
-import { Flex, useDarkMode } from '@wheat/core';
+import { Flex, useDarkMode } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';
+
 import HeroImage from './NFTGalleryHero.svg';
 import HeroImageDark from './NFTGalleryHeroDark.svg';
 

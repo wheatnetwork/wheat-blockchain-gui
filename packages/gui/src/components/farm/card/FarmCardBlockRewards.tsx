@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
+import { useGetFarmedAmountQuery } from '@wheat-network/api-react';
+import { useCurrencyCode, mojoToWheatLocaleString, CardSimple, useLocale } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
-import { useCurrencyCode, mojoToWheatLocaleString, CardSimple, useLocale } from '@wheat/core';
-import { useGetFarmedAmountQuery } from '@wheat/api-react';
+import React, { useMemo } from 'react';
 
 export default function FarmCardBlockRewards() {
   const currencyCode = useCurrencyCode();
@@ -24,6 +24,7 @@ export default function FarmCardBlockRewards() {
         </>
       );
     }
+    return undefined;
   }, [farmerRewardAmount, poolRewardAmount, locale, currencyCode]);
 
   return (

@@ -1,24 +1,18 @@
-import React from 'react';
+import { ServiceName } from '@wheat-network/api';
+import { useService } from '@wheat-network/api-react';
+import { CardSimple } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { CardSimple } from '@wheat/core';
-import { ServiceName } from '@wheat/api';
-import { useIsServiceRunningQuery } from '@wheat/api-react';
+import React from 'react';
 
 export default function FullNodeCardConnectionStatus() {
-  const { data: isRunning, isLoading, error } = useIsServiceRunningQuery({
-    service: ServiceName.FULL_NODE,
-  }, {
-    pollingInterval: 1000,
-  });
+  const { isRunning, isLoading, error } = useService(ServiceName.FULL_NODE);
 
   return (
     <CardSimple
       loading={isLoading}
       valueColor={isRunning ? 'primary' : 'textPrimary'}
       title={<Trans>Connection Status</Trans>}
-      value={
-        isRunning ? <Trans>Connected</Trans> : <Trans>Not connected</Trans>
-      }
+      value={isRunning ? <Trans>Connected</Trans> : <Trans>Not connected</Trans>}
       error={error}
     />
   );

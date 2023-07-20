@@ -1,4 +1,4 @@
-import type NFTInfo from '@wheat/api';
+import type NFTInfo from '@wheat-network/api';
 
 type NFTSelection = {
   items: NFTInfo[];

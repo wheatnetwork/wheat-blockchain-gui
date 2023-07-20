@@ -1,7 +1,7 @@
-import React from 'react';
+import { useGetNetworkInfoQuery } from '@wheat-network/api-react';
+import { CardSimple } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { useGetNetworkInfoQuery } from '@wheat/api-react';
-import { CardSimple } from '@wheat/core';
+import React from 'react';
 
 export default function FullNodeCardNetworkName() {
   const { data: networkInfo, isLoading, error } = useGetNetworkInfoQuery();

@@ -1,4 +1,5 @@
-import { SyncingStatus } from '@wheat/api';
+import { SyncingStatus } from '@wheat-network/api';
+
 import useWalletState from './useWalletState';
 
 export default function useIsWalletSynced(): boolean {

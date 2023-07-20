@@ -1,7 +1,8 @@
-import React from 'react';
-import { Loading, Flex } from '@wheat/core';
-import { useGetThrottlePlotQueueQuery, useGetTotalHarvestersSummaryQuery } from '@wheat/api-react';
+import { useGetThrottlePlotQueueQuery, useGetTotalHarvestersSummaryQuery } from '@wheat-network/api-react';
+import { Loading, Flex } from '@wheat-network/core';
 import { Grid } from '@mui/material';
+import React from 'react';
+
 import PlotHero from './PlotOverviewHero';
 import PlotOverviewPlots from './PlotOverviewPlots';
 

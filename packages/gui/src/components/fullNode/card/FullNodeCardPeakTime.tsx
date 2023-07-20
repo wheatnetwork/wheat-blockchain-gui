@@ -1,15 +1,13 @@
-import React from 'react';
+import { useGetLatestPeakTimestampQuery } from '@wheat-network/api-react';
+import { CardSimple } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { CardSimple } from '@wheat/core';
 import moment from 'moment';
-import { useGetLatestPeakTimestampQuery } from '@wheat/api-react';
+import React from 'react';
 
 export default function FullNodeCardPeakTime() {
   const { data: timestamp, isLoading, error } = useGetLatestPeakTimestampQuery();
 
-  const value = timestamp
-    ? moment(timestamp * 1000).format('LLL')
-    : '';
+  const value = timestamp ? moment(timestamp * 1000).format('LLL') : '';
 
   return (
     <CardSimple

@@ -1,7 +1,7 @@
-import React from 'react';
+import { useGetBlockchainStateQuery } from '@wheat-network/api-react';
+import { FormatBytes, CardSimple } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
-import { FormatBytes, CardSimple } from '@wheat/core';
-import { useGetBlockchainStateQuery } from '@wheat/api-react';
+import React from 'react';
 
 export default function FarmCardTotalNetworkSpace() {
   const { data, isLoading, error } = useGetBlockchainStateQuery();

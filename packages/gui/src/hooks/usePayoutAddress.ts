@@ -1,6 +1,6 @@
-import { toBech32m, fromBech32m } from '@wheat/api';
-import type { PlotNFT } from '@wheat/api';
-import { useSetPayoutInstructionsMutation, useGetNetworkInfoQuery } from '@wheat/api-react';
+import { toBech32m, fromBech32m } from '@wheat-network/api';
+import type { PlotNFT } from '@wheat-network/api';
+import { useSetPayoutInstructionsMutation, useGetNetworkInfoQuery } from '@wheat-network/api-react';
 
 export default function usePayoutAddress(nft: PlotNFT): {
   loading: boolean;
@@ -25,7 +25,7 @@ export default function usePayoutAddress(nft: PlotNFT): {
     let newPayoutInstructions: string;
 
     try {
-      newPayoutInstructions = fromBech32m(newPayoutAddress)
+      newPayoutInstructions = fromBech32m(newPayoutAddress);
     } catch {
       newPayoutInstructions = newPayoutAddress;
     }
@@ -47,7 +47,7 @@ export default function usePayoutAddress(nft: PlotNFT): {
   let payoutAddress: string;
 
   try {
-    payoutAddress = toBech32m(payoutInstructions, networkPrefix)
+    payoutAddress = toBech32m(payoutInstructions, networkPrefix);
   } catch {
     payoutAddress = payoutInstructions;
   }
