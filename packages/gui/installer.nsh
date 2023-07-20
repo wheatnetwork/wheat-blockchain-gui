@@ -14,9 +14,9 @@ Page custom checkIsWheatRunning checkIsWheatRunningLeave
 ;https://nsis.sourceforge.io/StrTok_function
 ;author bigmac666
 Function StrTok
-  Ewheat $R1
-  Ewheat 1
-  Ewheat $R0
+  Exch $R1
+  Exch 1
+  Exch $R0
   Push $R2
   Push $R3
   Push $R4
@@ -71,9 +71,9 @@ Function StrTok
   Pop $R4
   Pop $R3
   Pop $R2
-  Ewheat $R0
-  Ewheat 1
-  Ewheat $R1
+  Exch $R0
+  Exch 1
+  Exch $R1
 
 FunctionEnd
 
