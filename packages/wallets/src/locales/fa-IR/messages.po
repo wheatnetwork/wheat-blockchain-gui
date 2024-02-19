@@ -78,12 +78,6 @@ msgstr "آدرس یا تماس"
 msgid "Amount"
 msgstr "مبلغ"
 
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Wheat Asset Token"
-msgstr "توکن دارایی چیا"
-
 #: src/components/card/WalletCardCRCatApprove.tsx:71
 msgid "Approve"
 msgstr "تایید"
@@ -815,6 +809,12 @@ msgstr "کیف پول با نوع {0} پشتیبانی نمیشود"
 #: src/components/WalletAdd.tsx:65
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "خوش آمدید. کلمات زیر برای پشتیبان گیری کیف پول شما استفاده میشود. بدون آنها، دسترسی به کیف پول خود را از دست خواهید داد، آنها را در محل امن نگه دارید! هر کلمه را همراه با شماره ترتیب کنار آنها یادداشت کنید. (ترتیب مهم است)"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Wheat Asset Token"
+msgstr "توکن دارایی چیا"
 
 #: src/components/WalletHistoryClawbackChip.tsx:56
 msgid "Will be autoclaimed in "

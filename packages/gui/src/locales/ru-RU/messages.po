@@ -192,7 +192,7 @@ msgstr ""
 "Шаг 2 - Выбранный участок проверяется на выигрышный хэш. Итак, в качестве примера - ваша система работает - есть 5 строк, если у вас 157 графиков - каждая из 5 строк читает 0/157. Если выбран график или второй график, это хорошая новость, и число изменится на 1/157 или 2/157, может быть, 3/157. После прохождения фильтра каждый выбранный участок будет проходить «качественный поиск», который выполняет примерно 7 считываний на вашем графике и сообщает вам, выиграли ли участки. Если вы выиграли, это не показывает никаких признаков, так как транзакция выполняется быстро. Ваш кошелек увеличивается.\n"
 "\n"
 "Как только это совпадение появится в первой строке, оно переместится вниз к строкам 2-5, затем, если другой график пройдет шаг 1, он также начнется сверху, amd переместится, выполнив процесс фильтрации.\n"
-"Выигрыши случаются очень редко: в среднем один человек во всем мире выигрывает каждые 18 секунд. На каждой точке указателя (9 секунд) все ваши участки проверяются, чтобы увидеть, какие из них проходят [фильтр поля]. (https://github.com/Wheat-Network/wheat-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Примерно 1/512 всех участков пройдут через фильтр в каждом испытании, поэтому здесь вы можете увидеть, сколько ваших участков прошло. Однако есть 4 608 шансов выиграть 2 чиа каждый день.\n"
+"Выигрыши случаются очень редко: в среднем один человек во всем мире выигрывает каждые 18 секунд. На каждой точке указателя (9 секунд) все ваши участки проверяются, чтобы увидеть, какие из них проходят [фильтр поля]. (https://github.com/wheatnetwork/wheat-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Примерно 1/512 всех участков пройдут через фильтр в каждом испытании, поэтому здесь вы можете увидеть, сколько ваших участков прошло. Однако есть 4 608 шансов выиграть 2 чиа каждый день.\n"
 "\n"
 "Если по какой-то причине эти строки перестают двигаться, это еще один признак того, что вы не синхронизированы с базой данных и вам необходимо выполнить повторную синхронизацию - см. Ниже.\n"
 "\n"
@@ -689,14 +689,6 @@ msgstr "Количество"
 msgid "Amount before adding royalties"
 msgstr "Сумма до добавления роялти"
 
-#: src/util/offerBuilderDataToOffer.ts:59
-#~ msgid "Amount exceeds WHEAT spendable balance"
-#~ msgstr ""
-
-#: src/util/offerBuilderDataToOffer.ts:174
-msgid "Amount exceeds WHEAT total balance"
-msgstr ""
-
 #: src/components/offers/NFTOfferEditor.tsx:593
 #: src/components/offers/OfferEditor.tsx:109
 msgid "Amount exceeds spendable balance"
@@ -708,6 +700,14 @@ msgstr "Сумма превышает доступный баланс"
 
 #: src/util/offerBuilderDataToOffer.ts:242
 msgid "Amount exceeds total balance for {catName} token"
+msgstr ""
+
+#: src/util/offerBuilderDataToOffer.ts:59
+#~ msgid "Amount exceeds WHEAT spendable balance"
+#~ msgstr ""
+
+#: src/util/offerBuilderDataToOffer.ts:174
+msgid "Amount exceeds WHEAT total balance"
 msgstr ""
 
 #: src/components/farm/FarmHealth.tsx:321
@@ -726,22 +726,6 @@ msgstr ""
 #: src/components/settings/SettingsIntegration.tsx:212
 msgid "App Permissions"
 msgstr "Разрешения приложения"
-
-#: src/electron/main.tsx:1098
-#~ msgid "Wheat"
-#~ msgstr "Wheat"
-
-#: src/components/offers2/OfferBuilderWHEATSection.tsx:77
-msgid "Wheat ({currencyCode}) is a digital currency that is secure and sustainable"
-msgstr ""
-
-#: src/components/offers2/OfferBuilderTokensSection.tsx:115
-msgid "Wheat Asset Tokens (CATs) are tokens built on top of WHEAT"
-msgstr ""
-
-#: src/electron/main.tsx:1047
-#~ msgid "Wheat Blockchain Wiki"
-#~ msgstr "Wheat Blockchain Wiki"
 
 #: src/components/walletConnect/WalletConnectConfirmDialog.tsx:122
 #: src/components/walletConnect/WalletConnectPairInfoDialog.tsx:92
@@ -3894,14 +3878,14 @@ msgstr ""
 msgid "Please enter an amount for each row"
 msgstr "Пожалуйста, введите сумму для каждой строки"
 
+#: src/components/offers/NFTOfferEditor.tsx:580
+msgid "Please enter an NFT identifier"
+msgstr "Пожалуйста, введите идентификатор NFT"
+
 #: src/util/offerBuilderDataToOffer.ts:162
 #: src/util/offerBuilderDataToOffer.ts:298
 msgid "Please enter an WHEAT amount"
 msgstr ""
-
-#: src/components/offers/NFTOfferEditor.tsx:580
-msgid "Please enter an NFT identifier"
-msgstr "Пожалуйста, введите идентификатор NFT"
 
 #: src/components/settings/ChangePassphrasePrompt.tsx:86
 msgid "Please enter your current passphrase, and a new passphrase"
@@ -5090,10 +5074,6 @@ msgstr ""
 msgid "Temporary folder location"
 msgstr "Расположение временной папки"
 
-#: src/components/app/AppVersionWarning.tsx:35
-msgid "The Wheat application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Wheat services version: {backV}<2/>Wheat application version: {guiV}<3/><4/>It is recommended that you quit the Wheat application and stop all Wheat services."
-msgstr ""
-
 #: src/components/harvest/HarvesterOverview.tsx:63
 msgid "The average number of plots which passed filter over last 64 signage points"
 msgstr ""
@@ -5226,6 +5206,10 @@ msgstr "Общее количество итераций VDF (от англ. Ver
 #: src/components/block/Block.jsx:242
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Общая комиссия за транзакции в этом блоке, полученная в награду фермерами."
+
+#: src/components/app/AppVersionWarning.tsx:35
+msgid "The Wheat application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Wheat services version: {backV}<2/>Wheat application version: {guiV}<3/><4/>It is recommended that you quit the Wheat application and stop all Wheat services."
+msgstr ""
 
 #: src/components/addressbook/ContactEdit.tsx:308
 msgid "Theme"
@@ -5413,15 +5397,6 @@ msgstr "Всего запрошенная сумма"
 msgid "Total Amount with Royalties"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalWheatFarmed.tsx:27
-#~ msgid "Total Wheat Farmed"
-#~ msgstr "Total Wheat Farmed"
-
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
-msgid "Total WHEAT Farmed"
-msgstr ""
-
 #: src/components/harvest/HarvesterOverview.tsx:172
 msgid "Total farm size effective"
 msgstr ""
@@ -5493,6 +5468,15 @@ msgstr ""
 #: src/components/block/Block.jsx:186
 msgid "Total VDF Iterations"
 msgstr "Общее количество итерации VDF"
+
+#: src/components/farm/card/FarmCardTotalWheatFarmed.tsx:27
+#~ msgid "Total Wheat Farmed"
+#~ msgstr "Total Wheat Farmed"
+
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
+msgid "Total WHEAT Farmed"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:362
 msgid "Touch all pages of buffer allocations before starting to plot."
@@ -6007,6 +5991,22 @@ msgstr "Вес"
 #: src/components/block/Block.jsx:175
 msgid "Weight is the total added difficulty of all blocks up to and including this one"
 msgstr "Вес - общая сложность всех блоков до, включая этот"
+
+#: src/electron/main.tsx:1098
+#~ msgid "Wheat"
+#~ msgstr "Wheat"
+
+#: src/components/offers2/OfferBuilderWHEATSection.tsx:77
+msgid "Wheat ({currencyCode}) is a digital currency that is secure and sustainable"
+msgstr ""
+
+#: src/components/offers2/OfferBuilderTokensSection.tsx:115
+msgid "Wheat Asset Tokens (CATs) are tokens built on top of WHEAT"
+msgstr ""
+
+#: src/electron/main.tsx:1047
+#~ msgid "Wheat Blockchain Wiki"
+#~ msgstr "Wheat Blockchain Wiki"
 
 #: src/components/offers/OfferEditorConfirmationDialog.tsx:22
 msgid "When creating an offer, any assets that are being offered will be locked and unavailable until the offer is accepted or cancelled, resulting in your spendable balance changing."

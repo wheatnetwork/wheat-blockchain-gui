@@ -54,14 +54,6 @@ msgstr "數量"
 msgid "Appearance"
 msgstr "外觀"
 
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Wheat {latestVersion} is currently the latest version available."
-msgstr "目前可用的 Wheat 版本為 {latestVersion}。"
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Wheat Application Version:"
-msgstr "Wheat 應用程式版本："
-
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:158
 msgid "Are you sure you want to continue? Type in the fingerprint of this wallet key to confirm deletion."
 msgstr "你確定你要繼續嗎？輸入該錢包密鑰的指紋以確認刪除。"
@@ -551,6 +543,14 @@ msgstr "錢包金鑰"
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr "最新消息"
+
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Wheat {latestVersion} is currently the latest version available."
+msgstr "目前可用的 Wheat 版本為 {latestVersion}。"
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Wheat Application Version:"
+msgstr "Wheat 應用程式版本："
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

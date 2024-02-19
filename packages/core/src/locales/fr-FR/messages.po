@@ -54,14 +54,6 @@ msgstr "Montant"
 msgid "Appearance"
 msgstr "Apparence"
 
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Wheat {latestVersion} is currently the latest version available."
-msgstr "Wheat {latestVersion} est la dernière version disponible."
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Wheat Application Version:"
-msgstr "Version de l'application Wheat :"
-
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:158
 msgid "Are you sure you want to continue? Type in the fingerprint of this wallet key to confirm deletion."
 msgstr "Êtes-vous sûr de vouloir continuer ? Tapez l'empreinte de cette clé de porte-monnaie pour confirmer la suppression."
@@ -551,6 +543,14 @@ msgstr "Clés des portefeuilles"
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr "Nouveautés"
+
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Wheat {latestVersion} is currently the latest version available."
+msgstr "Wheat {latestVersion} est la dernière version disponible."
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Wheat Application Version:"
+msgstr "Version de l'application Wheat :"
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

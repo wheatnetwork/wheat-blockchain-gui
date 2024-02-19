@@ -54,14 +54,6 @@ msgstr "مبلغ"
 msgid "Appearance"
 msgstr "ظاهر برنامه"
 
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Wheat {latestVersion} is currently the latest version available."
-msgstr ".در حال حاضر آخرین نسخه موجود است {latestVersion} چیا"
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Wheat Application Version:"
-msgstr "نسخه برنامه چیا:"
-
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:158
 msgid "Are you sure you want to continue? Type in the fingerprint of this wallet key to confirm deletion."
 msgstr "آیا مطمئن هستید که میخواهید ادامه دهید؟ برای تایید حذف، کلمات کد این کلید کیف پول را تایپ کنید."
@@ -553,6 +545,14 @@ msgstr "کلیدهای کیف پول"
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr "اخبار جدید"
+
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Wheat {latestVersion} is currently the latest version available."
+msgstr ".در حال حاضر آخرین نسخه موجود است {latestVersion} چیا"
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Wheat Application Version:"
+msgstr "نسخه برنامه چیا:"
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

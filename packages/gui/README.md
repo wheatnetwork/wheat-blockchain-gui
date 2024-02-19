@@ -8,7 +8,7 @@ Wheat GUI - written in TypeScript and uses Electron/React.
 
 ## Development
 
-Please read and follow the main [README.md](https://github.com/Wheat-Network/wheat-blockchain-gui) of this monorepo.
+Please read and follow the main [README.md](https://github.com/wheatnetwork/wheat-blockchain-gui) of this monorepo.
 
 ## Best practices
 

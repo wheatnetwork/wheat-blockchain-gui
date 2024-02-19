@@ -78,12 +78,6 @@ msgstr ""
 msgid "Amount"
 msgstr "Sasia"
 
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Wheat Asset Token"
-msgstr ""
-
 #: src/components/card/WalletCardCRCatApprove.tsx:71
 msgid "Approve"
 msgstr ""
@@ -815,6 +809,12 @@ msgstr ""
 #: src/components/WalletAdd.tsx:65
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Mirëseardhje! Fjalët e mëposhtme përdoren për rezervimin e portofolit tuaj. Pa to, ju do të humbni hyrjen në portofolin tuaj, mbajini të sigurta! Shkruani secilën fjalë së bashku me numrin e rendit pranë tyre. (Renditja është e rëndësishme)"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Wheat Asset Token"
+msgstr ""
 
 #: src/components/WalletHistoryClawbackChip.tsx:56
 msgid "Will be autoclaimed in "

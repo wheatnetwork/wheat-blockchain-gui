@@ -54,14 +54,6 @@ msgstr "Belopp"
 msgid "Appearance"
 msgstr "Utseende"
 
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Wheat {latestVersion} is currently the latest version available."
-msgstr "Wheat {latestVersion} är för närvarande den senaste tillgängliga versionen."
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Wheat Application Version:"
-msgstr "Wheat programversion:"
-
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:158
 msgid "Are you sure you want to continue? Type in the fingerprint of this wallet key to confirm deletion."
 msgstr "Är du säker på att du vill fortsätta? Skriv in fingeravtrycket för denna plånboksnyckel för att bekräfta borttagning."
@@ -551,6 +543,14 @@ msgstr "Plånboksnycklar"
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr "Vad är nytt"
+
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Wheat {latestVersion} is currently the latest version available."
+msgstr "Wheat {latestVersion} är för närvarande den senaste tillgängliga versionen."
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Wheat Application Version:"
+msgstr "Wheat programversion:"
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

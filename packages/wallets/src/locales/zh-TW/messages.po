@@ -78,12 +78,6 @@ msgstr "地址或聯絡簿"
 msgid "Amount"
 msgstr "數量"
 
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Wheat Asset Token"
-msgstr "奇亞資產代幣"
-
 #: src/components/card/WalletCardCRCatApprove.tsx:71
 msgid "Approve"
 msgstr "簽屬"
@@ -817,6 +811,12 @@ msgstr "錢包類型 {0} 不支援。"
 #: src/components/WalletAdd.tsx:65
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "歡迎！以下的字是用來為你的錢包備份。沒有這些你將會無法進入你的錢包。將這些安全保存好！寫下每個字，包括他們旁邊的順序數字。（順序很重要）"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Wheat Asset Token"
+msgstr "奇亞資產代幣"
 
 #: src/components/WalletHistoryClawbackChip.tsx:56
 msgid "Will be autoclaimed in "

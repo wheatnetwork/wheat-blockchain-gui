@@ -62,4 +62,4 @@ import sleep from 'sleep-promise';
 
 ## Development
 
-Please read and follow the main [README.md](https://github.com/Wheat-Network/wheat-blockchain-gui) of this monorepo.
+Please read and follow the main [README.md](https://github.com/wheatnetwork/wheat-blockchain-gui) of this monorepo.

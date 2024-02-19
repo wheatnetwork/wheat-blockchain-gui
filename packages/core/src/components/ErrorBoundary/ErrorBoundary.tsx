@@ -52,7 +52,7 @@ export default class ErrorBoundary extends Component {
   render() {
     if (this.state.error) {
       const { stacktrace, error } = this.state;
-      const issueLink = `https://github.com/Wheat-Network/wheat-blockchain-gui/issues/new?${qs.stringify({
+      const issueLink = `https://github.com/wheatnetwork/wheat-blockchain-gui/issues/new?${qs.stringify({
         labels: 'bug',
         template: 'bug_report.yaml',
         title: `[BUG] ${error.message}`,

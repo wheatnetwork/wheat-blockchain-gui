@@ -517,14 +517,6 @@ msgstr "مبلغ"
 msgid "Amount before adding royalties"
 msgstr "مبلغ قبل از اضافه کردن حق امتیاز"
 
-#: src/util/offerBuilderDataToOffer.ts:59
-#~ msgid "Amount exceeds WHEAT spendable balance"
-#~ msgstr ""
-
-#: src/util/offerBuilderDataToOffer.ts:174
-msgid "Amount exceeds WHEAT total balance"
-msgstr "مقدار از موجودی کل چیا بیشتر است"
-
 #: src/components/offers/NFTOfferEditor.tsx:593
 #: src/components/offers/OfferEditor.tsx:109
 msgid "Amount exceeds spendable balance"
@@ -537,6 +529,14 @@ msgstr "مبلغ از موجودی قابل خرج کردن بیشتر است"
 #: src/util/offerBuilderDataToOffer.ts:242
 msgid "Amount exceeds total balance for {catName} token"
 msgstr "بیشتر است {catName} مقدار از کل موجودی برای توکن"
+
+#: src/util/offerBuilderDataToOffer.ts:59
+#~ msgid "Amount exceeds WHEAT spendable balance"
+#~ msgstr ""
+
+#: src/util/offerBuilderDataToOffer.ts:174
+msgid "Amount exceeds WHEAT total balance"
+msgstr "مقدار از موجودی کل چیا بیشتر است"
 
 #: src/components/farm/FarmHealth.tsx:321
 msgid "An increase in the number of missing signage points (SPs) suggests that you were either disconnected from or significantly distant from a Timelord in your Full Node network. The total number of missing SPs serves as an indicator of potential rewards you could have claimed."
@@ -554,22 +554,6 @@ msgstr "اعلان"
 #: src/components/settings/SettingsIntegration.tsx:212
 msgid "App Permissions"
 msgstr "مجوزهای برنامه"
-
-#: src/electron/main.tsx:1098
-#~ msgid "Wheat"
-#~ msgstr "Wheat"
-
-#: src/components/offers2/OfferBuilderWHEATSection.tsx:77
-msgid "Wheat ({currencyCode}) is a digital currency that is secure and sustainable"
-msgstr "یک ارز دیجیتال امن و پایدار است ({currencyCode}) چیا"
-
-#: src/components/offers2/OfferBuilderTokensSection.tsx:115
-msgid "Wheat Asset Tokens (CATs) are tokens built on top of WHEAT"
-msgstr "توکن‌های دارایی چیا (کت) توکن‌هایی هستند که بر روی چیا ساخته شده‌اند"
-
-#: src/electron/main.tsx:1047
-#~ msgid "Wheat Blockchain Wiki"
-#~ msgstr "Wheat Blockchain Wiki"
 
 #: src/components/walletConnect/WalletConnectConfirmDialog.tsx:122
 #: src/components/walletConnect/WalletConnectPairInfoDialog.tsx:92
@@ -3726,14 +3710,14 @@ msgstr "وارد کنید {catName} لطفاً مبلغی را برای توکن
 msgid "Please enter an amount for each row"
 msgstr "لطفاً برای هر ردیف مبلغی را وارد کنید"
 
+#: src/components/offers/NFTOfferEditor.tsx:580
+msgid "Please enter an NFT identifier"
+msgstr "لطفاً یک شناسه ان اف تی وارد کنید"
+
 #: src/util/offerBuilderDataToOffer.ts:162
 #: src/util/offerBuilderDataToOffer.ts:298
 msgid "Please enter an WHEAT amount"
 msgstr "لطفاً یک مبلغ چیا وارد کنید"
-
-#: src/components/offers/NFTOfferEditor.tsx:580
-msgid "Please enter an NFT identifier"
-msgstr "لطفاً یک شناسه ان اف تی وارد کنید"
 
 #: src/components/settings/ChangePassphrasePrompt.tsx:86
 msgid "Please enter your current passphrase, and a new passphrase"
@@ -4922,10 +4906,6 @@ msgstr "مکان پوشه موقت برای پلات سازی دیسک هیبر�
 msgid "Temporary folder location"
 msgstr "مکان پوشه موقت"
 
-#: src/components/app/AppVersionWarning.tsx:35
-msgid "The Wheat application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Wheat services version: {backV}<2/>Wheat application version: {guiV}<3/><4/>It is recommended that you quit the Wheat application and stop all Wheat services."
-msgstr "برنامه چیا و سرویس های آن از نسخه های مختلفی استفاده میکنند. در نتیجه برخی از عملکردها ممکن است به درستی عمل نکنند.<0/><1/>نسخه خدمات Wheat: {backV}<2/>نسخه برنامه Wheat: {guiV}<3/><4/>توصیه میشود که از برنامه چیا خارج شوید و تمام خدمات چیا را متوقف کنید."
-
 #: src/components/harvest/HarvesterOverview.tsx:63
 msgid "The average number of plots which passed filter over last 64 signage points"
 msgstr "میانگین تعداد پلاتهایی که از 64 نقطه علامت گذاری گذشته فیلتر عبور کرده اند"
@@ -5058,6 +5038,10 @@ msgstr "تعداد کل VDF (عملکرد تأخیری قابل تأیید) یا
 #: src/components/block/Block.jsx:242
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "کل کارمزدهای تراکنش ها در این بلاک. به فارم کننده پاداش داده میشود."
+
+#: src/components/app/AppVersionWarning.tsx:35
+msgid "The Wheat application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Wheat services version: {backV}<2/>Wheat application version: {guiV}<3/><4/>It is recommended that you quit the Wheat application and stop all Wheat services."
+msgstr "برنامه چیا و سرویس های آن از نسخه های مختلفی استفاده میکنند. در نتیجه برخی از عملکردها ممکن است به درستی عمل نکنند.<0/><1/>نسخه خدمات Wheat: {backV}<2/>نسخه برنامه Wheat: {guiV}<3/><4/>توصیه میشود که از برنامه چیا خارج شوید و تمام خدمات چیا را متوقف کنید."
 
 #: src/components/addressbook/ContactEdit.tsx:308
 msgid "Theme"
@@ -5245,15 +5229,6 @@ msgstr "مجموع مبلغ درخواست شده"
 msgid "Total Amount with Royalties"
 msgstr "کل مبلغ با حق امتیاز"
 
-#: src/components/farm/card/FarmCardTotalWheatFarmed.tsx:27
-#~ msgid "Total Wheat Farmed"
-#~ msgstr "Total Wheat Farmed"
-
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
-msgid "Total WHEAT Farmed"
-msgstr "مجموع فارم شده چیا"
-
 #: src/components/harvest/HarvesterOverview.tsx:172
 msgid "Total farm size effective"
 msgstr "مجموع اندازه مفید فارم"
@@ -5325,6 +5300,15 @@ msgstr "مجموع فضا"
 #: src/components/block/Block.jsx:186
 msgid "Total VDF Iterations"
 msgstr "کل تکرارهای تابع تاخیر قابل تاییدVDF"
+
+#: src/components/farm/card/FarmCardTotalWheatFarmed.tsx:27
+#~ msgid "Total Wheat Farmed"
+#~ msgstr "Total Wheat Farmed"
+
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
+msgid "Total WHEAT Farmed"
+msgstr "مجموع فارم شده چیا"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:362
 msgid "Touch all pages of buffer allocations before starting to plot."
@@ -5839,6 +5823,22 @@ msgstr "وزن"
 #: src/components/block/Block.jsx:175
 msgid "Weight is the total added difficulty of all blocks up to and including this one"
 msgstr "حجم کل سختی اضافه شده همه بلاک ها تا الان و از جمله این، یکی است"
+
+#: src/electron/main.tsx:1098
+#~ msgid "Wheat"
+#~ msgstr "Wheat"
+
+#: src/components/offers2/OfferBuilderWHEATSection.tsx:77
+msgid "Wheat ({currencyCode}) is a digital currency that is secure and sustainable"
+msgstr "یک ارز دیجیتال امن و پایدار است ({currencyCode}) چیا"
+
+#: src/components/offers2/OfferBuilderTokensSection.tsx:115
+msgid "Wheat Asset Tokens (CATs) are tokens built on top of WHEAT"
+msgstr "توکن‌های دارایی چیا (کت) توکن‌هایی هستند که بر روی چیا ساخته شده‌اند"
+
+#: src/electron/main.tsx:1047
+#~ msgid "Wheat Blockchain Wiki"
+#~ msgstr "Wheat Blockchain Wiki"
 
 #: src/components/offers/OfferEditorConfirmationDialog.tsx:22
 msgid "When creating an offer, any assets that are being offered will be locked and unavailable until the offer is accepted or cancelled, resulting in your spendable balance changing."

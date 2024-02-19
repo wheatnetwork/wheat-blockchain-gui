@@ -517,14 +517,6 @@ msgstr "金額"
 msgid "Amount before adding royalties"
 msgstr "添加版稅前金額"
 
-#: src/util/offerBuilderDataToOffer.ts:59
-#~ msgid "Amount exceeds WHEAT spendable balance"
-#~ msgstr ""
-
-#: src/util/offerBuilderDataToOffer.ts:174
-msgid "Amount exceeds WHEAT total balance"
-msgstr "金額超過 WHEAT 的總餘額"
-
 #: src/components/offers/NFTOfferEditor.tsx:593
 #: src/components/offers/OfferEditor.tsx:109
 msgid "Amount exceeds spendable balance"
@@ -537,6 +529,14 @@ msgstr "金額超過可用餘額"
 #: src/util/offerBuilderDataToOffer.ts:242
 msgid "Amount exceeds total balance for {catName} token"
 msgstr "金額超過 {catName} 代幣的總餘額"
+
+#: src/util/offerBuilderDataToOffer.ts:59
+#~ msgid "Amount exceeds WHEAT spendable balance"
+#~ msgstr ""
+
+#: src/util/offerBuilderDataToOffer.ts:174
+msgid "Amount exceeds WHEAT total balance"
+msgstr "金額超過 WHEAT 的總餘額"
 
 #: src/components/farm/FarmHealth.tsx:321
 msgid "An increase in the number of missing signage points (SPs) suggests that you were either disconnected from or significantly distant from a Timelord in your Full Node network. The total number of missing SPs serves as an indicator of potential rewards you could have claimed."
@@ -554,22 +554,6 @@ msgstr "公告"
 #: src/components/settings/SettingsIntegration.tsx:212
 msgid "App Permissions"
 msgstr "應用程式權限"
-
-#: src/electron/main.tsx:1098
-#~ msgid "Wheat"
-#~ msgstr "Wheat"
-
-#: src/components/offers2/OfferBuilderWHEATSection.tsx:77
-msgid "Wheat ({currencyCode}) is a digital currency that is secure and sustainable"
-msgstr "Wheat ({currencyCode}) 是一種安全且可持續的數位貨幣"
-
-#: src/components/offers2/OfferBuilderTokensSection.tsx:115
-msgid "Wheat Asset Tokens (CATs) are tokens built on top of WHEAT"
-msgstr "Wheat 資產代幣 (CATs) 是建立在 WHEAT 之上的代幣"
-
-#: src/electron/main.tsx:1047
-#~ msgid "Wheat Blockchain Wiki"
-#~ msgstr "Wheat Blockchain Wiki"
 
 #: src/components/walletConnect/WalletConnectConfirmDialog.tsx:122
 #: src/components/walletConnect/WalletConnectPairInfoDialog.tsx:92
@@ -3722,14 +3706,14 @@ msgstr "請輸入 {catName} 代幣的數量"
 msgid "Please enter an amount for each row"
 msgstr "請為每一行輸入數量"
 
+#: src/components/offers/NFTOfferEditor.tsx:580
+msgid "Please enter an NFT identifier"
+msgstr "請輸入 NFT 標識符"
+
 #: src/util/offerBuilderDataToOffer.ts:162
 #: src/util/offerBuilderDataToOffer.ts:298
 msgid "Please enter an WHEAT amount"
 msgstr "請輸入 WHEAT 金額"
-
-#: src/components/offers/NFTOfferEditor.tsx:580
-msgid "Please enter an NFT identifier"
-msgstr "請輸入 NFT 標識符"
 
 #: src/components/settings/ChangePassphrasePrompt.tsx:86
 msgid "Please enter your current passphrase, and a new passphrase"
@@ -4918,10 +4902,6 @@ msgstr ""
 msgid "Temporary folder location"
 msgstr "臨時資料夾位置"
 
-#: src/components/app/AppVersionWarning.tsx:35
-msgid "The Wheat application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Wheat services version: {backV}<2/>Wheat application version: {guiV}<3/><4/>It is recommended that you quit the Wheat application and stop all Wheat services."
-msgstr "Wheat應用程序及其服務使用不同版本。由此可能導致某些功能無法正常運作。<0/><1/>Wheat服務版本：{backV}<2/>Wheat應用程序版本：{guiV}<3/><4/>建議您退出Wheat應用程序並停止所有Wheat服務。"
-
 #: src/components/harvest/HarvesterOverview.tsx:63
 msgid "The average number of plots which passed filter over last 64 signage points"
 msgstr ""
@@ -5054,6 +5034,10 @@ msgstr "本區塊的VDF（可驗證延遲函數）或時間證明迭代的總數
 #: src/components/block/Block.jsx:242
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "本區塊中的總交易手續費。獎勵給農夫。"
+
+#: src/components/app/AppVersionWarning.tsx:35
+msgid "The Wheat application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Wheat services version: {backV}<2/>Wheat application version: {guiV}<3/><4/>It is recommended that you quit the Wheat application and stop all Wheat services."
+msgstr "Wheat應用程序及其服務使用不同版本。由此可能導致某些功能無法正常運作。<0/><1/>Wheat服務版本：{backV}<2/>Wheat應用程序版本：{guiV}<3/><4/>建議您退出Wheat應用程序並停止所有Wheat服務。"
 
 #: src/components/addressbook/ContactEdit.tsx:308
 msgid "Theme"
@@ -5241,15 +5225,6 @@ msgstr "總請求金額"
 msgid "Total Amount with Royalties"
 msgstr "總金額（包括版稅）"
 
-#: src/components/farm/card/FarmCardTotalWheatFarmed.tsx:27
-#~ msgid "Total Wheat Farmed"
-#~ msgstr "Total Wheat Farmed"
-
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
-msgid "Total WHEAT Farmed"
-msgstr ""
-
 #: src/components/harvest/HarvesterOverview.tsx:172
 msgid "Total farm size effective"
 msgstr ""
@@ -5321,6 +5296,15 @@ msgstr ""
 #: src/components/block/Block.jsx:186
 msgid "Total VDF Iterations"
 msgstr "總 VDF 疊代次數"
+
+#: src/components/farm/card/FarmCardTotalWheatFarmed.tsx:27
+#~ msgid "Total Wheat Farmed"
+#~ msgstr "Total Wheat Farmed"
+
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
+msgid "Total WHEAT Farmed"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:362
 msgid "Touch all pages of buffer allocations before starting to plot."
@@ -5835,6 +5819,22 @@ msgstr "權重"
 #: src/components/block/Block.jsx:175
 msgid "Weight is the total added difficulty of all blocks up to and including this one"
 msgstr "權重是包含本區塊在內的所有區塊的總加權難度"
+
+#: src/electron/main.tsx:1098
+#~ msgid "Wheat"
+#~ msgstr "Wheat"
+
+#: src/components/offers2/OfferBuilderWHEATSection.tsx:77
+msgid "Wheat ({currencyCode}) is a digital currency that is secure and sustainable"
+msgstr "Wheat ({currencyCode}) 是一種安全且可持續的數位貨幣"
+
+#: src/components/offers2/OfferBuilderTokensSection.tsx:115
+msgid "Wheat Asset Tokens (CATs) are tokens built on top of WHEAT"
+msgstr "Wheat 資產代幣 (CATs) 是建立在 WHEAT 之上的代幣"
+
+#: src/electron/main.tsx:1047
+#~ msgid "Wheat Blockchain Wiki"
+#~ msgstr "Wheat Blockchain Wiki"
 
 #: src/components/offers/OfferEditorConfirmationDialog.tsx:22
 msgid "When creating an offer, any assets that are being offered will be locked and unavailable until the offer is accepted or cancelled, resulting in your spendable balance changing."

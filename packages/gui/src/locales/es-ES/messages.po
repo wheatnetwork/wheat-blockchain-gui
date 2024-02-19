@@ -517,14 +517,6 @@ msgstr ""
 msgid "Amount before adding royalties"
 msgstr ""
 
-#: src/util/offerBuilderDataToOffer.ts:59
-#~ msgid "Amount exceeds WHEAT spendable balance"
-#~ msgstr ""
-
-#: src/util/offerBuilderDataToOffer.ts:174
-msgid "Amount exceeds WHEAT total balance"
-msgstr ""
-
 #: src/components/offers/NFTOfferEditor.tsx:593
 #: src/components/offers/OfferEditor.tsx:109
 msgid "Amount exceeds spendable balance"
@@ -536,6 +528,14 @@ msgstr ""
 
 #: src/util/offerBuilderDataToOffer.ts:242
 msgid "Amount exceeds total balance for {catName} token"
+msgstr ""
+
+#: src/util/offerBuilderDataToOffer.ts:59
+#~ msgid "Amount exceeds WHEAT spendable balance"
+#~ msgstr ""
+
+#: src/util/offerBuilderDataToOffer.ts:174
+msgid "Amount exceeds WHEAT total balance"
 msgstr ""
 
 #: src/components/farm/FarmHealth.tsx:321
@@ -554,22 +554,6 @@ msgstr ""
 #: src/components/settings/SettingsIntegration.tsx:212
 msgid "App Permissions"
 msgstr ""
-
-#: src/electron/main.tsx:1098
-#~ msgid "Wheat"
-#~ msgstr "Wheat"
-
-#: src/components/offers2/OfferBuilderWHEATSection.tsx:77
-msgid "Wheat ({currencyCode}) is a digital currency that is secure and sustainable"
-msgstr ""
-
-#: src/components/offers2/OfferBuilderTokensSection.tsx:115
-msgid "Wheat Asset Tokens (CATs) are tokens built on top of WHEAT"
-msgstr ""
-
-#: src/electron/main.tsx:1047
-#~ msgid "Wheat Blockchain Wiki"
-#~ msgstr "Wheat Blockchain Wiki"
 
 #: src/components/walletConnect/WalletConnectConfirmDialog.tsx:122
 #: src/components/walletConnect/WalletConnectPairInfoDialog.tsx:92
@@ -3722,13 +3706,13 @@ msgstr ""
 msgid "Please enter an amount for each row"
 msgstr ""
 
+#: src/components/offers/NFTOfferEditor.tsx:580
+msgid "Please enter an NFT identifier"
+msgstr ""
+
 #: src/util/offerBuilderDataToOffer.ts:162
 #: src/util/offerBuilderDataToOffer.ts:298
 msgid "Please enter an WHEAT amount"
-msgstr ""
-
-#: src/components/offers/NFTOfferEditor.tsx:580
-msgid "Please enter an NFT identifier"
 msgstr ""
 
 #: src/components/settings/ChangePassphrasePrompt.tsx:86
@@ -4918,10 +4902,6 @@ msgstr ""
 msgid "Temporary folder location"
 msgstr "Ubicación de la carpeta temporal"
 
-#: src/components/app/AppVersionWarning.tsx:35
-msgid "The Wheat application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Wheat services version: {backV}<2/>Wheat application version: {guiV}<3/><4/>It is recommended that you quit the Wheat application and stop all Wheat services."
-msgstr ""
-
 #: src/components/harvest/HarvesterOverview.tsx:63
 msgid "The average number of plots which passed filter over last 64 signage points"
 msgstr ""
@@ -5054,6 +5034,10 @@ msgstr "Número total de VDF (funcione de retardo verificable) o iteraciones de 
 #: src/components/block/Block.jsx:242
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Las tarifas totales de transacciones en este bloque. Recompensado al agricultor."
+
+#: src/components/app/AppVersionWarning.tsx:35
+msgid "The Wheat application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Wheat services version: {backV}<2/>Wheat application version: {guiV}<3/><4/>It is recommended that you quit the Wheat application and stop all Wheat services."
+msgstr ""
 
 #: src/components/addressbook/ContactEdit.tsx:308
 msgid "Theme"
@@ -5241,15 +5225,6 @@ msgstr ""
 msgid "Total Amount with Royalties"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalWheatFarmed.tsx:27
-#~ msgid "Total Wheat Farmed"
-#~ msgstr "Total Wheat Farmed"
-
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
-msgid "Total WHEAT Farmed"
-msgstr ""
-
 #: src/components/harvest/HarvesterOverview.tsx:172
 msgid "Total farm size effective"
 msgstr ""
@@ -5321,6 +5296,15 @@ msgstr ""
 #: src/components/block/Block.jsx:186
 msgid "Total VDF Iterations"
 msgstr "Total de iteraciones VDF"
+
+#: src/components/farm/card/FarmCardTotalWheatFarmed.tsx:27
+#~ msgid "Total Wheat Farmed"
+#~ msgstr "Total Wheat Farmed"
+
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
+msgid "Total WHEAT Farmed"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:362
 msgid "Touch all pages of buffer allocations before starting to plot."
@@ -5835,6 +5819,22 @@ msgstr "Peso"
 #: src/components/block/Block.jsx:175
 msgid "Weight is the total added difficulty of all blocks up to and including this one"
 msgstr "El peso es la dificultad total añadida de todos los bloques hasta este incluido"
+
+#: src/electron/main.tsx:1098
+#~ msgid "Wheat"
+#~ msgstr "Wheat"
+
+#: src/components/offers2/OfferBuilderWHEATSection.tsx:77
+msgid "Wheat ({currencyCode}) is a digital currency that is secure and sustainable"
+msgstr ""
+
+#: src/components/offers2/OfferBuilderTokensSection.tsx:115
+msgid "Wheat Asset Tokens (CATs) are tokens built on top of WHEAT"
+msgstr ""
+
+#: src/electron/main.tsx:1047
+#~ msgid "Wheat Blockchain Wiki"
+#~ msgstr "Wheat Blockchain Wiki"
 
 #: src/components/offers/OfferEditorConfirmationDialog.tsx:22
 msgid "When creating an offer, any assets that are being offered will be locked and unavailable until the offer is accepted or cancelled, resulting in your spendable balance changing."

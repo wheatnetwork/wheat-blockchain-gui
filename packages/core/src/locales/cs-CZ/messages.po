@@ -54,14 +54,6 @@ msgstr "Částka"
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Wheat {latestVersion} is currently the latest version available."
-msgstr ""
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Wheat Application Version:"
-msgstr ""
-
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:158
 msgid "Are you sure you want to continue? Type in the fingerprint of this wallet key to confirm deletion."
 msgstr "Jste si jisti, že chcete pokračovat? Pro potvrzení smazání zadejte otisk této peněženky."
@@ -550,6 +542,14 @@ msgstr ""
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:142
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
+msgstr ""
+
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Wheat {latestVersion} is currently the latest version available."
+msgstr ""
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Wheat Application Version:"
 msgstr ""
 
 #: src/components/Back/Back.tsx:40

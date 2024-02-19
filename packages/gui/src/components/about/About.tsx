@@ -144,7 +144,7 @@ export default function About(props: Props) {
           )}
         </VersionsTable>
 
-        <BugReport href="https://github.com/Wheat-Network/wheat-blockchain/issues" target="_blank">
+        <BugReport href="https://github.com/wheatnetwork/wheat-blockchain/issues" target="_blank">
           Report an issue
         </BugReport>
         {'{{CSS}}'}

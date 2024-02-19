@@ -78,12 +78,6 @@ msgstr ""
 msgid "Amount"
 msgstr "Количество"
 
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Wheat Asset Token"
-msgstr "Токен активов Wheat"
-
 #: src/components/card/WalletCardCRCatApprove.tsx:71
 msgid "Approve"
 msgstr ""
@@ -815,6 +809,12 @@ msgstr "Кошелек с типом {0} не поддерживается"
 #: src/components/WalletAdd.tsx:65
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Добро пожаловать! Перечисленные слова используются для резервного копирования вашего кошелька. Без них вы потеряете доступ к своему кошельку, берегите их! Запишите каждое слово вместе с порядковым номером рядом с ним. (Порядок важен)"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Wheat Asset Token"
+msgstr "Токен активов Wheat"
 
 #: src/components/WalletHistoryClawbackChip.tsx:56
 msgid "Will be autoclaimed in "

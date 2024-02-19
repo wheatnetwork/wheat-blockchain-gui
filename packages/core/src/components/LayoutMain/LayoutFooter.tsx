@@ -21,7 +21,7 @@ const SendFeedback = styled.a`
 async function openFAQURL(): Promise<void> {
   try {
     const { shell } = window as any;
-    await shell.openExternal('https://github.com/Wheat-Network/wheat-blockchain/wiki/FAQ');
+    await shell.openExternal('https://github.com/wheatnetwork/wheat-blockchain/wiki/FAQ');
   } catch (e) {
     console.error(e);
   }

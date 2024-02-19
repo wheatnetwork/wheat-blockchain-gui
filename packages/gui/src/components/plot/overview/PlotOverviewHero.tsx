@@ -33,7 +33,7 @@ export default function PlotOverviewHero() {
           <Typography variant="body1">
             <Trans>
               Plots are allocated space on your hard drive used to farm and earn Wheat. &nbsp;
-              <Link target="_blank" href="https://github.com/Wheat-Network/wheat-blockchain/wiki/Network-Architecture">
+              <Link target="_blank" href="https://github.com/wheatnetwork/wheat-blockchain/wiki/Network-Architecture">
                 Learn more
               </Link>
             </Trans>
