@@ -1,6 +1,7 @@
 import { PlotQueueItem } from '@wheat-network/api';
 
 import { useGetPlotQueueQuery } from '../services/plotter';
+
 import useThrottleQuery from './useThrottleQuery';
 
 export default function useGetThrottlePlotQueueQuery(wait = 5000): {

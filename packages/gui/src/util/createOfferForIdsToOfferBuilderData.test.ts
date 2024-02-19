@@ -2,6 +2,7 @@ import * as wheatCore from '@wheat-network/core';
 import BigNumber from 'bignumber.js';
 
 import { AssetIdMapEntry } from '../hooks/useAssetIdName';
+
 import createOfferForIdsToOfferBuilderData from './createOfferForIdsToOfferBuilderData';
 
 jest.mock('@wheat-network/core', () => ({

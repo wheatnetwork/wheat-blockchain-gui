@@ -279,7 +279,7 @@ FunctionEnd
 
 Function UpdatePath
   ; Parameters: $0 - "all" for all users, "CurrentUser" for the current user
-  Ewheat $0
+  Exch $0
   Push $1
   Push $2
   Push $3

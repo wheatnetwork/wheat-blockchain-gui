@@ -1,12 +1,14 @@
 import type { Connection } from '@wheat-network/api';
 import { ServiceName } from '@wheat-network/api';
-import { useGetFarmerFullNodeConnectionsQuery, useService } from '@wheat-network/api-react';
+import { useGetFarmerFullNodeConnectionsQuery } from '@wheat-network/api-react';
 import { Table, Card, FormatBytes, FormatConnectionStatus } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Link, Typography, Tooltip, IconButton } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+
+import useIsServiceRunning from '../../hooks/useIsServiceRunning';
 
 import FarmCloseConnection from './FarmCloseConnection';
 
@@ -55,7 +57,7 @@ const cols = [
         <FarmCloseConnection nodeId={row.nodeId}>
           {({ onClose }) => (
             <StyledIconButton onClick={() => onClose()}>
-              <DeleteIcon />
+              <DeleteIcon color="info" />
             </StyledIconButton>
           )}
         </FarmCloseConnection>
@@ -66,7 +68,7 @@ const cols = [
 
 export default function FarmFullNodeConnections() {
   const { data: connections = [] } = useGetFarmerFullNodeConnectionsQuery();
-  const { isRunning, isLoading } = useService(ServiceName.FARMER);
+  const { isRunning, isLoading } = useIsServiceRunning(ServiceName.FARMER);
 
   return (
     <Card

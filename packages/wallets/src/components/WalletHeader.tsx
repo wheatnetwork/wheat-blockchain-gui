@@ -6,13 +6,13 @@ import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Typography, ListItemIcon, Tab, Tabs } from '@mui/material';
 import React, { type ReactNode } from 'react';
 
-import WalletName from './WalletName';
 import useWallet from "../hooks/useWallet";
+import WalletName from './WalletName';
 
 type StandardWalletProps = {
   walletId: number;
   actions?: ReactNode;
-  tab: 'summary' | 'send' | 'receive' | 'nftRecover';
+  tab: 'summary' | 'send' | 'receive'| 'nftRecover';
   onTabChange: (tab: 'summary' | 'send' | 'receive' | 'nftRecover') => void;
 };
 
@@ -50,7 +50,7 @@ export default function WalletHeader(props: StandardWalletProps) {
             <Tab value="send" label={<Trans>Send</Trans>} data-testid="WalletHeader-tab-send" />
             <Tab value="receive" label={<Trans>Receive</Trans>} data-testid="WalletHeader-tab-receive" />
             {(wallet && wallet.type === WalletType.STANDARD_WALLET) && (
-              <Tab value="nftRecover" label={<Trans>nftRecover</Trans>} data-testid="WalletHeader-tab-nftRecover" />
+            <Tab value="nftRecover" label={<Trans>NFT Recover</Trans>} data-testid="WalletHeader-tab-nftRecover" />
             )}
           </Tabs>
         </Flex>
@@ -68,7 +68,7 @@ export default function WalletHeader(props: StandardWalletProps) {
           <DropdownActions label={<Trans>Actions</Trans>} variant="outlined">
             <MenuItem onClick={handleDeleteUnconfirmedTransactions} close>
               <ListItemIcon>
-                <DeleteIcon />
+                <DeleteIcon color="info" />
               </ListItemIcon>
               <Typography variant="inherit" noWrap>
                 <Trans>Delete Unconfirmed Transactions</Trans>

@@ -15,9 +15,9 @@ import type WalletCreate from '../@types/WalletCreate';
 import Client from '../Client';
 import type Message from '../Message';
 import ServiceName from '../constants/ServiceName';
+
 import Service from './Service';
 import type { Options } from './Service';
-import type NFTRecoverInfo from "../@types/NFTRecoverInfo";
 
 export default class Wallet extends Service {
   constructor(client: Client, options?: Options) {
@@ -244,6 +244,7 @@ export default class Wallet extends Service {
     driverDict: any;
     validateOnly?: boolean;
     disableJSONFormatting?: boolean;
+    maxTime?: number;
   }) {
     const { disableJSONFormatting, driverDict, ...restArgs } = args;
     return this.command<{ offer: string; tradeRecord: TradeRecord }>(
@@ -360,6 +361,25 @@ export default class Wallet extends Service {
     return this.command<{
       transactionIds: string[];
     }>('spend_clawback_coins', args);
+  }
+
+  async findPoolNFT(args: {launcherId: string, contractAddress: string}) {
+    return this.command<{
+        totalAmount: BigNumber | number;
+        balanceAmount:BigNumber | number;
+        recordAmount: BigNumber | number;
+        contractAddress: string;
+      }>('find_pool_nft', args);
+  }
+
+  async recoverPoolNFT(args: {launcherId: string, contractAddress: string, fee: number}) {
+      return this.command<{
+        amount: number;
+        totalAmount:number;
+        contractAddress: string;
+        status: string;
+        error: string;
+      }>('recover_pool_nft', args);
   }
 
   onSyncChanged(callback: (data: any, message: Message) => void, processData?: (data: any) => any) {
@@ -519,13 +539,5 @@ export default class Wallet extends Service {
     processData?: (data: any) => any
   ) {
     return this.onStateChanged('nft_coin_did_set', callback, processData);
-  }
-
-  async findPoolNFT(launcherId: string, contractAddress: string) {
-    return this.command<NFTRecoverInfo>('find_pool_nft', {launcherId, contractAddress});
-  }
-
-  async recoverPoolNFT(launcherId: string, contractAddress: string) {
-      return this.command('recover_pool_nft', {launcherId, contractAddress});
   }
 }

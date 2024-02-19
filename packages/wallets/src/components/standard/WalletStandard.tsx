@@ -10,8 +10,9 @@ import WalletHeader from '../WalletHeader';
 import WalletHistory from '../WalletHistory';
 import WalletReceiveAddress from '../WalletReceiveAddress';
 import WalletSend from '../WalletSend';
+
 import WalletStandardCards from './WalletStandardCards';
-import NFTRecover from "./nftRecover/NFTRecover";
+import NFTRecover from './nftRecover/NFTRecover';
 
 type StandardWalletProps = {
   walletId: number;
@@ -25,7 +26,7 @@ export default function StandardWallet(props: StandardWalletProps) {
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedTab = searchParams.get('selectedTab') || 'summary';
 
-  const setSelectedTab = (tab: 'summary' | 'send' | 'receive'| 'nftRecover') => {
+  const setSelectedTab = (tab: 'summary' | 'send' | 'receive' | 'nftRecover') => {
     setSearchParams({ selectedTab: tab });
   };
 

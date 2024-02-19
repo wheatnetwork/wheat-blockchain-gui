@@ -150,6 +150,25 @@ const walletConnectCommands: WalletConnectCommand[] = [
     ],
   },
   {
+    command: 'spendClawbackCoins',
+    label: <Trans>Claw back or claim claw back transaction</Trans>,
+    service: ServiceName.WALLET,
+    waitForSync: true,
+    params: [
+      {
+        name: WalletConnectCommandParamName.COIN_IDS,
+        label: <Trans>Coin Ids</Trans>,
+        type: 'object',
+      },
+      {
+        name: WalletConnectCommandParamName.FEE,
+        label: <Trans>Fee</Trans>,
+        type: 'BigNumber',
+        displayComponent: (value) => <MojoToWheat value={value} />,
+      },
+    ],
+  },
+  {
     command: 'signMessageById',
     label: <Trans>Sign Message by Id</Trans>,
     service: ServiceName.WALLET,
@@ -163,6 +182,12 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.MESSAGE,
         label: <Trans>Message</Trans>,
         type: 'string',
+      },
+      {
+        name: WalletConnectCommandParamName.IS_HEX,
+        label: <Trans>Message Is Hex Encoded String</Trans>,
+        type: 'boolean',
+        isOptional: true,
       },
     ],
   },
@@ -180,6 +205,12 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.MESSAGE,
         label: <Trans>Message</Trans>,
         type: 'string',
+      },
+      {
+        name: WalletConnectCommandParamName.IS_HEX,
+        label: <Trans>Message Is Hex Encoded String</Trans>,
+        type: 'boolean',
+        isOptional: true,
       },
     ],
   },
@@ -440,25 +471,6 @@ const walletConnectCommands: WalletConnectCommand[] = [
   },
 
   // CAT
-  {
-    command: 'createNewCATWallet',
-    label: <Trans>Create new CAT Wallet</Trans>,
-    service: ServiceName.WALLET,
-    params: [
-      {
-        name: WalletConnectCommandParamName.AMOUNT,
-        label: <Trans>Amount</Trans>,
-        type: 'BigNumber',
-        displayComponent: (value) => <MojoToWheat value={value} />,
-      },
-      {
-        name: WalletConnectCommandParamName.FEE,
-        label: <Trans>Fee</Trans>,
-        type: 'BigNumber',
-        displayComponent: (value) => <MojoToWheat value={value} />,
-      },
-    ],
-  },
   {
     command: 'getCATWalletInfo',
     label: <Trans>Get CAT Wallet Info</Trans>,
@@ -824,7 +836,6 @@ const walletConnectCommands: WalletConnectCommand[] = [
     command: 'spendVC',
     label: <Trans>Add Proofs To Verifiable Credential</Trans>,
     service: ServiceName.WALLET,
-    bypassConfirm: true,
     params: [
       {
         name: WalletConnectCommandParamName.VC_ID,
@@ -865,11 +876,10 @@ const walletConnectCommands: WalletConnectCommand[] = [
     command: 'addVCProofs',
     label: <Trans>Add Proofs</Trans>,
     service: ServiceName.WALLET,
-    bypassConfirm: true,
     params: [
       {
         name: WalletConnectCommandParamName.PROOFS,
-        type: 'string',
+        type: 'object',
         label: <Trans>Proofs Object (Key Value Pairs)</Trans>,
       },
     ],
@@ -891,7 +901,6 @@ const walletConnectCommands: WalletConnectCommand[] = [
     command: 'revokeVC',
     label: <Trans>Revoke Verifiable Credential</Trans>,
     service: ServiceName.WALLET,
-    bypassConfirm: true,
     params: [
       {
         name: WalletConnectCommandParamName.VC_PARENT_ID,
@@ -934,6 +943,55 @@ const walletConnectCommands: WalletConnectCommand[] = [
         type: 'boolean',
         label: <Trans>Is notification visible to all paired fingerprints</Trans>,
         isOptional: true,
+      },
+    ],
+  },
+  {
+    command: 'getWalletAddresses',
+    label: <Trans>Get wallet addresses for one or more wallet keys</Trans>,
+    service: ServiceName.DAEMON,
+    bypassConfirm: true,
+    params: [
+      {
+        name: WalletConnectCommandParamName.FINGERPRINTS,
+        type: 'object', // number array
+        label: <Trans>Fingerprints</Trans>,
+        isOptional: true,
+        defaultValue: undefined,
+      },
+      {
+        name: WalletConnectCommandParamName.INDEX,
+        type: 'number',
+        label: <Trans>Index</Trans>,
+        isOptional: true,
+        defaultValue: undefined,
+      },
+      {
+        name: WalletConnectCommandParamName.COUNT,
+        type: 'number',
+        label: <Trans>Count</Trans>,
+        isOptional: true,
+        defaultValue: undefined,
+      },
+      {
+        name: WalletConnectCommandParamName.NON_OBSERVER_DERIVATION,
+        type: 'boolean',
+        label: <Trans>Non Observer Derivation</Trans>,
+        isOptional: true,
+        defaultValue: undefined,
+      },
+    ],
+  },
+  {
+    command: 'getPublicKey',
+    label: <Trans>Get public key</Trans>,
+    description: <Trans>Requests a master public key from your wallet</Trans>,
+    service: ServiceName.DAEMON,
+    params: [
+      {
+        name: WalletConnectCommandParamName.FINGERPRINT,
+        type: 'number',
+        label: <Trans>Fingerprint</Trans>,
       },
     ],
   },

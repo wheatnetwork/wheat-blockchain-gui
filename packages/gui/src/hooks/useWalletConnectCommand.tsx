@@ -1,5 +1,5 @@
-import api, { store, useGetLoggedInFingerprintQuery, useLogInMutation } from '@wheat-network/api-react';
-import { useOpenDialog } from '@wheat-network/core';
+import api, { store, useGetLoggedInFingerprintQuery } from '@wheat-network/api-react';
+import { useOpenDialog, useAuth } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
 import debug from 'debug';
 import React, { type ReactNode } from 'react';
@@ -12,6 +12,7 @@ import NotificationType from '../constants/NotificationType';
 import walletConnectCommands from '../constants/WalletConnectCommands';
 import prepareWalletConnectCommand from '../util/prepareWalletConnectCommand';
 import waitForWalletSync from '../util/waitForWalletSync';
+
 import useWalletConnectPairs from './useWalletConnectPairs';
 import useWalletConnectPreferences from './useWalletConnectPreferences';
 
@@ -71,7 +72,7 @@ function parseNotification(
 export default function useWalletConnectCommand(options: UseWalletConnectCommandOptions) {
   const { onNotification } = options;
   const openDialog = useOpenDialog();
-  const [logIn] = useLogInMutation();
+  const { logIn } = useAuth();
   const { data: currentFingerprint, isLoading: isLoadingLoggedInFingerprint } = useGetLoggedInFingerprintQuery();
   const { getPairBySession } = useWalletConnectPairs();
 
@@ -161,7 +162,7 @@ export default function useWalletConnectCommand(options: UseWalletConnectCommand
       }
     }
 
-    const { params: definitionParams = [], bypassConfirm } = definition;
+    const { service, params: definitionParams = [], bypassConfirm } = definition;
 
     log('Confirm arguments', definitionParams);
 
@@ -197,10 +198,7 @@ export default function useWalletConnectCommand(options: UseWalletConnectCommand
     // auto login before execute command
     if (isDifferentFingerprint && allowConfirmationFingerprintChange) {
       log('Changing fingerprint', fingerprint);
-      await logIn({
-        fingerprint,
-        type: 'skip',
-      }).unwrap();
+      await logIn(fingerprint);
     }
 
     // wait for sync
@@ -208,6 +206,16 @@ export default function useWalletConnectCommand(options: UseWalletConnectCommand
       log('Waiting for sync');
       // wait for wallet synchronisation
       await waitForWalletSync();
+    }
+
+    if (service === 'EXECUTE') {
+      const { execute } = definition;
+      const result = typeof execute === 'function' ? await execute(values) : execute;
+
+      return {
+        success: true,
+        ...result,
+      };
     }
 
     // validate current fingerprint again

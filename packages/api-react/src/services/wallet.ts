@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign -- This file use Immer */
 import { CAT, DID, Farmer, NFT, Pool, WalletService, WalletType, toBech32m, VC } from '@wheat-network/api';
-import type { NFTInfo, Transaction, Wallet, WalletBalance, NFTRecoverInfo } from '@wheat-network/api';
+import type { NFTInfo, Transaction, Wallet, WalletBalance } from '@wheat-network/api';
 import BigNumber from 'bignumber.js';
 
 import api, { baseQuery } from '../api';
@@ -79,7 +79,7 @@ export const walletApi = apiWithTag.injectEndpoints({
               wallets.map(async (wallet: Wallet) => {
                 const { type } = wallet;
                 const meta: any = {};
-                if (type === WalletType.CAT) {
+                if ([WalletType.CAT, WalletType.CRCAT].includes(type)) {
                   // get CAT asset
                   const { data: assetData, error: assetError } = await fetchWithBQ({
                     command: 'getAssetId',
@@ -876,6 +876,10 @@ export const walletApi = apiWithTag.injectEndpoints({
       ],
     }),
 
+    crCatApprovePending: mutation(build, CAT, 'crCatApprovePending', {
+      invalidatesTags: [{ type: 'Transactions', id: 'LIST' }],
+    }),
+
     // PlotNFTs
 
     // TODO refactor
@@ -1448,39 +1452,9 @@ export const walletApi = apiWithTag.injectEndpoints({
 
     spendClawbackCoins: mutation(build, WalletService, 'spendClawbackCoins'),
 
-    findPoolNFT: build.mutation<
-      NFTRecoverInfo,
-      {
-        launcherId: string;
-        contractAddress?: string;
-      }
-    >({
-      query: ({ launcherId, contractAddress }) => {
-        return {
-        command: 'findPoolNFT',
-        service: WalletService,
-        args: [launcherId, contractAddress],
-      }},
-    }),
+    findPoolNFT: mutation(build, WalletService, 'findPoolNFT'),
 
-    recoverPoolNFT: build.mutation<
-      {
-        num: number;
-        totalAmount: number;
-        amount: number;
-        status: string;
-      },
-      {
-        launcherId: string;
-        contractAddress?: string;
-      }
-    >({
-      query: ({ launcherId, contractAddress }) => {
-        return {
-        command: 'recoverPoolNFT',
-        service: WalletService,
-        args: [launcherId, contractAddress],
-      }},
+    recoverPoolNFT: mutation(build, WalletService, 'recoverPoolNFT', {
       invalidatesTags: [
         { type: 'Transactions', id: 'LIST' },
       ],
@@ -1550,6 +1524,7 @@ export const {
   useSpendCATMutation,
   useAddCATTokenMutation,
   useGetStrayCatsQuery,
+  useCrCatApprovePendingMutation,
 
   // PlotNFTS
   useGetPlotNFTsQuery,
@@ -1607,6 +1582,7 @@ export const {
   useGetAutoClaimQuery,
   useSpendClawbackCoinsMutation,
 
+  // nftRecover
   useFindPoolNFTMutation,
   useRecoverPoolNFTMutation,
 } = walletApi;

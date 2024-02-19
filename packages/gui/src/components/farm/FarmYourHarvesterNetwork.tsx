@@ -1,12 +1,14 @@
 import type { Connection } from '@wheat-network/api';
 import { ServiceName } from '@wheat-network/api';
-import { useService, useGetHarvesterConnectionsQuery } from '@wheat-network/api-react';
+import { useGetHarvesterConnectionsQuery } from '@wheat-network/api-react';
 import { Table, FormatBytes, FormatConnectionStatus, Card } from '@wheat-network/core';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Typography, Tooltip, IconButton } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+
+import useIsServiceRunning from '../../hooks/useIsServiceRunning';
 
 import FarmCloseConnection from './FarmCloseConnection';
 
@@ -55,7 +57,7 @@ const cols = [
         <FarmCloseConnection nodeId={row.nodeId}>
           {({ onClose }) => (
             <StyledIconButton onClick={() => onClose()}>
-              <DeleteIcon />
+              <DeleteIcon color="info" />
             </StyledIconButton>
           )}
         </FarmCloseConnection>
@@ -66,7 +68,7 @@ const cols = [
 
 export default function FarmYourHarvesterNetwork() {
   const { data: connections = [] } = useGetHarvesterConnectionsQuery();
-  const { isRunning, isLoading } = useService(ServiceName.HARVESTER);
+  const { isRunning, isLoading } = useIsServiceRunning(ServiceName.HARVESTER);
 
   return (
     <Card
